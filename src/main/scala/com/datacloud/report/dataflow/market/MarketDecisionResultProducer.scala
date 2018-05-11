@@ -6,7 +6,7 @@ import com.datacloud.report.dataflow.util.JsonUtil
 import org.apache.kafka.clients.producer.{KafkaProducer, Producer, ProducerRecord}
 import org.apache.kafka.common.serialization.StringSerializer
 
-object MarketDecisionResultProducer {
+object MarketDecisionResultProducer extends App {
 
   val topic = "sit_MARKET_DECISION_RESULT"
 
