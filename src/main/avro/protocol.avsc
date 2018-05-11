@@ -1,0 +1,34 @@
+[
+    {
+     "namespace": "com.datacloud.report.dataflow.protocol.avro",
+     "type": "record",
+     "name": "City",
+     "fields": [
+        {"name": "name", "type": "string"},
+        {"name": "population", "type": "long"}
+     ]
+    },
+
+    {
+     "namespace": "com.datacloud.report.dataflow.protocol.avro",
+     "type": "record",
+     "name": "Province",
+     "fields": [
+        {"name": "name", "type": "string"},
+        {"name": "area", "type": "double"},
+        {"name": "cities", "type": {"type": "array", "items": "City"}}
+     ]
+    },
+
+    {
+     "namespace": "com.datacloud.report.dataflow.protocol.avro",
+     "type": "record",
+     "name": "Country",
+     "fields": [
+        {"name": "name", "type": "string"},
+        {"name": "tenant", "type": ["null", "int"], "default": null},
+        {"name": "ts", "type": ["null", "long"], "default": null},
+        {"name": "provinces", "type": {"type": "array", "items": "Province"}}
+     ]
+    }
+]

@@ -1,0 +1,1311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f99fb74d-68c1-4930-b53c-dc16332504ed" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="CreditInvocationHistoryProducer.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryProducer.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="24" column="26" lean-forward="false" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+              <folding>
+                <element signature="e#63#90#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OverdueEventProducer.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/overdueevent/OverdueEventProducer.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MarketDecisionResultProducer.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/MarketDecisionResultProducer.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MarketDecisionResultGenerator.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/MarketDecisionResultGenerator.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/package.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="326">
+              <caret line="54" column="23" lean-forward="false" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Package Object" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>RISK_INVOCATION_HISTORY_STREAM</find>
+      <find>tenantid</find>
+      <find>kafka</find>
+      <find>kafka.ver</find>
+      <find>occur</find>
+      <find>ruleId</find>
+      <find>rule</find>
+      <find>ruleid</find>
+      <find>hitrulesets</find>
+      <find>iden</find>
+      <find>identifier</find>
+      <find>scala.version</find>
+      <find>&quot;v&quot;</find>
+      <find>output.clientData</find>
+      <find>Chronology</find>
+      <find>date</find>
+      <find>creditscore</find>
+      <find>sit_OVERDUE_EVENT</find>
+      <find>input</find>
+      <find>i</find>
+      <find>latitude</find>
+      <find>latitud</find>
+      <find>product</find>
+      <find>review</find>
+      <find>marketActivityId</find>
+      <find>hitrule</find>
+      <find>tenant</find>
+      <find>trans</find>
+      <find>activit</find>
+      <find>500</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>output.setClientData</replace>
+    </replaceStrings>
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="modificationStamps">
+      <map>
+        <entry key="$USER_HOME$/book/SourceCode/Learning Spring Boot [Video]/Section2-3" value="1472545256000" />
+        <entry key="$USER_HOME$/github/EasyUpload/Backend" value="2965604436000" />
+        <entry key="$USER_HOME$/github/Spring4MVCFileUpload" value="1407368382000" />
+        <entry key="$USER_HOME$/github/favorites-web" value="1486174272000" />
+        <entry key="$USER_HOME$/github/gs-accessing-mongodb-data-rest/complete" value="1482132766000" />
+        <entry key="$USER_HOME$/github/hello-kafka-streams" value="1490370035000" />
+        <entry key="$USER_HOME$/github/kafka-streams" value="2946521210000" />
+        <entry key="$USER_HOME$/github/spring-boot-netflix-example" value="7428317015000" />
+        <entry key="$USER_HOME$/github/spring-boot-pdf" value="2973467142000" />
+        <entry key="$USER_HOME$/github/spring-boot-scala-web" value="1481284441000" />
+        <entry key="$USER_HOME$/github/spring-cloud/zuul/book-service" value="1485759411000" />
+        <entry key="$USER_HOME$/github/spring-cloud/zuul/zuul-sandbox" value="1485759411000" />
+        <entry key="$USER_HOME$/github/spring-kafka" value="4452842403000" />
+        <entry key="$USER_HOME$/github/springfox-demos/boot-swagger" value="8893203396000" />
+      </map>
+    </option>
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$USER_HOME$/github/caffeine-cache-spring-boot-demo" value="PREVIEW" />
+        <entry key="$USER_HOME$/github/eventuate-tram-sagas-examples-customers-and-orders" value="PREVIEW" />
+        <entry key="$USER_HOME$/github/kafka-streams" value="PREVIEW" />
+        <entry key="$USER_HOME$/github/mohitsinha/tutorials/spring-boot-reactive-sse" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/overdueevent/OverdueEventGenerator.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryCreator.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/overdueevent/OverdueEventCreator.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryCreator.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/overdueevent/OverdueEventWithCreditInvocationHistoryProducer.scala" />
+        <option value="$PROJECT_DIR$/src/main/resources/avro/protocol.avsc" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/JsonProducer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/json/JsonProducer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/country/JsonProducer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/country/CountryCreator.scala" />
+        <option value="$PROJECT_DIR$/src/main/java/com/datacloud/report/dataflow/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/avro/protocol.avsc" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/country/CountryGenerator.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/KafkaSchemaRegistryExample.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/datacloud/report/dataflow/reflection/KafkaSchemaRegistryExample.java" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/reflection/FuweiOutputCreator.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/country/CountryProducer.scala" />
+        <option value="$PROJECT_DIR$/src/main/java/com/datacloud/report/dataflow/reflection/FuweiOutput.java" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/reflection/FuweiOutputProducer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryGenerator.scala" />
+        <option value="$PROJECT_DIR$/src/main/java/com/datacloud/report/dataflow/market/MarketData.java" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/MarketDataGenerator.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/MarketDecisionResultCreator.scala" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryProducer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/PersonalInfo.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/MarketDecisionResult.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/GainActivityRightEvent.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/GainActivityRightEventCreator.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/GainActivityRightEventProducer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/GainActivityRightEventGenerator.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/MarketDecisionResultGenerator.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/overdueevent/OverdueEventProducer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryProducer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/package.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/MarketDecisionResultProducer.scala" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="877" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Android</id>
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Accessibility</id>
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Correctness</id>
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Correctness &gt; Messages</id>
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Internationalization</id>
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Performance</id>
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Security</id>
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Usability</id>
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Usability &gt; Icons</id>
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Usability &gt; Typography</id>
+          </State>
+          <State>
+            <id>Android Lint for Kotlin</id>
+          </State>
+          <State>
+            <id>CDI(Contexts and Dependency Injection) issues</id>
+          </State>
+          <State>
+            <id>CodeSpring CoreSpring</id>
+          </State>
+          <State>
+            <id>Concurrency annotation issuesJava</id>
+          </State>
+          <State>
+            <id>Data flow issuesJava</id>
+          </State>
+          <State>
+            <id>Encapsulation issuesJava</id>
+          </State>
+          <State>
+            <id>GeneralJavaScript</id>
+          </State>
+          <State>
+            <id>Groovy</id>
+          </State>
+          <State>
+            <id>Initialization issuesJava</id>
+          </State>
+          <State>
+            <id>Java</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>RESTful Web Service</id>
+          </State>
+          <State>
+            <id>Serialization issuesJava</id>
+          </State>
+          <State>
+            <id>Spring</id>
+          </State>
+          <State>
+            <id>Spring AOPSpring</id>
+          </State>
+          <State>
+            <id>Spring CoreSpring</id>
+          </State>
+          <State>
+            <id>Threading issuesGroovy</id>
+          </State>
+          <State>
+            <id>Threading issuesJava</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Akka</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="dataflow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dataflow" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataflow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dataflow" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataflow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dataflow" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataflow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dataflow" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="avro" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataflow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dataflow" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataflow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dataflow" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dataflow" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataflow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dataflow" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataflow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dataflow" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="dataflow" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataflow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dataflow" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="dataflow" type="462c0819:PsiDirectoryNode" />
+              <item name="creditinvocationhistory" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dataflow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dataflow" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="dataflow" type="462c0819:PsiDirectoryNode" />
+              <item name="market" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.datacloud.report.dataflow.reflection" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.MarketDecisionResultProducer">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration name="CreditInvocationHistoryProducer" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.datacloud.report.dataflow.creditinvocationhistory.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.datacloud.report.dataflow.creditinvocationhistory.CreditInvocationHistoryProducer" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="dataflow" />
+      <envs />
+    </configuration>
+    <configuration name="GainActivityRightEventCreator" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.datacloud.report.dataflow.market.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.datacloud.report.dataflow.market.GainActivityRightEventCreator" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="dataflow" />
+      <envs />
+    </configuration>
+    <configuration name="MarketDecisionResultProducer" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.datacloud.report.dataflow.market.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.datacloud.report.dataflow.market.MarketDecisionResultProducer" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="dataflow" />
+      <envs />
+    </configuration>
+    <configuration name="OverdueEventProducer" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.datacloud.report.dataflow.overdueevent.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.datacloud.report.dataflow.overdueevent.OverdueEventProducer" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="dataflow" />
+      <envs />
+    </configuration>
+    <configuration name="RiskInvocationHistoryProducer" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.datacloud.report.dataflow.riskinvocationhistory.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.datacloud.report.dataflow.riskinvocationhistory.RiskInvocationHistoryProducer" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="dataflow" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Application.RiskInvocationHistoryProducer" />
+      <item index="1" class="java.lang.String" itemvalue="Application.OverdueEventProducer" />
+      <item index="2" class="java.lang.String" itemvalue="Application.MarketDecisionResultProducer" />
+      <item index="3" class="java.lang.String" itemvalue="Application.GainActivityRightEventCreator" />
+      <item index="4" class="java.lang.String" itemvalue="Application.CreditInvocationHistoryProducer" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.MarketDecisionResultProducer" />
+        <item index="1" class="java.lang.String" itemvalue="Application.OverdueEventProducer" />
+        <item index="2" class="java.lang.String" itemvalue="Application.CreditInvocationHistoryProducer" />
+        <item index="3" class="java.lang.String" itemvalue="Application.GainActivityRightEventCreator" />
+        <item index="4" class="java.lang.String" itemvalue="Application.RiskInvocationHistoryProducer" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="modificationStamps">
+      <map>
+        <entry key="$USER_HOME$/book/SourceCode/BuildingApplicationswithScala_Code/Chapter03/Chap3/ReactiveWebStore" value="1464423836000" />
+        <entry key="$USER_HOME$/book/SourceCode/BuildingApplicationswithScala_Code/Chapter04/chap4/ReactiveWebStore" value="1466842516000" />
+        <entry key="$USER_HOME$/book/SourceCode/BuildingApplicationswithScala_Code/Chapter04/chap4/ng-microservice" value="1467045872000" />
+        <entry key="$USER_HOME$/book/SourceCode/BuildingApplicationswithScala_Code/Chapter05/chap5/ReactiveWebStore" value="1468482766000" />
+        <entry key="$USER_HOME$/book/SourceCode/BuildingApplicationswithScala_Code/Chapter05/chap5/ng-microservice" value="1468482760000" />
+        <entry key="$USER_HOME$/book/SourceCode/BuildingApplicationswithScala_Code/Chapter06/ReactiveWebStore" value="1470525084000" />
+        <entry key="$USER_HOME$/book/SourceCode/BuildingApplicationswithScala_Code/Chapter07/chap7/ReactiveWebStore" value="1471446228000" />
+        <entry key="$USER_HOME$/book/SourceCode/BuildingApplicationswithScala_Code/Chapter08/Chap8/ReactiveWebStore" value="1472313934000" />
+        <entry key="$USER_HOME$/book/SourceCode/BuildingApplicationswithScala_Code/Chapter09/ReactiveWebStore" value="1485251470000" />
+        <entry key="$USER_HOME$/book/SourceCode/BuildingApplicationswithScala_Code/Chapter09/rest-client" value="1473517058000" />
+        <entry key="$USER_HOME$/book/SourceCode/BuildingApplicationswithScala_Code/Chapter10/ReactiveWebStore" value="1473827222000" />
+        <entry key="$USER_HOME$/book/SourceCode/LearningScalaWebDevelopment_video" value="1460769946000" />
+        <entry key="$USER_HOME$/book/SourceCode/akka-in-action-master/chapter-channels" value="1472689300000" />
+        <entry key="$USER_HOME$/book/SourceCode/akka-in-action-master/chapter-cluster" value="1472689300000" />
+        <entry key="$USER_HOME$/book/SourceCode/akka-in-action-master/chapter-conf-deploy" value="1472689300000" />
+        <entry key="$USER_HOME$/book/SourceCode/akka-in-action-master/chapter-fault-tolerance" value="1472689300000" />
+        <entry key="$USER_HOME$/book/SourceCode/akka-in-action-master/chapter-futures" value="1472689300000" />
+        <entry key="$USER_HOME$/book/SourceCode/akka-in-action-master/chapter-perf" value="1472689300000" />
+        <entry key="$USER_HOME$/book/SourceCode/akka-in-action-master/chapter-remoting" value="1472689300000" />
+        <entry key="$USER_HOME$/book/SourceCode/akka-in-action-master/chapter-routing" value="1472689300000" />
+        <entry key="$USER_HOME$/book/SourceCode/akka-in-action-master/chapter-state" value="1472689300000" />
+        <entry key="$USER_HOME$/book/SourceCode/akka-in-action-master/chapter-stream" value="1472689300000" />
+        <entry key="$USER_HOME$/book/SourceCode/akka-in-action-master/chapter-structure" value="1472689300000" />
+        <entry key="$USER_HOME$/book/SourceCode/akka-in-action-master/chapter-testdriven" value="1472689300000" />
+        <entry key="$USER_HOME$/book/SourceCode/akka-in-action-master/chapter-up-and-running" value="1472689300000" />
+        <entry key="$USER_HOME$/book/SourceCode/spray-book-catalog-master" value="1460769946000" />
+        <entry key="$USER_HOME$/course/scala-spark-big-data/example" value="1464667244000" />
+        <entry key="$USER_HOME$/course/scala-spark-big-data/stackoverflow" value="1489475504000" />
+        <entry key="$USER_HOME$/course/scala-spark-big-data/timeusage" value="1490252832000" />
+        <entry key="$USER_HOME$/course/scala-spark-big-data/wikipedia" value="1476849020000" />
+        <entry key="$USER_HOME$/finatra-quill-slick-mysql-basics" value="1479094464000" />
+        <entry key="$USER_HOME$/github/ETL" value="1478348311000" />
+        <entry key="$USER_HOME$/github/Kafka-Avro-scala" value="1479522564000" />
+        <entry key="$USER_HOME$/github/MachineLearningWithSpark" value="1479886325000" />
+        <entry key="$USER_HOME$/github/SBTScalaMultiproject" value="1480136309000" />
+        <entry key="$USER_HOME$/github/activator-play-slick-angularjs" value="1480469790000" />
+        <entry key="$USER_HOME$/github/activator-reactive-kafka-scala" value="1480601010000" />
+        <entry key="$USER_HOME$/github/activator-squbs-scala" value="1485311916000" />
+        <entry key="$USER_HOME$/github/akka-cluster-demo" value="1488896123000" />
+        <entry key="$USER_HOME$/github/akka-in-action" value="23647490330000" />
+        <entry key="$USER_HOME$/github/akka-in-action/chapter-fault-tolerance" value="1477904220000" />
+        <entry key="$USER_HOME$/github/akka-in-action/chapter-testdriven" value="1477904221000" />
+        <entry key="$USER_HOME$/github/akka-in-action/chapter-up-and-running" value="1477904221000" />
+        <entry key="$USER_HOME$/github/akka-kafka" value="1481088269000" />
+        <entry key="$USER_HOME$/github/akka-stream-kafka-template.g8/myakkastreamkafkaproject" value="1490016606000" />
+        <entry key="$USER_HOME$/github/akka-streams-example" value="1481512768000" />
+        <entry key="$USER_HOME$/github/bootzooka" value="1478135851000" />
+        <entry key="$USER_HOME$/github/drools-scala-example" value="1479622951000" />
+        <entry key="$USER_HOME$/github/effective-akka-http-example" value="1484812412000" />
+        <entry key="$USER_HOME$/github/fetch" value="1486958366000" />
+        <entry key="$USER_HOME$/github/finagle-example-name-finder" value="1481289923000" />
+        <entry key="$USER_HOME$/github/finagle-thrift-server-quickstart" value="1479871415000" />
+        <entry key="$USER_HOME$/github/finatra-quill-slick-mysql-basics" value="1479094464000" />
+        <entry key="$USER_HOME$/github/generic-akka-http-rest" value="1477499369000" />
+        <entry key="$USER_HOME$/github/machine-learning-samples/targeted-marketing-scala" value="1477451362000" />
+        <entry key="$USER_HOME$/github/modelmatrix" value="5921652292000" />
+        <entry key="$USER_HOME$/github/play-isolated-slick" value="5921950904000" />
+        <entry key="$USER_HOME$/github/play-ng2-webpack2" value="1478070366000" />
+        <entry key="$USER_HOME$/github/play-quill-async" value="1479173358000" />
+        <entry key="$USER_HOME$/github/play-quill-jdbc" value="1479193188000" />
+        <entry key="$USER_HOME$/github/play-slick-codegen-flyway-seed" value="1480469833000" />
+        <entry key="$USER_HOME$/github/play-slick-guice-angular-reactive" value="1477980273000" />
+        <entry key="$USER_HOME$/github/play-slick-rest" value="1480469369000" />
+        <entry key="$USER_HOME$/github/play-slick3-example" value="1480137947000" />
+        <entry key="$USER_HOME$/github/play-swagger-service" value="1480215563000" />
+        <entry key="$USER_HOME$/github/scala-test-driven-development/helloworld" value="1484537169000" />
+        <entry key="$USER_HOME$/github/scavro" value="1481856108000" />
+        <entry key="$USER_HOME$/github/slick-course/workspace" value="1480520399000" />
+        <entry key="$USER_HOME$/github/spark-csv" value="1482811496000" />
+        <entry key="$USER_HOME$/github/spark-graphx-phoenix" value="1478489570000" />
+        <entry key="$USER_HOME$/github/spark-mllib-scala-play" value="1480156817000" />
+        <entry key="$USER_HOME$/github/spark-tutorial" value="1479572034000" />
+        <entry key="$PROJECT_DIR$/../blogapp/server" value="1480471372000" />
+        <entry key="$PROJECT_DIR$/../essential-slick-code/chapter-01" value="1480511097000" />
+        <entry key="$PROJECT_DIR$/../essential-slick-code/chapter-02" value="1480511097000" />
+        <entry key="$PROJECT_DIR$/../essential-slick-code/chapter-03" value="1480511097000" />
+        <entry key="$PROJECT_DIR$/../essential-slick-code/play-slick-example" value="1480511097000" />
+        <entry key="$PROJECT_DIR$/../etl" value="1478310210000" />
+        <entry key="$PROJECT_DIR$/../play-slick" value="1480488239000" />
+        <entry key="$PROJECT_DIR$/../training-console-api" value="1479103644000" />
+        <entry key="$PROJECT_DIR$/../training-console-service" value="1479195415000" />
+        <entry key="$USER_HOME$/play-ng2-webpack2" value="1478070366000" />
+        <entry key="$USER_HOME$/quill-async-akka-http" value="1478340803000" />
+        <entry key="$USER_HOME$/work/mysql-looter" value="1471487490000" />
+        <entry key="$USER_HOME$/work/ssp-s32r" value="1475116645000" />
+        <entry key="$USER_HOME$/workspace/ReactiveWebStore" value="1484574217000" />
+        <entry key="$USER_HOME$/workspace/hello-world-sbt" value="1484572206000" />
+      </map>
+    </option>
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$USER_HOME$/github/FlinkForward2017" value="PREVIEW" />
+        <entry key="$USER_HOME$/github/activator-akka-stream-scala" value="PREVIEW" />
+        <entry key="$USER_HOME$/github/flight_delay_akka_streams" value="PREVIEW" />
+        <entry key="$USER_HOME$/github/flink-examples" value="PREVIEW" />
+        <entry key="$USER_HOME$/github/kafka-with-akka-streams-kafka-streams-tutorial" value="PREVIEW" />
+        <entry key="$USER_HOME$/github/quiz-management-service/akka-http-crud" value="PREVIEW" />
+        <entry key="$USER_HOME$/github/scala-samples/akka-http" value="PREVIEW" />
+        <entry key="$USER_HOME$/github/simple-scala-rest-example" value="PREVIEW" />
+        <entry key="$USER_HOME$/github/slick-akka-http" value="PREVIEW" />
+        <entry key="$USER_HOME$/github/spark-avro-compactor" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f99fb74d-68c1-4930-b53c-dc16332504ed" name="Default" comment="" />
+      <created>1522643299788</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1522643299788</updated>
+      <workItem from="1522643301333" duration="4026000" />
+      <workItem from="1522719432135" duration="2294000" />
+      <workItem from="1522732556592" duration="5318000" />
+      <workItem from="1522805108752" duration="596000" />
+      <workItem from="1522830645482" duration="2120000" />
+      <workItem from="1523170904245" duration="5064000" />
+      <workItem from="1523252951336" duration="13148000" />
+      <workItem from="1523429556024" duration="13798000" />
+      <workItem from="1523680546664" duration="5651000" />
+      <workItem from="1523938023870" duration="1708000" />
+      <workItem from="1524016483244" duration="4007000" />
+      <workItem from="1524021154108" duration="11530000" />
+      <workItem from="1524121728631" duration="608000" />
+      <workItem from="1524187896017" duration="14824000" />
+      <workItem from="1524564263494" duration="29639000" />
+      <workItem from="1524795914213" duration="606000" />
+      <workItem from="1524895217498" duration="1754000" />
+      <workItem from="1524963915280" duration="11379000" />
+      <workItem from="1525224344880" duration="4141000" />
+      <workItem from="1525437688820" duration="17481000" />
+      <workItem from="1525679335056" duration="7159000" />
+      <workItem from="1525750237418" duration="14823000" />
+      <workItem from="1525834893810" duration="3267000" />
+      <workItem from="1525914874939" duration="17933000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="192874000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19842313" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="TCPMON" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6281209" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20499343" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29322767" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37976348" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37976348" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19842313" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="TCPMON" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6281209" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20499343" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29322767" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/country/CountryCreator.scala</url>
+          <line>18</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/country/CountryCreator.scala</url>
+          <line>14</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/MarketDecisionResultProducer.scala</url>
+          <line>42</line>
+          <properties />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="22" />
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="avroSchema" language="Scala" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>avroSchema</expression-string>
+        <language-id>Scala</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/overdueevent/OverdueEventWithCreditInvocationHistoryProducer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="26" lean-forward="false" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/confluent/kafka-avro-serializer/4.0.0/kafka-avro-serializer-4.0.0.jar!/io/confluent/kafka/serializers/AbstractKafkaAvroSerDeConfig.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/confluent/kafka-avro-serializer/4.0.0/kafka-avro-serializer-4.0.0.jar!/io/confluent/kafka/serializers/KafkaAvroSerializerConfig.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="10" column="57" lean-forward="false" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ksql/kafka-connect-mongo.txt" />
+    <entry file="jar://$MAVEN_REPOSITORY$/com/datacloud/polaris/polaris-protocol/3.0.2-SNAPSHOT/polaris-protocol-3.0.2-SNAPSHOT.jar!/com/datacloud/polaris/protocol/avro/RiskInvocationHistory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ksql/dataflow-schema.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/datacloud/report/dataflow/protocol/avro/China.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/JsonProducer.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/datacloud/report/dataflow/protocol/avro/City.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/datacloud/report/dataflow/protocol/avro/Country.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/scalatest/scalatest_2.11/2.2.6/scalatest_2.11-2.2.6.jar!/org/scalatest/prop/GeneratorDrivenPropertyChecks.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/datacloud/report/dataflow/protocol/avro/Province.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="279" column="72" lean-forward="false" selection-start-line="279" selection-start-column="72" selection-end-line="279" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/datacloud/report/dataflow/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/country/CountryGenerator.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="24" column="38" lean-forward="true" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/time/LocalDateTime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-677">
+          <caret line="134" column="19" lean-forward="false" selection-start-line="134" selection-start-column="19" selection-end-line="134" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/country/CountryCreator.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="19" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/datacloud/report/dataflow/reflection/KafkaSchemaRegistryExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="106" column="18" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="116" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/reflection/FuweiOutputCreator.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/lang/System.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="352" column="30" lean-forward="false" selection-start-line="352" selection-start-column="30" selection-end-line="352" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="110" column="17" lean-forward="false" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/country/CountryProducer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="17" column="38" lean-forward="false" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/datacloud/report/dataflow/reflection/FuweiOutput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5104">
+          <caret line="292" column="79" lean-forward="false" selection-start-line="292" selection-start-column="79" selection-end-line="292" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1782">
+          <caret line="87" column="88" lean-forward="false" selection-start-line="87" selection-start-column="88" selection-end-line="87" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/reflection/FuweiOutputProducer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/datacloud/polaris/polaris-protocol/3.0.2-SNAPSHOT/polaris-protocol-3.0.2-20180420.075000-23.jar!/com/datacloud/polaris/protocol/avro/CreditDetail.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-932">
+          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/overdueevent/OverdueEventCreator.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="9" column="66" lean-forward="true" selection-start-line="9" selection-start-column="66" selection-end-line="9" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/datacloud/polaris/polaris-protocol/3.0.2-SNAPSHOT/polaris-protocol-3.0.2-20180420.075000-23.jar!/com/datacloud/polaris/protocol/avro/OverdueEvent.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="65" column="31" lean-forward="false" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/datacloud/polaris/polaris-protocol/3.0.2-SNAPSHOT/polaris-protocol-3.0.2-20180420.075000-23.jar!/com/datacloud/polaris/protocol/avro/CreditInvocationHistory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="69" column="36" lean-forward="false" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/datacloud/polaris/polaris-protocol/3.0.2-SNAPSHOT/polaris-protocol-3.0.2-SNAPSHOT.jar!/com/datacloud/polaris/protocol/avro/CreditInvocationHistory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-151">
+          <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/overdueevent/OverdueEventGenerator.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="26" column="50" lean-forward="false" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/datacloud/report/dataflow/market/MarketData.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryGenerator.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-966">
+          <caret line="10" column="70" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryCreator.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="20" column="1" lean-forward="true" selection-start-line="6" selection-start-column="38" selection-end-line="20" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/scalacheck/scalacheck_2.11/1.12.5/scalacheck_2.11-1.12.5-sources.jar!/org/scalacheck/Gen.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9636">
+          <caret line="449" column="6" lean-forward="false" selection-start-line="449" selection-start-column="6" selection-end-line="449" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="21" column="44" lean-forward="false" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryProducer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="29" column="31" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/MarketDecisionResultCreator.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="5" selection-start-column="35" selection-end-line="19" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/GainActivityRightEvent.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="62" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="10" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/MarketDecisionResult.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="19" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="15" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/PersonalInfo.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/GainActivityRightEventGenerator.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/GainActivityRightEventProducer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="e#46#73#0" expanded="false" />
+            <element signature="e#398#455#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/GainActivityRightEventCreator.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="14" column="34" lean-forward="false" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+          <folding>
+            <element signature="e#46#96#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/MarketDecisionResultGenerator.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/package.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="54" column="23" lean-forward="false" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryProducer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="24" column="26" lean-forward="false" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+          <folding>
+            <element signature="e#63#90#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/overdueevent/OverdueEventProducer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/avro/protocol.avsc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/MarketDecisionResultProducer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>scala-sdk-2.11.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
