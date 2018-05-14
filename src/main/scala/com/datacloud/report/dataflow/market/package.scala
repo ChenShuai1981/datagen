@@ -8,7 +8,7 @@ package object market {
                                   marketProcessId: String, // 营销进件流程所颁发的ID
                                   marketActivityId: String, // 营销活动ID
                                   decisionStrategyId: String, // 营销决策ID
-                                  marketContentTemplateId: String, // 营销内容模板ID
+                                  strategyDeployId: String, // 策略部署ID
                                   creditCardNo: String, // 信用卡号
                                   cardOwnerIndivID: String, // 持卡客户身份证号
                                   cardOwnerName: String, // 持卡客户姓名

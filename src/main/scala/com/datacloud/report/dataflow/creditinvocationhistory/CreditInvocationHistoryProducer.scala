@@ -11,7 +11,7 @@ import org.apache.kafka.common.serialization.StringSerializer
 
 object CreditInvocationHistoryProducer extends App {
 
-  val topic = "uat_CREDIT_INVOCATION_HISTORY"
+  val topic = "sit_CREDIT_INVOCATION_HISTORY"
 
   val props = new Properties
 
@@ -21,14 +21,14 @@ object CreditInvocationHistoryProducer extends App {
   props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, classOf[StringSerializer].getName)
   props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, classOf[KafkaAvroSerializer].getName)
   props.put(ProducerConfig.ACKS_CONFIG, "all")
-  props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "10.201.9.76:9092")
-  props.put("schema.registry.url", "http://10.201.9.76:8081")
+//  props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "10.201.9.76:9092")
+//  props.put("schema.registry.url", "http://10.201.9.76:8081")
 
 //  props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092")
 //  props.put("schema.registry.url", "http://localhost:8081")
 
-//  props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "ambari-agent4.sit.geerong.com:9092")
-//  props.put("schema.registry.url", "http://ambari-agent4.sit.geerong.com:8081")
+  props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "ambari-agent4.sit.geerong.com:9092")
+  props.put("schema.registry.url", "http://ambari-agent4.sit.geerong.com:8081")
 
   val producer: Producer[String, CreditInvocationHistory] = new KafkaProducer[String, CreditInvocationHistory](props)
   //  val max = Integer.MAX_VALUE

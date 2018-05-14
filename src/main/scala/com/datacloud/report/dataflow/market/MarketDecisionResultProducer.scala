@@ -8,7 +8,6 @@ import org.apache.kafka.common.serialization.StringSerializer
 
 object MarketDecisionResultProducer extends App {
 
-  def main(args: Array[String]) = {
     val topic = "dev_MARKET_DECISION_RESULT"
 
     val props = new Properties
@@ -20,10 +19,8 @@ object MarketDecisionResultProducer extends App {
     props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, classOf[StringSerializer].getName)
     props.put(ProducerConfig.ACKS_CONFIG, "all")
 
-    //  props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092")
-
+//      props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092")
     props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "ambari-agent4.sit.geerong.com:9092")
-    props.put("schema.registry.url", "http://ambari-agent4.sit.geerong.com:8081")
 
     val producer: Producer[String, String] = new KafkaProducer[String, String](props)
     val interval = 50
@@ -38,6 +35,5 @@ object MarketDecisionResultProducer extends App {
 
     producer.flush()
     producer.close()
-  }
 
 }

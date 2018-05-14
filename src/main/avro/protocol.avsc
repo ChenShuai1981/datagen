@@ -30,5 +30,18 @@
         {"name": "ts", "type": ["null", "long"], "default": null},
         {"name": "provinces", "type": {"type": "array", "items": "Province"}}
      ]
+    },
+
+    {
+     "namespace": "com.datacloud.report.dataflow.protocol.avro",
+     "type": "record",
+     "name": "Person",
+     "fields": [
+        {"name": "name", "type": "string"},
+        {"name": "date", "type": "int", "logicalType": "date"},
+        {"name": "timeMillis", "type": "int", "logicalType": "time-millis"},
+        {"name": "timestampMillis", "type": "long", "logicalType": "timestamp-millis"},
+        {"name": "duration", "type": { "type": "fixed", "name": "PersonDuration","size": 12 }, "logicalType": "duration"}
+     ]
     }
 ]
