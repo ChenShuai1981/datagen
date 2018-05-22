@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.datacloud.report</groupId>
-  <artifactId>dataflow</artifactId>
+  <groupId>com.datacloud</groupId>
+  <artifactId>datagen</artifactId>
   <version>1.0-SNAPSHOT</version>
 
   <properties>
@@ -117,26 +117,26 @@
           <skipTests>true</skipTests>
         </configuration>
       </plugin>
-      <plugin>
-        <groupId>org.apache.avro</groupId>
-        <artifactId>avro-maven-plugin</artifactId>
-        <version>1.8.1</version>
-        <configuration>
-          <stringType>String</stringType>
-        </configuration>
-        <executions>
-          <execution>
-            <phase>generate-sources</phase>
-            <goals>
-              <goal>schema</goal>
-            </goals>
-            <configuration>
-              <sourceDirectory>${project.basedir}/src/main/avro/</sourceDirectory>
-              <outputDirectory>${project.basedir}/src/main/java/</outputDirectory>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
+      <!--<plugin>-->
+        <!--<groupId>org.apache.avro</groupId>-->
+        <!--<artifactId>avro-maven-plugin</artifactId>-->
+        <!--<version>1.8.1</version>-->
+        <!--<configuration>-->
+          <!--<stringType>String</stringType>-->
+        <!--</configuration>-->
+        <!--<executions>-->
+          <!--<execution>-->
+            <!--<phase>generate-sources</phase>-->
+            <!--<goals>-->
+              <!--<goal>schema</goal>-->
+            <!--</goals>-->
+            <!--<configuration>-->
+              <!--<sourceDirectory>${project.basedir}/src/main/avro/</sourceDirectory>-->
+              <!--<outputDirectory>${project.basedir}/src/main/java/</outputDirectory>-->
+            <!--</configuration>-->
+          <!--</execution>-->
+        <!--</executions>-->
+      <!--</plugin>-->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-assembly-plugin</artifactId>
@@ -147,12 +147,11 @@
             <descriptorRef>jar-with-dependencies</descriptorRef>
           </descriptorRefs>
           <!-- MainClass in mainfest make a executable jar -->
-          <!--<archive>-->
-          <!--<manifest>-->
-          <!--<mainClass>com.mkyong.core.utils.App</mainClass>-->
-          <!--</manifest>-->
-          <!--</archive>-->
-
+          <archive>
+            <manifest>
+              <mainClass>com.datacloud.datagen.Boot</mainClass>
+            </manifest>
+          </archive>
         </configuration>
         <executions>
           <execution>
@@ -166,7 +165,7 @@
         </executions>
       </plugin>
     </plugins>
-    <finalName>dataflow</finalName>
+    <finalName>datagen</finalName>
   </build>
 
   <repositories>

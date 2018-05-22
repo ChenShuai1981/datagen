@@ -1,84 +1,363 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3ae6d58a-0857-4952-8190-db875b80dddc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/AvroDataProducer.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/BootCreditInvocationHistory.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/BootOverdueEvent.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/BootRiskInvocationHistory.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/DataCreator.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/DataGenerator.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/DataWithTime.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/JsonDataProducer.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/UnionPayTrx.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/UnionPayTrxProducer.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/person/PersonConsumer.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/person/PersonCreator.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/person/PersonGenerator.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/person/PersonProducer.scala" afterDir="false" />
+    <list default="true" id="82f032db-bdc8-42c9-8e4b-b8c083cb1606" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/AvroDataProducer.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/Boot.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/DataProducer.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/JsonDataProducer.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/creditinvocationhistory/CreditInvocationHistoryProducer.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/feedback/LoanEndEventProducer.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/feedback/OverdueEventProducer.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/feedback/PaymentEventProducer.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/feedback/package.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/market/GainActivityRightEventProducer.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/market/MarketDecisionResultProducer.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/market/UnionPayTrxProducer.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/riskinvocationhistory/RiskInvocationHistoryProducer.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/util/DateTimeUtil.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_101tec_zkclient_0_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_datacloud_polaris_polaris_protocol_3_0_0_SNAPSHOT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_paranamer_2_9_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_scala_2_11_2_9_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_thoughtworks_paranamer_paranamer_2_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_confluent_common_config_4_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_confluent_common_utils_4_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_confluent_kafka_avro_serializer_4_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_confluent_kafka_schema_registry_client_4_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_3_10_5_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jline_jline_0_9_94.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_9_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_16.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_avro_avro_1_8_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_compress_1_8_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_kafka_clients_1_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_3_4_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_13.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_9_13.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_lz4_lz4_java_1_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_16_18.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_modules_scala_xml_2_11_1_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_scala_library_2_11_8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_scala_reflect_2_11_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_sbt_test_interface_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_scalacheck_scalacheck_2_11_1_12_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_scalatest_scalatest_2_11_2_2_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_6_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_tukaani_xz_1_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xerial_snappy_snappy_java_1_1_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/thriftCompiler.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataflow.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/avro/protocol.avsc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/avro/protocol.avsc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryProducer.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryProducer.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/MarketDecisionResultProducer.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/MarketDecisionResultProducer.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/package.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/package.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/overdueevent/OverdueEventProducer.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/overdueevent/OverdueEventProducer.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/KylinClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/KylinClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryProducer$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryProducer$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/MarketDecisionResultProducer$$anonfun$main$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/MarketDecisionResultProducer$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/MarketDecisionResultProducer$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/package$MarketDecisionResult$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/package$MarketDecisionResult$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/package$MarketDecisionResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/package$MarketDecisionResult.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/package.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/package.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/overdueevent/OverdueEventProducer$$anonfun$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/overdueevent/OverdueEventProducer$$anonfun$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/overdueevent/OverdueEventProducer$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/overdueevent/OverdueEventProducer$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/protocol/avro/City$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/protocol/avro/City$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/protocol/avro/City.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/protocol/avro/City.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/protocol/avro/Country$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/protocol/avro/Country$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/protocol/avro/Country.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/protocol/avro/Country.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/protocol/avro/Province$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/protocol/avro/Province$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/protocol/avro/Province.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/protocol/avro/Province.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutput.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutput.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/avro/protocol.avsc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/datacloud/report/dataflow/KylinClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/datacloud/report/dataflow/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/datacloud/report/dataflow/protocol/avro/City.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/datacloud/report/dataflow/protocol/avro/Country.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/datacloud/report/dataflow/protocol/avro/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/datacloud/report/dataflow/protocol/avro/PersonDuration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/datacloud/report/dataflow/protocol/avro/Province.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/datacloud/report/dataflow/reflection/FuweiOutput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/datacloud/report/dataflow/reflection/KafkaSchemaRegistryExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/AvroDataProducer.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/BootCreditInvocationHistory.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/BootOverdueEvent.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/BootRiskInvocationHistory.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/DataCreator.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/DataGenerator.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/DataWithTime.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/JsonDataProducer.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/country/CountryCreator.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/country/CountryGenerator.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/country/CountryProducer.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryCreator.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryGenerator.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryProducer.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/GainActivityRightEventCreator.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/GainActivityRightEventGenerator.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/GainActivityRightEventProducer.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/MarketDecisionResultCreator.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/MarketDecisionResultGenerator.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/MarketDecisionResultProducer.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/UnionPayTrx.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/UnionPayTrxProducer.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/package.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/market/package.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/overdueevent/OverdueEventCreator.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/overdueevent/OverdueEventGenerator.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/overdueevent/OverdueEventProducer.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/overdueevent/OverdueEventWithCreditInvocationHistoryProducer.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/person/PersonConsumer.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/person/PersonCreator.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/person/PersonGenerator.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/person/PersonProducer.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/reflection/FuweiOutputCreator.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/reflection/FuweiOutputProducer.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryCreator.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryProducer.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/util/JsonUtil.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/util/JsonUtil.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/KylinClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/country/CountryCreator$$anonfun$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/country/CountryCreator$$anonfun$getCountries$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/country/CountryCreator$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/country/CountryCreator$delayedInit$body.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/country/CountryCreator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/country/CountryGenerator$$anonfun$com$datacloud$report$dataflow$country$CountryGenerator$$genCity$1$$anonfun$apply$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/country/CountryGenerator$$anonfun$com$datacloud$report$dataflow$country$CountryGenerator$$genCity$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/country/CountryGenerator$$anonfun$com$datacloud$report$dataflow$country$CountryGenerator$$genProvince$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$apply$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/country/CountryGenerator$$anonfun$com$datacloud$report$dataflow$country$CountryGenerator$$genProvince$1$$anonfun$apply$2$$anonfun$apply$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/country/CountryGenerator$$anonfun$com$datacloud$report$dataflow$country$CountryGenerator$$genProvince$1$$anonfun$apply$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/country/CountryGenerator$$anonfun$com$datacloud$report$dataflow$country$CountryGenerator$$genProvince$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/country/CountryGenerator$$anonfun$genCountry$1$$anonfun$apply$5$$anonfun$apply$6$$anonfun$apply$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/country/CountryGenerator$$anonfun$genCountry$1$$anonfun$apply$5$$anonfun$apply$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/country/CountryGenerator$$anonfun$genCountry$1$$anonfun$apply$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/country/CountryGenerator$$anonfun$genCountry$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/country/CountryGenerator$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/country/CountryGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/country/CountryProducer$$anonfun$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/country/CountryProducer$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/country/CountryProducer$delayedInit$body.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/country/CountryProducer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryCreator$$anonfun$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryCreator$$anonfun$getCreditInvocationHistories$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryCreator$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryCreator$delayedInit$body.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryCreator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryGenerator$$anonfun$genCreditInvocation$$$$2bf19bb7f7a82b11e42d3c1d79e5afb1$$$$pply$10$$anonfun$apply$11$$anonfun$apply$12$$anonfun$apply$13$$anonfun$apply$14$$anonfun$apply$15$$anonfun$apply$16$$anonfun$apply$17.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryGenerator$$anonfun$genCreditInvocation$$$$2bf19bb7f7a82b11e42d3c1d79e5afb1$$$$pply$10$$anonfun$apply$11$$anonfun$apply$12$$anonfun$apply$13$$anonfun$apply$14$$anonfun$apply$15$$anonfun$apply$16.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryGenerator$$anonfun$genCreditInvocation$$$$2bf19bb7f7a82b11e42d3c1d79e5afb1$$$$pply$10$$anonfun$apply$11$$anonfun$apply$12$$anonfun$apply$13$$anonfun$apply$14$$anonfun$apply$15.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryGenerator$$anonfun$genCreditInvocation$$$$2bf19bb7f7a82b11e42d3c1d79e5afb1$$$$pply$10$$anonfun$apply$11$$anonfun$apply$12$$anonfun$apply$13$$anonfun$apply$14.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryGenerator$$anonfun$genCreditInvocation$$$$2bf19bb7f7a82b11e42d3c1d79e5afb1$$$$pply$10$$anonfun$apply$11$$anonfun$apply$12$$anonfun$apply$13.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryGenerator$$anonfun$genCreditInvocation$$$$4acf69247bc4181af5cc9672a0d06a9c$$$$pply$15$$anonfun$apply$16$$anonfun$apply$17$$anonfun$apply$18$$anonfun$apply$19.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryGenerator$$anonfun$genCreditInvocation$$$$4acf69247bc4181af5cc9672a0d06a9c$$$$pply$15$$anonfun$apply$16$$anonfun$apply$17$$anonfun$apply$18.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryGenerator$$anonfun$genCreditInvocationHistory$1$$anonfun$apply$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryGenerator$$anonfun$genCreditInvocationHistory$1$$anonfun$apply$3$$anonfun$apply$4$$anonfun$apply$5$$anonfun$apply$6$$anonfun$apply$7$$anonfun$apply$8$$anonfun$apply$9$$anonfun$apply$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryGenerator$$anonfun$genCreditInvocationHistory$1$$anonfun$apply$3$$anonfun$apply$4$$anonfun$apply$5$$anonfun$apply$6$$anonfun$apply$7$$anonfun$apply$8$$anonfun$apply$9$$anonfun$apply$10$$anonfun$apply$11$$anonfun$apply$12.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryGenerator$$anonfun$genCreditInvocationHistory$1$$anonfun$apply$3$$anonfun$apply$4$$anonfun$apply$5$$anonfun$apply$6$$anonfun$apply$7$$anonfun$apply$8$$anonfun$apply$9$$anonfun$apply$10$$anonfun$apply$11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryGenerator$$anonfun$genCreditInvocationHistory$1$$anonfun$apply$3$$anonfun$apply$4$$anonfun$apply$5$$anonfun$apply$6$$anonfun$apply$7$$anonfun$apply$8$$anonfun$apply$9$$anonfun$apply$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryGenerator$$anonfun$genCreditInvocationHistory$1$$anonfun$apply$3$$anonfun$apply$4$$anonfun$apply$5$$anonfun$apply$6$$anonfun$apply$7$$anonfun$apply$8$$anonfun$apply$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryGenerator$$anonfun$genCreditInvocationHistory$1$$anonfun$apply$3$$anonfun$apply$4$$anonfun$apply$5$$anonfun$apply$6$$anonfun$apply$7$$anonfun$apply$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryGenerator$$anonfun$genCreditInvocationHistory$1$$anonfun$apply$3$$anonfun$apply$4$$anonfun$apply$5$$anonfun$apply$6$$anonfun$apply$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryGenerator$$anonfun$genCreditInvocationHistory$1$$anonfun$apply$3$$anonfun$apply$4$$anonfun$apply$5$$anonfun$apply$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryGenerator$$anonfun$genCreditInvocationHistory$1$$anonfun$apply$3$$anonfun$apply$4$$anonfun$apply$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryGenerator$$anonfun$genCreditInvocationHistory$1$$anonfun$apply$3$$anonfun$apply$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryGenerator$$anonfun$genCreditInvocationHistory$1$$anonfun$apply$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryGenerator$$anonfun$genCreditInvocationHistory$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryGenerator$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryProducer$$anonfun$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryProducer$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryProducer$delayedInit$body.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryProducer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/GainActivityRightEventCreator$$anonfun$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/GainActivityRightEventCreator$$anonfun$getGainActivityRightEvents$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/GainActivityRightEventCreator$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/GainActivityRightEventCreator$delayedInit$body.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/GainActivityRightEventCreator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/GainActivityRightEventGenerator$$anonfun$genGainActivityRightEvent$1$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$apply$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/GainActivityRightEventGenerator$$anonfun$genGainActivityRightEvent$1$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$apply$5$$anonfun$apply$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/GainActivityRightEventGenerator$$anonfun$genGainActivityRightEvent$1$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$apply$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/GainActivityRightEventGenerator$$anonfun$genGainActivityRightEvent$1$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/GainActivityRightEventGenerator$$anonfun$genGainActivityRightEvent$1$$anonfun$apply$1$$anonfun$apply$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/GainActivityRightEventGenerator$$anonfun$genGainActivityRightEvent$1$$anonfun$apply$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/GainActivityRightEventGenerator$$anonfun$genGainActivityRightEvent$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/GainActivityRightEventGenerator$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/GainActivityRightEventGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/GainActivityRightEventProducer$$anonfun$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/GainActivityRightEventProducer$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/GainActivityRightEventProducer$delayedInit$body.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/GainActivityRightEventProducer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/MarketDecisionResultCreator$$anonfun$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/MarketDecisionResultCreator$$anonfun$getMarketDecisionResults$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/MarketDecisionResultCreator$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/MarketDecisionResultCreator$delayedInit$body.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/MarketDecisionResultCreator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/MarketDecisionResultGenerator$$anonfun$genMarketDecisionResult$1$$anonfun$apply$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/MarketDecisionResultGenerator$$anonfun$genMarketDecisionResult$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$apply$4$$anonfun$apply$5$$anonfun$apply$6$$anonfun$apply$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/MarketDecisionResultGenerator$$anonfun$genMarketDecisionResult$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$apply$4$$anonfun$apply$5$$anonfun$apply$6$$anonfun$apply$8$$anonfun$apply$9$$anonfun$apply$10$$anonfun$apply$11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/MarketDecisionResultGenerator$$anonfun$genMarketDecisionResult$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$apply$4$$anonfun$apply$5$$anonfun$apply$6$$anonfun$apply$8$$anonfun$apply$9$$anonfun$apply$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/MarketDecisionResultGenerator$$anonfun$genMarketDecisionResult$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$apply$4$$anonfun$apply$5$$anonfun$apply$6$$anonfun$apply$8$$anonfun$apply$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/MarketDecisionResultGenerator$$anonfun$genMarketDecisionResult$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$apply$4$$anonfun$apply$5$$anonfun$apply$6$$anonfun$apply$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/MarketDecisionResultGenerator$$anonfun$genMarketDecisionResult$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$apply$4$$anonfun$apply$5$$anonfun$apply$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/MarketDecisionResultGenerator$$anonfun$genMarketDecisionResult$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$apply$4$$anonfun$apply$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/MarketDecisionResultGenerator$$anonfun$genMarketDecisionResult$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$apply$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/MarketDecisionResultGenerator$$anonfun$genMarketDecisionResult$1$$anonfun$apply$2$$anonfun$apply$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/MarketDecisionResultGenerator$$anonfun$genMarketDecisionResult$1$$anonfun$apply$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/MarketDecisionResultGenerator$$anonfun$genMarketDecisionResult$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/MarketDecisionResultGenerator$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/MarketDecisionResultGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/MarketDecisionResultProducer$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/MarketDecisionResultProducer$delayedInit$body.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/MarketDecisionResultProducer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/package$$anonfun$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/package$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/package$GainActivityRightEvent$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/package$GainActivityRightEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/package$MarketDecisionResult$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/package$MarketDecisionResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/package$PersonalInfo$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/package$PersonalInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/market/package.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/overdueevent/OverdueEventCreator$$anonfun$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/overdueevent/OverdueEventCreator$$anonfun$getOverdueEvents$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/overdueevent/OverdueEventCreator$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/overdueevent/OverdueEventCreator$delayedInit$body.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/overdueevent/OverdueEventCreator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/overdueevent/OverdueEventGenerator$$anonfun$genOverdueEvent$1$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$apply$4$$anonfun$apply$5$$anonfun$apply$6$$anonfun$apply$7$$anonfun$apply$8$$anonfun$apply$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/overdueevent/OverdueEventGenerator$$anonfun$genOverdueEvent$1$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$apply$4$$anonfun$apply$5$$anonfun$apply$6$$anonfun$apply$7$$anonfun$apply$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/overdueevent/OverdueEventGenerator$$anonfun$genOverdueEvent$1$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$apply$4$$anonfun$apply$5$$anonfun$apply$6$$anonfun$apply$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/overdueevent/OverdueEventGenerator$$anonfun$genOverdueEvent$1$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$apply$4$$anonfun$apply$5$$anonfun$apply$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/overdueevent/OverdueEventGenerator$$anonfun$genOverdueEvent$1$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$apply$4$$anonfun$apply$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/overdueevent/OverdueEventGenerator$$anonfun$genOverdueEvent$1$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$apply$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/overdueevent/OverdueEventGenerator$$anonfun$genOverdueEvent$1$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/overdueevent/OverdueEventGenerator$$anonfun$genOverdueEvent$1$$anonfun$apply$1$$anonfun$apply$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/overdueevent/OverdueEventGenerator$$anonfun$genOverdueEvent$1$$anonfun$apply$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/overdueevent/OverdueEventGenerator$$anonfun$genOverdueEvent$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/overdueevent/OverdueEventGenerator$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/overdueevent/OverdueEventGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/overdueevent/OverdueEventProducer$$anonfun$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/overdueevent/OverdueEventProducer$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/overdueevent/OverdueEventProducer$delayedInit$body.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/overdueevent/OverdueEventProducer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/overdueevent/OverdueEventWithCreditInvocationHistoryProducer$$anonfun$1$$anonfun$apply$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/overdueevent/OverdueEventWithCreditInvocationHistoryProducer$$anonfun$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/overdueevent/OverdueEventWithCreditInvocationHistoryProducer$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/overdueevent/OverdueEventWithCreditInvocationHistoryProducer$delayedInit$body.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/overdueevent/OverdueEventWithCreditInvocationHistoryProducer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/protocol/avro/City$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/protocol/avro/City$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/protocol/avro/City.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/protocol/avro/Country$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/protocol/avro/Country$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/protocol/avro/Country.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/protocol/avro/Province$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/protocol/avro/Province$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/protocol/avro/Province.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutput.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputCreator$$anonfun$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputCreator$$anonfun$getFuweiOutputs$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputCreator$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputCreator$delayedInit$body.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputCreator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$20696c8fc010c1394675fbc50564237$$$$pply$49$$anonfun$apply$51$$anonfun$apply$53$$anonfun$apply$54.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$2fd37758f16c240a7b77a4da1b6d48$$$$pply$14$$anonfun$apply$15$$anonfun$apply$16$$anonfun$apply$17$$anonfun$apply$18$$anonfun$apply$19.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$2fd37758f16c240a7b77a4da1b6d48$$$$pply$14$$anonfun$apply$15$$anonfun$apply$16$$anonfun$apply$17$$anonfun$apply$18$$anonfun$apply$20$$anonfun$apply$21.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$2fd37758f16c240a7b77a4da1b6d48$$$$pply$14$$anonfun$apply$15$$anonfun$apply$16$$anonfun$apply$17$$anonfun$apply$18$$anonfun$apply$20$$anonfun$apply$22$$anonfun$apply$23.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$2fd37758f16c240a7b77a4da1b6d48$$$$pply$14$$anonfun$apply$15$$anonfun$apply$16$$anonfun$apply$17$$anonfun$apply$18$$anonfun$apply$20$$anonfun$apply$22.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$2fd37758f16c240a7b77a4da1b6d48$$$$pply$14$$anonfun$apply$15$$anonfun$apply$16$$anonfun$apply$17$$anonfun$apply$18$$anonfun$apply$20.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$2fd37758f16c240a7b77a4da1b6d48$$$$pply$14$$anonfun$apply$15$$anonfun$apply$16$$anonfun$apply$17$$anonfun$apply$18.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$2fd37758f16c240a7b77a4da1b6d48$$$$pply$14$$anonfun$apply$15$$anonfun$apply$16$$anonfun$apply$17.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$7d44237c50a5eec3612282b14fdc5a0$$$$pply$20$$anonfun$apply$22$$anonfun$apply$23$$anonfun$apply$24.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$94ec77b1869bf5a72ad9d1a20dcc99$$$$pply$29$$anonfun$apply$31$$anonfun$apply$33$$anonfun$apply$35$$anonfun$apply$36.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$94ec77b1869bf5a72ad9d1a20dcc99$$$$pply$29$$anonfun$apply$31$$anonfun$apply$33$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$38.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$94ec77b1869bf5a72ad9d1a20dcc99$$$$pply$29$$anonfun$apply$31$$anonfun$apply$33$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$39$$anonfun$apply$40.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$94ec77b1869bf5a72ad9d1a20dcc99$$$$pply$29$$anonfun$apply$31$$anonfun$apply$33$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$39$$anonfun$apply$41$$anonfun$apply$42.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$94ec77b1869bf5a72ad9d1a20dcc99$$$$pply$29$$anonfun$apply$31$$anonfun$apply$33$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$39$$anonfun$apply$41$$anonfun$apply$43.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$94ec77b1869bf5a72ad9d1a20dcc99$$$$pply$29$$anonfun$apply$31$$anonfun$apply$33$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$39$$anonfun$apply$41.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$94ec77b1869bf5a72ad9d1a20dcc99$$$$pply$29$$anonfun$apply$31$$anonfun$apply$33$$anonfun$apply$35$$anonfun$apply$37$$anonfun$apply$39.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$94ec77b1869bf5a72ad9d1a20dcc99$$$$pply$29$$anonfun$apply$31$$anonfun$apply$33$$anonfun$apply$35$$anonfun$apply$37.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$94ec77b1869bf5a72ad9d1a20dcc99$$$$pply$29$$anonfun$apply$31$$anonfun$apply$33$$anonfun$apply$35.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$a01d67f173382a1d8bdd8e424bf811e3$$$$pply$29$$anonfun$apply$31$$anonfun$apply$33$$anonfun$apply$34.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$a77a6d577a293b3b4dd1219cb1766f2e$$$$apply$9$$anonfun$apply$10$$anonfun$apply$11$$anonfun$apply$12$$anonfun$apply$13$$anonfun$apply$14$$anonfun$apply$15$$anonfun$apply$16.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$a77a6d577a293b3b4dd1219cb1766f2e$$$$apply$9$$anonfun$apply$10$$anonfun$apply$11$$anonfun$apply$12$$anonfun$apply$13$$anonfun$apply$14$$anonfun$apply$15.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$a77a6d577a293b3b4dd1219cb1766f2e$$$$apply$9$$anonfun$apply$10$$anonfun$apply$11$$anonfun$apply$12$$anonfun$apply$13$$anonfun$apply$14.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$a77a6d577a293b3b4dd1219cb1766f2e$$$$apply$9$$anonfun$apply$10$$anonfun$apply$11$$anonfun$apply$12$$anonfun$apply$13.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$a77a6d577a293b3b4dd1219cb1766f2e$$$$apply$9$$anonfun$apply$10$$anonfun$apply$11$$anonfun$apply$12.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$c33285d78d9441a9315de1efd381becc$$$$pply$39$$anonfun$apply$41$$anonfun$apply$43$$anonfun$apply$44.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$ccb359212e6623a4296e275a477b3c6$$$$pply$39$$anonfun$apply$41$$anonfun$apply$43$$anonfun$apply$45$$anonfun$apply$46.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$ccb359212e6623a4296e275a477b3c6$$$$pply$39$$anonfun$apply$41$$anonfun$apply$43$$anonfun$apply$45$$anonfun$apply$47$$anonfun$apply$48.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$ccb359212e6623a4296e275a477b3c6$$$$pply$39$$anonfun$apply$41$$anonfun$apply$43$$anonfun$apply$45$$anonfun$apply$47$$anonfun$apply$49$$anonfun$apply$50.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$ccb359212e6623a4296e275a477b3c6$$$$pply$39$$anonfun$apply$41$$anonfun$apply$43$$anonfun$apply$45$$anonfun$apply$47$$anonfun$apply$49$$anonfun$apply$51$$anonfun$apply$52.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$ccb359212e6623a4296e275a477b3c6$$$$pply$39$$anonfun$apply$41$$anonfun$apply$43$$anonfun$apply$45$$anonfun$apply$47$$anonfun$apply$49$$anonfun$apply$51$$anonfun$apply$53.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$ccb359212e6623a4296e275a477b3c6$$$$pply$39$$anonfun$apply$41$$anonfun$apply$43$$anonfun$apply$45$$anonfun$apply$47$$anonfun$apply$49$$anonfun$apply$51.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$ccb359212e6623a4296e275a477b3c6$$$$pply$39$$anonfun$apply$41$$anonfun$apply$43$$anonfun$apply$45$$anonfun$apply$47$$anonfun$apply$49.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$ccb359212e6623a4296e275a477b3c6$$$$pply$39$$anonfun$apply$41$$anonfun$apply$43$$anonfun$apply$45$$anonfun$apply$47.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$ccb359212e6623a4296e275a477b3c6$$$$pply$39$$anonfun$apply$41$$anonfun$apply$43$$anonfun$apply$45.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$d26682eb52992236d29afcc1b5cd145$$$$pply$20$$anonfun$apply$22$$anonfun$apply$23$$anonfun$apply$25$$anonfun$apply$26.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$d26682eb52992236d29afcc1b5cd145$$$$pply$20$$anonfun$apply$22$$anonfun$apply$23$$anonfun$apply$25$$anonfun$apply$27$$anonfun$apply$28.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$d26682eb52992236d29afcc1b5cd145$$$$pply$20$$anonfun$apply$22$$anonfun$apply$23$$anonfun$apply$25$$anonfun$apply$27$$anonfun$apply$29$$anonfun$apply$30.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$d26682eb52992236d29afcc1b5cd145$$$$pply$20$$anonfun$apply$22$$anonfun$apply$23$$anonfun$apply$25$$anonfun$apply$27$$anonfun$apply$29$$anonfun$apply$31$$anonfun$apply$32.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$d26682eb52992236d29afcc1b5cd145$$$$pply$20$$anonfun$apply$22$$anonfun$apply$23$$anonfun$apply$25$$anonfun$apply$27$$anonfun$apply$29$$anonfun$apply$31$$anonfun$apply$33.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$d26682eb52992236d29afcc1b5cd145$$$$pply$20$$anonfun$apply$22$$anonfun$apply$23$$anonfun$apply$25$$anonfun$apply$27$$anonfun$apply$29$$anonfun$apply$31.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$d26682eb52992236d29afcc1b5cd145$$$$pply$20$$anonfun$apply$22$$anonfun$apply$23$$anonfun$apply$25$$anonfun$apply$27$$anonfun$apply$29.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$d26682eb52992236d29afcc1b5cd145$$$$pply$20$$anonfun$apply$22$$anonfun$apply$23$$anonfun$apply$25$$anonfun$apply$27.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$d26682eb52992236d29afcc1b5cd145$$$$pply$20$$anonfun$apply$22$$anonfun$apply$23$$anonfun$apply$25.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$efa46294f3c1701c378867b35a9711b5$$$$pply$49$$anonfun$apply$51$$anonfun$apply$53$$anonfun$apply$55$$anonfun$apply$56.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$efa46294f3c1701c378867b35a9711b5$$$$pply$49$$anonfun$apply$51$$anonfun$apply$53$$anonfun$apply$55$$anonfun$apply$57$$anonfun$apply$58.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$efa46294f3c1701c378867b35a9711b5$$$$pply$49$$anonfun$apply$51$$anonfun$apply$53$$anonfun$apply$55$$anonfun$apply$57$$anonfun$apply$59.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$efa46294f3c1701c378867b35a9711b5$$$$pply$49$$anonfun$apply$51$$anonfun$apply$53$$anonfun$apply$55$$anonfun$apply$57.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$$$$efa46294f3c1701c378867b35a9711b5$$$$pply$49$$anonfun$apply$51$$anonfun$apply$53$$anonfun$apply$55.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$apply$4$$anonfun$apply$5$$anonfun$apply$6$$anonfun$apply$7$$anonfun$apply$8$$anonfun$apply$9$$anonfun$apply$10$$anonfun$apply$11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$apply$4$$anonfun$apply$5$$anonfun$apply$6$$anonfun$apply$7$$anonfun$apply$8$$anonfun$apply$9$$anonfun$apply$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$apply$4$$anonfun$apply$5$$anonfun$apply$6$$anonfun$apply$7$$anonfun$apply$8$$anonfun$apply$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$apply$4$$anonfun$apply$5$$anonfun$apply$6$$anonfun$apply$7$$anonfun$apply$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$apply$4$$anonfun$apply$5$$anonfun$apply$6$$anonfun$apply$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$apply$4$$anonfun$apply$5$$anonfun$apply$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$apply$4$$anonfun$apply$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$apply$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$1$$anonfun$apply$2$$anonfun$apply$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$1$$anonfun$apply$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2$$anonfun$apply$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$$anonfun$genFuweiOutput$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputProducer$$anonfun$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputProducer$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputProducer$delayedInit$body.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/reflection/FuweiOutputProducer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryCreator$$anonfun$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryCreator$$anonfun$getRiskInvocationHistories$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryCreator$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryCreator$delayedInit$body.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryCreator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genAntifraudDetail$1$$anonfun$apply$12$$anonfun$apply$13$$anonfun$apply$14$$anonfun$apply$15.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genAntifraudDetail$1$$anonfun$apply$12$$anonfun$apply$13$$anonfun$apply$14.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genAntifraudDetail$1$$anonfun$apply$12$$anonfun$apply$13$$anonfun$apply$16.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genAntifraudDetail$1$$anonfun$apply$12$$anonfun$apply$13.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genAntifraudDetail$1$$anonfun$apply$12.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genAntifraudDetail$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genAntifraudHitRuleSet$1$$anonfun$apply$5$$anonfun$apply$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genAntifraudHitRuleSet$1$$anonfun$apply$5$$anonfun$apply$7$$anonfun$apply$8$$anonfun$apply$11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genAntifraudHitRuleSet$1$$anonfun$apply$5$$anonfun$apply$7$$anonfun$apply$8$$anonfun$apply$9$$anonfun$apply$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genAntifraudHitRuleSet$1$$anonfun$apply$5$$anonfun$apply$7$$anonfun$apply$8$$anonfun$apply$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genAntifraudHitRuleSet$1$$anonfun$apply$5$$anonfun$apply$7$$anonfun$apply$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genAntifraudHitRuleSet$1$$anonfun$apply$5$$anonfun$apply$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genAntifraudHitRuleSet$1$$anonfun$apply$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genAntifraudHitRuleSet$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genCertNo$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genCreditDetail$1$$anonfun$apply$17$$anonfun$apply$18$$anonfun$apply$19$$anonfun$apply$20$$anonfun$apply$21.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genCreditDetail$1$$anonfun$apply$17$$anonfun$apply$18$$anonfun$apply$19$$anonfun$apply$20.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genCreditDetail$1$$anonfun$apply$17$$anonfun$apply$18$$anonfun$apply$19.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genCreditDetail$1$$anonfun$apply$17$$anonfun$apply$18.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genCreditDetail$1$$anonfun$apply$17.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genCreditDetail$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genCreditStartDate$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genHitRule$1$$anonfun$apply$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genHitRule$1$$anonfun$apply$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genHitRule$1$$anonfun$apply$3$$anonfun$apply$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genHitRule$1$$anonfun$apply$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genHitRule$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genInput$1$$anonfun$apply$46$$anonfun$apply$47$$anonfun$apply$48$$anonfun$apply$49$$anonfun$apply$50$$anonfun$apply$51.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genInput$1$$anonfun$apply$46$$anonfun$apply$47$$anonfun$apply$48$$anonfun$apply$49$$anonfun$apply$50.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genInput$1$$anonfun$apply$46$$anonfun$apply$47$$anonfun$apply$48$$anonfun$apply$49.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genInput$1$$anonfun$apply$46$$anonfun$apply$47$$anonfun$apply$48.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genInput$1$$anonfun$apply$46$$anonfun$apply$47.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genInput$1$$anonfun$apply$46.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genInput$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genPhone$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genRiskInvocationHist$$$$1059e65bfd6c3bba1279b7b11a92c85$$$$pply$40$$anonfun$apply$41$$anonfun$apply$42$$anonfun$apply$43$$anonfun$apply$44.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genRiskInvocationHist$$$$1059e65bfd6c3bba1279b7b11a92c85$$$$pply$40$$anonfun$apply$41$$anonfun$apply$42$$anonfun$apply$43$$anonfun$apply$45.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genRiskInvocationHist$$$$1059e65bfd6c3bba1279b7b11a92c85$$$$pply$40$$anonfun$apply$41$$anonfun$apply$42$$anonfun$apply$43.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genRiskInvocationHist$$$$7eb25fd687c17b36bb9256676eba7d8$$$$pply$30$$anonfun$apply$31$$anonfun$apply$32$$anonfun$apply$33$$anonfun$apply$34$$anonfun$apply$35$$anonfun$apply$36$$anonfun$apply$37.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genRiskInvocationHist$$$$7eb25fd687c17b36bb9256676eba7d8$$$$pply$30$$anonfun$apply$31$$anonfun$apply$32$$anonfun$apply$33$$anonfun$apply$34$$anonfun$apply$35$$anonfun$apply$36.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genRiskInvocationHist$$$$7eb25fd687c17b36bb9256676eba7d8$$$$pply$30$$anonfun$apply$31$$anonfun$apply$32$$anonfun$apply$33$$anonfun$apply$34$$anonfun$apply$35.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genRiskInvocationHist$$$$7eb25fd687c17b36bb9256676eba7d8$$$$pply$30$$anonfun$apply$31$$anonfun$apply$32$$anonfun$apply$33$$anonfun$apply$34.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genRiskInvocationHist$$$$7eb25fd687c17b36bb9256676eba7d8$$$$pply$30$$anonfun$apply$31$$anonfun$apply$32$$anonfun$apply$33.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genRiskInvocationHist$$$$83f622ca7fc2da83729f71f14d9e2$$$$pply$35$$anonfun$apply$36$$anonfun$apply$37$$anonfun$apply$38$$anonfun$apply$39$$anonfun$apply$40$$anonfun$apply$41$$anonfun$apply$42.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genRiskInvocationHist$$$$83f622ca7fc2da83729f71f14d9e2$$$$pply$35$$anonfun$apply$36$$anonfun$apply$37$$anonfun$apply$38$$anonfun$apply$39$$anonfun$apply$40$$anonfun$apply$41.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genRiskInvocationHist$$$$83f622ca7fc2da83729f71f14d9e2$$$$pply$35$$anonfun$apply$36$$anonfun$apply$37$$anonfun$apply$38$$anonfun$apply$39$$anonfun$apply$40.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genRiskInvocationHist$$$$83f622ca7fc2da83729f71f14d9e2$$$$pply$35$$anonfun$apply$36$$anonfun$apply$37$$anonfun$apply$38$$anonfun$apply$39.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genRiskInvocationHist$$$$83f622ca7fc2da83729f71f14d9e2$$$$pply$35$$anonfun$apply$36$$anonfun$apply$37$$anonfun$apply$38.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genRiskInvocationHistory$1$$anonfun$apply$22.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genRiskInvocationHistory$1$$anonfun$apply$23$$anonfun$apply$24$$anonfun$apply$25$$anonfun$apply$26$$anonfun$apply$27$$anonfun$apply$28$$anonfun$apply$29$$anonfun$apply$30$$anonfun$apply$31$$anonfun$apply$32.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genRiskInvocationHistory$1$$anonfun$apply$23$$anonfun$apply$24$$anonfun$apply$25$$anonfun$apply$26$$anonfun$apply$27$$anonfun$apply$28$$anonfun$apply$29$$anonfun$apply$30$$anonfun$apply$31.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genRiskInvocationHistory$1$$anonfun$apply$23$$anonfun$apply$24$$anonfun$apply$25$$anonfun$apply$26$$anonfun$apply$27$$anonfun$apply$28$$anonfun$apply$29$$anonfun$apply$30.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genRiskInvocationHistory$1$$anonfun$apply$23$$anonfun$apply$24$$anonfun$apply$25$$anonfun$apply$26$$anonfun$apply$27$$anonfun$apply$28$$anonfun$apply$29.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genRiskInvocationHistory$1$$anonfun$apply$23$$anonfun$apply$24$$anonfun$apply$25$$anonfun$apply$26$$anonfun$apply$27$$anonfun$apply$28.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genRiskInvocationHistory$1$$anonfun$apply$23$$anonfun$apply$24$$anonfun$apply$25$$anonfun$apply$26$$anonfun$apply$27.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genRiskInvocationHistory$1$$anonfun$apply$23$$anonfun$apply$24$$anonfun$apply$25$$anonfun$apply$26.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genRiskInvocationHistory$1$$anonfun$apply$23$$anonfun$apply$24$$anonfun$apply$25.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genRiskInvocationHistory$1$$anonfun$apply$23$$anonfun$apply$24.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genRiskInvocationHistory$1$$anonfun$apply$23.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$$anonfun$genRiskInvocationHistory$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryProducer$$anonfun$1$$anonfun$apply$mcVI$sp$1$$anonfun$2$$anonfun$apply$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryProducer$$anonfun$1$$anonfun$apply$mcVI$sp$1$$anonfun$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryProducer$$anonfun$1$$anonfun$apply$mcVI$sp$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryProducer$$anonfun$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryProducer$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryProducer$delayedInit$body.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/riskinvocationhistory/RiskInvocationHistoryProducer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/util/JsonUtil$$anon$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/util/JsonUtil$$anonfun$toJson$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/util/JsonUtil$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/datacloud/report/dataflow/util/JsonUtil.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -90,110 +369,104 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UnionPayTrxProducer.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/UnionPayTrxProducer.scala">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+            <state relative-caret-position="100">
+              <caret line="167" column="22" selection-start-line="167" selection-start-column="22" selection-end-line="167" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="87">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Boot.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/Boot.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="29" selection-start-column="8" selection-end-column="29" />
               <folding>
-                <element signature="e#46#99#0" expanded="true" />
+                <element signature="e#31#115#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GainActivityRightEventProducer.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/market/GainActivityRightEventProducer.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="151">
+              <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+              <folding>
+                <element signature="e#38#83#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UnionPayTrxProducer.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/market/UnionPayTrxProducer.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="58">
+              <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="MarketDecisionResultProducer.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/MarketDecisionResultProducer.scala">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/market/MarketDecisionResultProducer.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="e#401#458#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MarketDecisionResultGenerator.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/MarketDecisionResultGenerator.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-              <folding>
-                <element signature="e#46#70#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.scala" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/package.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="43" column="6" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
+            <state relative-caret-position="58">
+              <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="JsonDataProducer.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/JsonDataProducer.scala">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/JsonDataProducer.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+            <state relative-caret-position="-225">
+              <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RiskInvocationHistoryProducer.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/riskinvocationhistory/RiskInvocationHistoryProducer.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="151">
+              <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
               <folding>
-                <element signature="e#39#66#0" expanded="true" />
+                <element signature="e#53#86#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProducerRecord.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/1.0.0/kafka-clients-1.0.0-sources.jar!/org/apache/kafka/clients/producer/ProducerRecord.java">
+      <file leaf-file-name="OverdueEventProducer.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/feedback/OverdueEventProducer.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="114" column="31" selection-start-line="114" selection-start-column="31" selection-end-line="114" selection-end-column="31" />
+            <state relative-caret-position="58">
+              <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AvroDataProducer.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/AvroDataProducer.scala">
+      <file leaf-file-name="PaymentEventProducer.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/feedback/PaymentEventProducer.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+            <state relative-caret-position="-65">
+              <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
               <folding>
-                <element signature="e#39#66#0" expanded="true" />
+                <element signature="e#40#81#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataCreator.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/DataCreator.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="5" column="77" lean-forward="true" selection-start-line="5" selection-start-column="77" selection-end-line="5" selection-end-column="77" />
-              <folding>
-                <element signature="e#39#89#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataGenerator.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/DataGenerator.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UnionPayTrx.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/UnionPayTrx.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -202,7 +475,9 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ProducerRecord</find>
+      <find>main</find>
+      <find>avro</find>
+      <find>final</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -211,17 +486,27 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/DataWithTime.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/DataProducer.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/JSONDataProducer.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/UnionPayTrx.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/DataCreator.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/DataGenerator.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/AvroDataProducer.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/JsonDataProducer.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/UnionPayTrxProducer.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/MarketDecisionResultProducer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/report/datagen/SetupKafkaTopic.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/SetupKafkaTopic.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/market/MarketDecisionResultProducer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/JsonDataProducer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/riskinvocationhistory/RiskInvocationHistoryProducer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/feedback/OverdueEventProducer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/feedback/PaymentEventProducer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/market/GainActivityRightEventProducer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/market/UnionPayTrxProducer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/reflection/FuweiOutputProducer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/Boot.scala" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="ProjectFrameBounds">
@@ -235,68 +520,50 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="dataflow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dataflow" type="462c0819:PsiDirectoryNode" />
+              <item name="datagen" type="b2602c69:ProjectViewProjectNode" />
+              <item name="datagen" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dataflow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dataflow" type="462c0819:PsiDirectoryNode" />
+              <item name="datagen" type="b2602c69:ProjectViewProjectNode" />
+              <item name="datagen" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dataflow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dataflow" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dataflow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dataflow" type="462c0819:PsiDirectoryNode" />
+              <item name="datagen" type="b2602c69:ProjectViewProjectNode" />
+              <item name="datagen" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dataflow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dataflow" type="462c0819:PsiDirectoryNode" />
+              <item name="datagen" type="b2602c69:ProjectViewProjectNode" />
+              <item name="datagen" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="dataflow" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="dataflow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dataflow" type="462c0819:PsiDirectoryNode" />
+              <item name="datagen" type="b2602c69:ProjectViewProjectNode" />
+              <item name="datagen" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="dataflow" type="462c0819:PsiDirectoryNode" />
-              <item name="creditinvocationhistory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dataflow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dataflow" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="dataflow" type="462c0819:PsiDirectoryNode" />
-              <item name="market" type="462c0819:PsiDirectoryNode" />
+              <item name="datagen" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
@@ -313,28 +580,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MarketDecisionResultProducer">
+  <component name="RunManager">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
-    <configuration name="MarketDecisionResultProducer" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.datacloud.report.dataflow.market.MarketDecisionResultProducer" />
-      <module name="dataflow" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    <configuration name="SetupKafkaTopic" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.datacloud.datagen.Boot" />
+      <module name="datagen" />
+      <option name="PROGRAM_PARAMETERS" value="OverdueEvent dev_OVERDUE_EVENT 10.12.0.157:9092 http://10.12.0.157:8081" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.datacloud.report.dataflow.market.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="UnionPayTrxProducer" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.datacloud.report.dataflow.market.UnionPayTrxProducer" />
-      <module name="dataflow" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.datacloud.report.dataflow.market.*" />
+          <option name="PATTERN" value="com.datacloud.datagen.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -380,14 +637,9 @@
       <properties />
       <listeners />
     </configuration>
-    <list>
-      <item itemvalue="Application.MarketDecisionResultProducer" />
-      <item itemvalue="Application.UnionPayTrxProducer" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MarketDecisionResultProducer" />
-        <item itemvalue="Application.UnionPayTrxProducer" />
+        <item itemvalue="Application.SetupKafkaTopic" />
       </list>
     </recent_temporary>
   </component>
@@ -396,11 +648,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3ae6d58a-0857-4952-8190-db875b80dddc" name="Default" comment="" />
-      <created>1526174565679</created>
+      <changelist id="82f032db-bdc8-42c9-8e4b-b8c083cb1606" name="Default" comment="" />
+      <created>1526969259911</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1526174565679</updated>
+      <updated>1526969259911</updated>
     </task>
     <servers />
   </component>
@@ -408,210 +660,181 @@
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info id="DB Browser" order="2" />
-      <window_info anchor="bottom" id="SBT Console" order="7" />
-      <window_info anchor="bottom" id="Messages" weight="0.329602" />
+      <window_info anchor="right" id="Palette" order="5" />
+      <window_info anchor="bottom" id="TODO" order="12" />
+      <window_info id="DB Browser" order="7" />
+      <window_info anchor="bottom" id="SBT Console" order="1" />
+      <window_info anchor="bottom" id="Messages" order="5" weight="0.32806325" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="bottom" id="DB Execution Console" order="7" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34914362" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.30115274" />
-      <window_info anchor="right" id="BPMNPalette" order="3" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="Image Layers" order="1" />
+      <window_info anchor="bottom" id="DB Execution Console" order="0" />
+      <window_info anchor="right" id="Capture Analysis" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="2" />
+      <window_info anchor="bottom" id="Run" order="8" weight="0.32938075" />
+      <window_info anchor="bottom" id="Version Control" order="4" />
+      <window_info anchor="bottom" id="Terminal" order="2" weight="0.6179183" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Designer" order="0" />
+      <window_info content_ui="combo" id="Project" order="5" weight="0.25" />
+      <window_info anchor="right" id="BPMNPalette" order="1" />
+      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="7" />
+      <window_info anchor="right" id="Commander" order="6" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="6" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="bottom" id="DB Execution Console" order="8" />
-      <window_info id="Designer" order="2" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="SBT Console" order="9" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.329602" />
-      <window_info id="Image Layers" order="3" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="DB Browser" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info id="Capture Tool" order="7" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="BPMNPalette" order="5" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="bottom" id="Find" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.30115274" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.329602" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="DB Execution Console" order="0" />
+      <window_info id="Designer" order="0" />
+      <window_info anchor="right" id="Palette" order="5" />
+      <window_info anchor="bottom" id="SBT Console" order="1" />
+      <window_info anchor="bottom" id="Run" order="8" weight="0.32938075" />
+      <window_info id="Image Layers" order="1" />
+      <window_info anchor="right" id="Commander" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
+      <window_info id="DB Browser" order="7" />
+      <window_info id="UI Designer" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="2" visible="true" weight="0.6179183" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.25" />
+      <window_info anchor="right" id="BPMNPalette" order="1" />
+      <window_info anchor="bottom" id="Version Control" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="2" />
+      <window_info anchor="bottom" id="Find" order="7" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="5" weight="0.32806325" />
+      <window_info anchor="bottom" id="Message" order="6" />
+      <window_info anchor="bottom" id="TODO" order="12" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/MarketDecisionResultCreator.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/avro/protocol.avsc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/datacloud/report/datagen/creditinvocationhistory/CreditInvocationHistory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="18" column="78" lean-forward="true" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="78" />
+        <state>
+          <folding>
+            <element signature="e#0#3608#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/creditinvocationhistory/CreditInvocationHistoryProducer.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-208">
-          <caret line="24" column="63" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/DataWithTime.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/market/MarketDecisionResultProducer.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="58">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/UnionPayTrx.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/JsonDataProducer.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+        <state relative-caret-position="-225">
+          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/DataCreator.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/riskinvocationhistory/RiskInvocationHistoryProducer.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="5" column="77" lean-forward="true" selection-start-line="5" selection-start-column="77" selection-end-line="5" selection-end-column="77" />
+        <state relative-caret-position="151">
+          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
           <folding>
-            <element signature="e#39#89#0" expanded="true" />
+            <element signature="e#53#86#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/DataGenerator.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/feedback/OverdueEventProducer.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        <state relative-caret-position="58">
+          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/1.0.0/kafka-clients-1.0.0-sources.jar!/org/apache/kafka/clients/producer/ProducerRecord.java">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/feedback/PaymentEventProducer.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="114" column="31" selection-start-line="114" selection-start-column="31" selection-end-line="114" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/AvroDataProducer.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+        <state relative-caret-position="-65">
+          <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
           <folding>
-            <element signature="e#39#66#0" expanded="true" />
+            <element signature="e#40#81#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/JsonDataProducer.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/market/GainActivityRightEventProducer.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+        <state relative-caret-position="151">
+          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
           <folding>
-            <element signature="e#39#66#0" expanded="true" />
+            <element signature="e#38#83#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/UnionPayTrxProducer.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/reflection/FuweiOutputProducer.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        <state relative-caret-position="160">
+          <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
           <folding>
-            <element signature="e#46#99#0" expanded="true" />
+            <element signature="e#42#72#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/MarketDecisionResultProducer.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/market/UnionPayTrxProducer.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="58">
+          <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/Boot.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="29" selection-start-column="8" selection-end-column="29" />
           <folding>
-            <element signature="e#401#458#0" expanded="true" />
+            <element signature="e#31#115#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/MarketDecisionResultGenerator.scala">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-          <folding>
-            <element signature="e#46#70#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="100">
+          <caret line="167" column="22" selection-start-line="167" selection-start-column="22" selection-end-line="167" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/report/dataflow/market/package.scala">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="43" column="6" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
+        <state relative-caret-position="87">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
           <last-edited>scala-sdk-2.11.8</last-edited>
@@ -636,19 +859,6 @@
           </splitter-proportions>
         </settings>
       </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>dataflow</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
@@ -663,7 +873,6 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: com.101tec:zkclient:0.10</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
