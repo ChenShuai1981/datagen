@@ -1,4 +1,4 @@
-package com.datacloud.datagen.creditinvocationhistory
+package com.datacloud.datagen.history
 
 import java.util
 
@@ -7,7 +7,7 @@ import com.datacloud.polaris.protocol.avro._
 import org.scalacheck.Gen
 
 object CreditInvocationHistoryProducer extends App {
-  val topicName = "sit_CREDIT_INVOCATION_HISTORY"
+  val topicName = "dev_CREDIT_INVOCATION_HISTORY"
   val bootstrapServers = "ambari-agent4.sit.geerong.com:9092"
   val schemaRegistryUrl = "http://ambari-agent4.sit.geerong.com:8081"
 //  val bootstrapServers = "localhost:9092"
@@ -21,14 +21,10 @@ class CreditInvocationHistoryProducer(topicName: String, bootstrapServers: Strin
   extends AvroDataProducer[CreditInvocationHistory](topicName, bootstrapServers, schemaRegistryUrl, interval, loop) {
 
   def genData: Gen[CreditInvocationHistory] = {
-    def genDecision: Gen[Decision] = Gen.oneOf(Decision.accept, Decision.reject, Decision.review)
-
-    def genRateType: Gen[Option[RateType]] = Gen.option(Gen.oneOf(RateType.absolute, RateType.relative, RateType.multiple))
-
     for {
       riskProcessId <- Gen.choose(1234567100L, 1234567123L)
       executionId <- Gen.uuid.map(uuid => Math.abs(uuid.getMostSignificantBits + uuid.getLeastSignificantBits))
-      creditStrategyId <- Gen.oneOf(Seq(102, 103, 113))
+      creditStrategyId <- Gen.choose(100L, 300L)
       tenantId <- Gen.oneOf(Seq(29L))
       userId <- Gen.const(100L)
       productCode <- Gen.oneOf(Seq("test"))

@@ -1,9 +1,8 @@
 package com.datacloud.datagen
 
-import com.datacloud.datagen.creditinvocationhistory.CreditInvocationHistoryProducer
 import com.datacloud.datagen.feedback.{LoanEndEventProducer, OverdueEventProducer, PaymentEventProducer}
+import com.datacloud.datagen.history.{CreditInvocationHistoryProducer, RiskInvocationHistoryProducer}
 import com.datacloud.datagen.market.MarketDecisionResultProducer
-import com.datacloud.datagen.riskinvocationhistory.RiskInvocationHistoryProducer
 
 object Boot {
 

@@ -7,7 +7,7 @@ import com.datacloud.polaris.protocol.avro.PaymentEvent
 import org.scalacheck.Gen
 
 object PaymentEventProducer extends App {
-  val topicName = "sit_PAYMENT_EVENT"
+  val topicName = "dev_PAYMENT_EVENT"
   val bootstrapServers = "ambari-agent4.sit.geerong.com:9092"
   val schemaRegistryUrl = "http://ambari-agent4.sit.geerong.com:8081"
 //  val bootstrapServers = "localhost:9092"
