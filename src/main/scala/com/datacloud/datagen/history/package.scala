@@ -51,6 +51,7 @@ package object history {
     antifraudDetail.setDecisionReason(decisionReason)
     antifraudDetail.setRiskLevel(riskLevel)
     antifraudDetail.setHitRuleSets(hitRuleSets)
+//    antifraudDetail.setHitRuleSets(new java.util.ArrayList())
 
     antifraudDetail
   }

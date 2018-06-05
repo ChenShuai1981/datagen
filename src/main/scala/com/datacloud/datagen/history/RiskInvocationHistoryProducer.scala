@@ -7,11 +7,13 @@ import org.scalacheck.Gen
 import scala.collection.JavaConversions._
 
 object RiskInvocationHistoryProducer extends App {
-  val topicName = "sit_RISK_INVOCATION_HISTORY"
-  val bootstrapServers = "ambari-agent4.sit.geerong.com:9092"
-  val schemaRegistryUrl = "http://ambari-agent4.sit.geerong.com:8081"
-//  val bootstrapServers = "localhost:9092"
-//  val schemaRegistryUrl = "http://localhost:8081"
+//  val topicName = "preprod_RISK_INVOCATION_HISTORY"
+//  val bootstrapServers = "10.12.0.6:9092"
+//  val schemaRegistryUrl = "http://10.12.0.6:8081"
+
+  val topicName = "dev_RISK_INVOCATION_HISTORY"
+  val bootstrapServers = "10.12.0.157:9092"
+  val schemaRegistryUrl = "http://10.12.0.157:8081"
 
   val producer = new RiskInvocationHistoryProducer(topicName, bootstrapServers, schemaRegistryUrl, 60L, 1)
   producer.run()

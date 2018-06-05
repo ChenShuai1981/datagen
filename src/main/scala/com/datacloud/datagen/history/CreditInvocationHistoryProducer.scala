@@ -10,8 +10,10 @@ object CreditInvocationHistoryProducer extends App {
   val topicName = "dev_CREDIT_INVOCATION_HISTORY"
   val bootstrapServers = "ambari-agent4.sit.geerong.com:9092"
   val schemaRegistryUrl = "http://ambari-agent4.sit.geerong.com:8081"
-//  val bootstrapServers = "localhost:9092"
-//  val schemaRegistryUrl = "http://localhost:8081"
+
+//  val topicName = "preprod_CREDIT_INVOCATION_HISTORY"
+//  val bootstrapServers = "10.12.0.6:9092"
+//  val schemaRegistryUrl = "http://10.12.0.6:8081"
 
   val producer = new CreditInvocationHistoryProducer(topicName, bootstrapServers, schemaRegistryUrl, 60L, 1)
   producer.run()
@@ -25,7 +27,7 @@ class CreditInvocationHistoryProducer(topicName: String, bootstrapServers: Strin
       riskProcessId <- Gen.choose(1234567100L, 1234567123L)
       executionId <- Gen.uuid.map(uuid => Math.abs(uuid.getMostSignificantBits + uuid.getLeastSignificantBits))
       creditStrategyId <- Gen.choose(100L, 300L)
-      tenantId <- Gen.oneOf(Seq(29L))
+      tenantId <- Gen.oneOf(Seq(8L))
       userId <- Gen.const(100L)
       productCode <- Gen.oneOf(Seq("test"))
       terminal <- Gen.oneOf("GENERAL", "WEB", "IOS", "ANDROID")

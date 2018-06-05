@@ -5,11 +5,13 @@ import com.datacloud.polaris.protocol.avro.{LoanEndEvent, LoanEndType}
 import org.scalacheck.Gen
 
 object LoanEndEventProducer extends App {
-  val topicName = "dev_LOANEND_EVENT"
-  val bootstrapServers = "ambari-agent4.sit.geerong.com:9092"
-  val schemaRegistryUrl = "http://ambari-agent4.sit.geerong.com:8081"
-//  val bootstrapServers = "localhost:9092"
-//  val schemaRegistryUrl = "http://localhost:8081"
+//  val topicName = "dev_LOANEND_EVENT"
+//  val bootstrapServers = "ambari-agent4.sit.geerong.com:9092"
+//  val schemaRegistryUrl = "http://ambari-agent4.sit.geerong.com:8081"
+
+  val topicName = "preprod_LOANEND_EVENT"
+  val bootstrapServers = "10.12.0.6:9092"
+  val schemaRegistryUrl = "http://10.12.0.6:8081"
 
   val producer = new LoanEndEventProducer(topicName, bootstrapServers, schemaRegistryUrl, 60L, 1)
   producer.run()

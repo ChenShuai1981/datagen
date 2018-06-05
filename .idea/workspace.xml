@@ -2,18 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82f032db-bdc8-42c9-8e4b-b8c083cb1606" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/history/CreditNodeHistoryProducer.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/history/package.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/monitor/MonitorStreamResultProducer.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/monitor/MonitorTableResultProducer.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/monitor/package.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/Boot.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/Boot.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/creditinvocationhistory/CreditInvocationHistoryProducer.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/history/CreditInvocationHistoryProducer.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/feedback/LoanEndEventProducer.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/feedback/LoanEndEventProducer.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/feedback/OverdueEventProducer.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/feedback/OverdueEventProducer.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/feedback/PaymentEventProducer.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/feedback/PaymentEventProducer.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/riskinvocationhistory/RiskInvocationHistoryProducer.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/history/RiskInvocationHistoryProducer.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/history/CreditInvocationHistoryProducer.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/history/CreditInvocationHistoryProducer.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/history/RiskInvocationHistoryProducer.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/history/RiskInvocationHistoryProducer.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/history/package.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/history/package.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/market/MarketDecisionResultProducer.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/market/MarketDecisionResultProducer.scala" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,20 +21,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="CreditInvocationHistoryProducer.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CreditInvocationHistoryProducer.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/history/CreditInvocationHistoryProducer.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+            <state relative-caret-position="167">
+              <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RiskInvocationHistoryProducer.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RiskInvocationHistoryProducer.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/history/RiskInvocationHistoryProducer.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+            <state relative-caret-position="205">
+              <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
               <folding>
                 <element signature="e#39#84#0" expanded="true" />
               </folding>
@@ -46,11 +42,47 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="AvroDataProducer.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/AvroDataProducer.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="696">
+              <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/history/package.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1479">
+              <caret line="56" column="3" selection-start-line="56" selection-start-column="3" selection-end-line="56" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AntifraudDetail.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/datacloud/polaris/polaris-protocol/3.0.0-SNAPSHOT/polaris-protocol-3.0.0-SNAPSHOT.jar!/com/datacloud/polaris/protocol/avro/AntifraudDetail.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3045">
+              <caret line="146" column="16" selection-start-line="146" selection-start-column="16" selection-end-line="146" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="OverdueEventProducer.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/feedback/OverdueEventProducer.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="22" />
+            <state relative-caret-position="174">
+              <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MarketDecisionResultProducer.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/market/MarketDecisionResultProducer.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -58,8 +90,8 @@
       <file leaf-file-name="LoanEndEventProducer.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/feedback/LoanEndEventProducer.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+            <state relative-caret-position="290">
+              <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -67,8 +99,8 @@
       <file leaf-file-name="PaymentEventProducer.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/feedback/PaymentEventProducer.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+            <state relative-caret-position="261">
+              <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -122,14 +154,14 @@
         <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/monitor/package.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/monitor/MonitorResultProducer.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/monitor/MonitorStreamResultProducer.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/history/package.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/market/MarketDecisionResultProducer.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/history/CreditNodeHistoryProducer.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/history/CreditInvocationHistoryProducer.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/feedback/OverdueEventProducer.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/feedback/LoanEndEventProducer.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/feedback/PaymentEventProducer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/market/MarketDecisionResultProducer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/feedback/OverdueEventProducer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/history/package.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/history/RiskInvocationHistoryProducer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/history/CreditInvocationHistoryProducer.scala" />
       </list>
     </option>
   </component>
@@ -140,7 +172,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="877" />
@@ -151,9 +183,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -200,6 +229,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -220,7 +252,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.RiskInvocationHistoryProducer">
+  <component name="RunManager" selected="Application.CreditInvocationHistoryProducer">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -246,19 +278,19 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="OverdueEventProducer" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.datacloud.datagen.feedback.OverdueEventProducer" />
+    <configuration name="MarketDecisionResultProducer" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.datacloud.datagen.market.MarketDecisionResultProducer" />
       <module name="datagen" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.datacloud.datagen.feedback.*" />
+          <option name="PATTERN" value="com.datacloud.datagen.market.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
     </configuration>
-    <configuration name="PaymentEventProducer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.datacloud.datagen.feedback.PaymentEventProducer" />
+    <configuration name="OverdueEventProducer" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.datacloud.datagen.feedback.OverdueEventProducer" />
       <module name="datagen" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -322,18 +354,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.OverdueEventProducer" />
-      <item itemvalue="Application.RiskInvocationHistoryProducer" />
       <item itemvalue="Application.CreditInvocationHistoryProducer" />
-      <item itemvalue="Application.PaymentEventProducer" />
       <item itemvalue="Application.LoanEndEventProducer" />
+      <item itemvalue="Application.MarketDecisionResultProducer" />
+      <item itemvalue="Application.RiskInvocationHistoryProducer" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CreditInvocationHistoryProducer" />
         <item itemvalue="Application.RiskInvocationHistoryProducer" />
         <item itemvalue="Application.OverdueEventProducer" />
+        <item itemvalue="Application.MarketDecisionResultProducer" />
         <item itemvalue="Application.LoanEndEventProducer" />
-        <item itemvalue="Application.PaymentEventProducer" />
-        <item itemvalue="Application.CreditInvocationHistoryProducer" />
       </list>
     </recent_temporary>
   </component>
@@ -351,7 +383,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="5" />
@@ -365,18 +397,18 @@
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="2" />
-      <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.4017413" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.3188406" />
       <window_info anchor="bottom" id="Version Control" order="4" />
-      <window_info anchor="bottom" id="Terminal" order="2" weight="0.6179183" />
+      <window_info anchor="bottom" id="Terminal" order="2" weight="0.65349144" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Designer" order="0" />
-      <window_info content_ui="combo" id="Project" order="5" weight="0.32564843" />
+      <window_info content_ui="combo" id="Project" order="5" weight="0.3371758" />
       <window_info anchor="right" id="BPMNPalette" order="1" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="bottom" id="Debug" order="9" weight="0.37686568" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.23847167" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="right" id="Commander" order="6" weight="0.4" />
@@ -390,23 +422,24 @@
       <window_info id="Designer" order="0" />
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="bottom" id="SBT Console" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.3188406" />
       <window_info id="Image Layers" order="1" />
-      <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.42555994" />
+      <window_info anchor="right" id="Commander" order="6" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
       <window_info id="DB Browser" order="7" show_stripe_button="false" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="2" weight="0.6179183" />
+      <window_info anchor="bottom" id="Terminal" order="2" weight="0.65349144" />
       <window_info id="Capture Tool" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
-      <window_info anchor="right" id="Commander" order="6" weight="0.4" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
       <window_info anchor="right" id="BPMNPalette" order="1" />
       <window_info anchor="bottom" id="Version Control" order="4" />
       <window_info anchor="right" id="Maven Projects" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.32564843" />
+      <window_info anchor="bottom" id="Find" order="7" weight="0.32938075" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.3371758" />
       <window_info anchor="bottom" id="Messages" order="5" weight="0.32806325" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="TODO" order="12" />
@@ -414,8 +447,7 @@
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="7" weight="0.32938075" />
-      <window_info anchor="bottom" id="Debug" order="9" weight="0.37686568" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.23847167" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -435,13 +467,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/AvroDataProducer.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/history/package.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
@@ -672,13 +697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/AvroDataProducer.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/market/GainActivityRightEventProducer.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1073">
@@ -714,24 +732,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/history/package.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3886">
-          <caret line="134" column="6" selection-start-line="134" selection-start-column="6" selection-end-line="134" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/market/package.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/market/MarketDecisionResultProducer.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -742,41 +746,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/history/CreditInvocationHistoryProducer.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/feedback/PaymentEventProducer.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        <state relative-caret-position="261">
+          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/feedback/LoanEndEventProducer.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+        <state relative-caret-position="290">
+          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/market/MarketDecisionResultProducer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/feedback/OverdueEventProducer.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="22" />
+        <state relative-caret-position="174">
+          <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/datacloud/polaris/polaris-protocol/3.0.0-SNAPSHOT/polaris-protocol-3.0.0-SNAPSHOT.jar!/com/datacloud/polaris/protocol/avro/AntifraudDetail.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3045">
+          <caret line="146" column="16" selection-start-line="146" selection-start-column="16" selection-end-line="146" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/history/package.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1479">
+          <caret line="56" column="3" selection-start-line="56" selection-start-column="3" selection-end-line="56" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/AvroDataProducer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/history/RiskInvocationHistoryProducer.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+        <state relative-caret-position="205">
+          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
           <folding>
             <element signature="e#39#84#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/datacloud/datagen/history/CreditInvocationHistoryProducer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
         </state>
       </provider>
     </entry>

@@ -4,9 +4,13 @@ import com.datacloud.datagen.JsonDataProducer
 import org.scalacheck.Gen
 
 object MarketDecisionResultProducer extends App {
-  val topicName = "dev_MARKET_DECISION_RESULT"
-  val bootstrapServers = "ambari-agent4.sit.geerong.com:9092"
-// val bootstrapServers = "localhost:9092"
+//  val topicName = "dev_MARKET_DECISION_RESULT"
+//  val bootstrapServers = "ambari-agent4.sit.geerong.com:9092"
+
+  val topicName = "preprod_MARKET_DECISION_RESULT"
+  val bootstrapServers = "10.12.0.6:9092"
+
+
   val interval = 60L
   val loop = 1
 
