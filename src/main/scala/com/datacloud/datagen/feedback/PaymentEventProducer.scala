@@ -15,7 +15,7 @@ object PaymentEventProducer extends App {
   val bootstrapServers = "10.12.0.6:9092"
   val schemaRegistryUrl = "http://10.12.0.6:8081"
 
-  val producer = new PaymentEventProducer(topicName, bootstrapServers, schemaRegistryUrl, 60L, 1)
+  val producer = new PaymentEventProducer(topicName, bootstrapServers, schemaRegistryUrl, 600L, 10)
   producer.run()
 }
 
@@ -60,11 +60,13 @@ class PaymentEventProducer(topicName: String, bootstrapServers: String, schemaRe
       paymentEvent.setSurchargeFixFee(surchargeFixFee.get)
     }
     paymentEvent.setProductCode(productCode)
-    paymentEvent.setRiskProcessId(riskProcessId)
+//    paymentEvent.setRiskProcessId(riskProcessId)
+    paymentEvent.setRiskProcessId(111111121L)
     paymentEvent.setTenantId(tenantId)
     paymentEvent.setTerminal(terminal)
     paymentEvent.setPlanRepayment(planRepayment)
     paymentEvent
   }
 
+  override def getKey(t: PaymentEvent): String = s"${t.getRiskProcessId}_${t.getEventTime}"
 }

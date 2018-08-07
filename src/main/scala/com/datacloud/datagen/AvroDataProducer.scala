@@ -15,6 +15,8 @@ abstract class AvroDataProducer[T](topicName: String,
 
   def genData: Gen[T]
 
+  def getKey(t: T): String
+
   def run() {
     val props = new Properties
     props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, classOf[StringSerializer].getName)
@@ -27,7 +29,7 @@ abstract class AvroDataProducer[T](topicName: String,
     for (i <- 1 to loop) {
       forAll(genData) {
         (data: T) => {
-          producer.send(new ProducerRecord[String, T](topicName, data))
+          producer.send(new ProducerRecord[String, T](topicName, getKey(data), data))
           println(data.toString)
           Thread.sleep(interval)
         }

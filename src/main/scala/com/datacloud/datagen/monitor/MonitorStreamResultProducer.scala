@@ -27,4 +27,5 @@ class MonitorStreamResultProducer(topicName: String, bootstrapServers: String, i
     MonitorStreamResult(tenantId, productCode, eventCode, terminal, occurTime)
   }
 
+  override def getKey(t: MonitorStreamResult): String = t.occurTime.toString
 }

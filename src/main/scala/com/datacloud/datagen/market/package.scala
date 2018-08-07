@@ -2,6 +2,8 @@ package com.datacloud.datagen
 
 import org.scalacheck.Gen
 
+import scala.collection.mutable
+
 package object market {
 
   case class Appendix(gzcbCreditCardType: String,
@@ -58,6 +60,8 @@ package object market {
 
   case class PersonalInfo(certNo: String, name: String, phone: String, email: String, creditCardNo: String)
 
+  case class MarketingRequest(tenantId: Long, marketActivityId: Long, decisionStrategyId: Long,
+                              strategyDeployId: Long, occurTime: Long, data: Map[String, String])
 
   val customers = (1000 to 9999).map(s => {
     // 1525945209741
@@ -89,5 +93,23 @@ package object market {
     val now = System.currentTimeMillis()
     val start = now - 2*3600*24*1000
     Gen.choose(start, now)
+  }
+
+  def genName: Gen[String] = Gen.oneOf("张三", "李四", "王五", "赵六")
+
+  def genCertNo: Gen[String] = Gen.const("450331199511070613") // Gen.choose(312039129372189999L, 578129129372189999L).map(_.toString)
+
+  def genPhone: Gen[Option[String]] = Gen.option(Gen.const("18887749973"))// Gen.option(Gen.choose(13000000000L, 18900000000L).map(_.toString))
+
+  def genExtraData: Gen[Map[String, String]] = for {
+    name <- genName
+    certNo <- genCertNo
+    phone <- genPhone
+  } yield {
+    var map = mutable.Map[String, String]()
+    map += ("indivName__ROLE__APPLICANT" -> name)
+    map += ("indivID__ROLE__APPLICANT" -> certNo)
+    if (phone.isDefined) map += ("indivPhone__ROLE__APPLICANT" -> phone.get)
+    map.toMap
   }
 }

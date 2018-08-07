@@ -8,14 +8,14 @@ import org.scalacheck.Gen
 
 object OverdueEventProducer extends App {
 //  val topicName = "sit_OVERDUE_EVENT"
-//  val bootstrapServers = "ambari-agent4.sit.geerong.com:9092"
-//  val schemaRegistryUrl = "http://ambari-agent4.sit.geerong.com:8081"
+//  val bootstrapServers = "10.12.0.157:9092"
+//  val schemaRegistryUrl = "http://10.12.0.157:8081"
 
   val topicName = "preprod_OVERDUE_EVENT"
   val bootstrapServers = "10.12.0.6:9092"
   val schemaRegistryUrl = "http://10.12.0.6:8081"
 
-  val producer = new OverdueEventProducer(topicName, bootstrapServers, schemaRegistryUrl, 60L, 1)
+  val producer = new OverdueEventProducer(topicName, bootstrapServers, schemaRegistryUrl, 600L, 10)
   producer.run()
 }
 
@@ -37,8 +37,7 @@ class OverdueEventProducer(topicName: String, bootstrapServers: String, schemaRe
     overdueEvent.setName(personalInfo.name)
     overdueEvent.setPhone(personalInfo.phone)
     val ldt = LocalDateTime.ofInstant(Instant.ofEpochMilli(eventTime), zoneId)
-//    val dueDate = ldt.minusDays(overdueDays).toLocalDate.atStartOfDay().atZone(zoneId).toInstant.toEpochMilli
-    val dueDate = ldt.toLocalDate.atStartOfDay().atZone(zoneId).toInstant.toEpochMilli
+    val dueDate = ldt.minusDays(overdueDays).toLocalDate.atStartOfDay().atZone(zoneId).toInstant.toEpochMilli
     overdueEvent.setDueDate(dueDate)
     overdueEvent.setOverdueStartDate(dueDate+3600*1000*24*1)
     overdueEvent.setEventTime(eventTime)
@@ -46,10 +45,19 @@ class OverdueEventProducer(topicName: String, bootstrapServers: String, schemaRe
     overdueEvent.setOverdueDays(overdueDays)
     overdueEvent.setProductCode(productCode)
     overdueEvent.setRiskProcessId(riskProcessId)
-//    overdueEvent.setRiskProcessId(1234566568L)
     overdueEvent.setTenantId(tenantId)
     overdueEvent.setTerminal(terminal)
+
+    overdueEvent.setTenantId(436L)
+    overdueEvent.setProductCode("PLUTO_TEST")
+    overdueEvent.setRiskProcessId(417030711099260936L)
+    overdueEvent.setTerminal("GENERAL")
+    overdueEvent.setEventTime(1532942799000L)
+    overdueEvent.setOverdueStartDate(1528646400000L)
+    overdueEvent.setOverdueDays(1)
+    overdueEvent.setDueDate(1528560000000L)
     overdueEvent
   }
 
+  override def getKey(t: OverdueEvent): String = s"${t.getRiskProcessId}_${t.getDueDate}"
 }

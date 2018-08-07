@@ -35,4 +35,5 @@ class GainActivityRightEventProducer(topicName: String, bootstrapServers: String
     event.copy(tenantId = "2621", marketActivityId = "516", cardOwnerIndivID = "310101198001010003", creditCardNo = "4000123456780003")
   }
 
+  override def getKey(t: GainActivityRightEvent): String = t.gainActivityRightTime.toString
 }

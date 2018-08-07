@@ -15,8 +15,8 @@ package object history {
   } yield {
     val hitRule = new HitRule()
     hitRule.setRuleDescription(ruleDescription)
-    hitRule.setRuleId(101510L)
-    hitRule.setRuleName("rule-101510")
+    hitRule.setRuleId(199L)
+    hitRule.setRuleName("rule-199")
     hitRule.setRuleTemplateId(ruleTemplateId)
     hitRule
   }
@@ -30,10 +30,10 @@ package object history {
     hitRules <- Gen.choose(1, 3).flatMap(size => Gen.sequence((1 to size).map(_ => genHitRule)))
   } yield {
     val antifraudHitRuleSet = new AntifraudHitRuleSet()
-    antifraudHitRuleSet.setDecision(Decision.valueOf(decision.name()))
+    antifraudHitRuleSet.setDecision(Decision.reject)
     antifraudHitRuleSet.setReturnMsg(returnMsg)
-    antifraudHitRuleSet.setRuleSetName("ruleset-2000")
-    antifraudHitRuleSet.setRuleSetId(2000L)
+    antifraudHitRuleSet.setRuleSetName("ruleset-2002")
+    antifraudHitRuleSet.setRuleSetId(2002L)
     antifraudHitRuleSet.setRuleSetMode(RuleSetMode.valueOf(ruleSetMode.name()))
     antifraudHitRuleSet.setHitRules(hitRules)
 
@@ -43,17 +43,29 @@ package object history {
   def genAntifraudDetail: Gen[AntifraudDetail] = for {
     antifraudDecision <- genDecision
     decisionReason <- Gen.const("decisionReason")
-    riskLevel <- genRiskLevel
     hitRuleSets <- Gen.choose(1, 3).flatMap(size => Gen.sequence((1 to size).map(_ => genAntifraudHitRuleSet)))
   } yield {
     val antifraudDetail = new AntifraudDetail()
     antifraudDetail.setAntifraudDecision(antifraudDecision)
     antifraudDetail.setDecisionReason(decisionReason)
-    antifraudDetail.setRiskLevel(riskLevel)
     antifraudDetail.setHitRuleSets(hitRuleSets)
 //    antifraudDetail.setHitRuleSets(new java.util.ArrayList())
 
     antifraudDetail
+  }
+
+  def genAdmissionDetail: Gen[AdmissionDetail] = for {
+    admissionDecision <- genDecision
+    decisionReason <- Gen.const("decisionReason")
+    hitRuleSets <- Gen.choose(1, 3).flatMap(size => Gen.sequence((1 to size).map(_ => genAntifraudHitRuleSet)))
+  } yield {
+    val admissionDetail = new AdmissionDetail()
+    admissionDetail.setAdmissionDecision(admissionDecision)
+    admissionDetail.setDecisionReason(decisionReason)
+    admissionDetail.setHitRuleSets(hitRuleSets)
+    //    admissionDetail.setHitRuleSets(new java.util.ArrayList())
+
+    admissionDetail
   }
 
   def genCreditDetail: Gen[CreditDetail] = for {
@@ -100,9 +112,9 @@ package object history {
 
   def genName: Gen[String] = Gen.oneOf("张三", "李四", "王五", "赵六")
 
-  def genCertNo: Gen[String] = Gen.choose(312039129372189999L, 578129129372189999L).map(_.toString)
+  def genCertNo: Gen[String] = Gen.const("450331199511070613") // Gen.choose(312039129372189999L, 578129129372189999L).map(_.toString)
 
-  def genPhone: Gen[Option[String]] = Gen.option(Gen.choose(13000000000L, 18900000000L).map(_.toString))
+  def genPhone: Gen[Option[String]] = Gen.option(Gen.const("18887749973"))// Gen.option(Gen.choose(13000000000L, 18900000000L).map(_.toString))
 
   //  def genGPS: Gen[Option[(Double, Double)]] = Gen.option(for {
   //    latitude <- Gen.choose(28.0, 35.0)
@@ -153,7 +165,8 @@ package object history {
       map += ("indivDeviceGeoLatitude__ROLE__APPLICANT" -> gpsOption.get._1.toString)
       map += ("indivDeviceGeoLongitude__ROLE__APPLICANT" -> gpsOption.get._2.toString)
     }
-    if (phone.isDefined) map += ("indivPhone__ROLE__APPLICANT" -> phone.get)
+    map += ("indivPhone__ROLE__APPLICANT" -> "18887749973")
+//    if (phone.isDefined) map += ("indivPhone__ROLE__APPLICANT" -> phone.get)
     if (gender.isDefined) map += ("indivGender__ROLE__APPLICANT" -> gender.get)
     if (age.isDefined) map += ("indivAge__ROLE__APPLICANT" -> age.get.toString)
     if (deviceId.isDefined) map += ("indivDeviceId__ROLE__APPLICANT" -> deviceId.get.toString)

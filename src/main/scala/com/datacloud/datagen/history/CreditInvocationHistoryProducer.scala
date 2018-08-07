@@ -7,15 +7,15 @@ import com.datacloud.polaris.protocol.avro._
 import org.scalacheck.Gen
 
 object CreditInvocationHistoryProducer extends App {
-  val topicName = "dev_CREDIT_INVOCATION_HISTORY"
-  val bootstrapServers = "ambari-agent4.sit.geerong.com:9092"
-  val schemaRegistryUrl = "http://ambari-agent4.sit.geerong.com:8081"
+//  val topicName = "sit_CREDIT_INVOCATION_HISTORY"
+//  val bootstrapServers = "ambari-agent4.sit.geerong.com:9092"
+//  val schemaRegistryUrl = "http://ambari-agent4.sit.geerong.com:8081"
 
-//  val topicName = "preprod_CREDIT_INVOCATION_HISTORY"
-//  val bootstrapServers = "10.12.0.6:9092"
-//  val schemaRegistryUrl = "http://10.12.0.6:8081"
+  val topicName = "preprod_CREDIT_INVOCATION_HISTORY"
+  val bootstrapServers = "10.12.0.6:9092"
+  val schemaRegistryUrl = "http://10.12.0.6:8081"
 
-  val producer = new CreditInvocationHistoryProducer(topicName, bootstrapServers, schemaRegistryUrl, 60L, 1)
+  val producer = new CreditInvocationHistoryProducer(topicName, bootstrapServers, schemaRegistryUrl, 100L, 10)
   producer.run()
 }
 
@@ -24,9 +24,9 @@ class CreditInvocationHistoryProducer(topicName: String, bootstrapServers: Strin
 
   def genData: Gen[CreditInvocationHistory] = {
     for {
-      riskProcessId <- Gen.choose(1234567100L, 1234567123L)
+      riskProcessId <- Gen.choose(2634567100L, 2934567123L)
       executionId <- Gen.uuid.map(uuid => Math.abs(uuid.getMostSignificantBits + uuid.getLeastSignificantBits))
-      creditStrategyId <- Gen.choose(100L, 300L)
+      creditStrategyId <- Gen.choose(1000L, 1009L)//Gen.choose(100L, 300L)
       tenantId <- Gen.oneOf(Seq(8L))
       userId <- Gen.const(100L)
       productCode <- Gen.oneOf(Seq("test"))
@@ -44,7 +44,7 @@ class CreditInvocationHistoryProducer(topicName: String, bootstrapServers: Strin
       rateType <- genRateType
     } yield {
       val creditInvocationHistory = new CreditInvocationHistory
-      creditInvocationHistory.setRiskProcessId(riskProcessId)
+//      creditInvocationHistory.setRiskProcessId(riskProcessId)
       creditInvocationHistory.setExecutionId(executionId)
       creditInvocationHistory.setCreditStrategyId(creditStrategyId)
       creditInvocationHistory.setTenantId(tenantId)
@@ -88,4 +88,5 @@ class CreditInvocationHistoryProducer(topicName: String, bootstrapServers: Strin
     }
   }
 
+  override def getKey(t: CreditInvocationHistory): String = s"${t.getRiskProcessId}_${t.getOccurTime}"
 }

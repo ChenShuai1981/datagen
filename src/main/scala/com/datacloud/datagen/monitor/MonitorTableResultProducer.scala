@@ -25,4 +25,5 @@ class MonitorTableResultProducer(topicName: String, bootstrapServers: String, in
     MonitorTableResult(tenantId, hitTime, hitCounts)
   }
 
+  override def getKey(t: MonitorTableResult): String = t.hitTime.toString
 }

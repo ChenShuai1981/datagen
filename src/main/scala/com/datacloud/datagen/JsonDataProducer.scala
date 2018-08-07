@@ -15,6 +15,8 @@ abstract class JsonDataProducer[T](topicName: String,
 
   def genData: Gen[T]
 
+  def getKey(t: T): String
+
   def run() = {
     val props = new Properties
     props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, classOf[StringSerializer].getName)
@@ -28,7 +30,7 @@ abstract class JsonDataProducer[T](topicName: String,
         (data: T) => {
           val jsonString = JsonUtil.toJson(data)
           println(jsonString)
-          producer.send(new ProducerRecord[String, String](topicName, null, String.valueOf(System.currentTimeMillis()), jsonString))
+          producer.send(new ProducerRecord[String, String](topicName, null, getKey(data), jsonString))
           Thread.sleep(interval)
         }
       }

@@ -4,11 +4,11 @@ import com.datacloud.datagen.JsonDataProducer
 import org.scalacheck.Gen
 
 object MarketDecisionResultProducer extends App {
-//  val topicName = "dev_MARKET_DECISION_RESULT"
-//  val bootstrapServers = "ambari-agent4.sit.geerong.com:9092"
+  val topicName = "dev_MARKET_DECISION_RESULT"
+  val bootstrapServers = "ambari-agent4.sit.geerong.com:9092"
 
-  val topicName = "preprod_MARKET_DECISION_RESULT"
-  val bootstrapServers = "10.12.0.6:9092"
+//  val topicName = "preprod_MARKET_DECISION_RESULT"
+//  val bootstrapServers = "10.12.0.6:9092"
 
 
   val interval = 60L
@@ -58,4 +58,6 @@ class MarketDecisionResultProducer(topicName: String, bootstrapServers: String, 
           cardOwnerIndivID, cardOwnerName, cardOwnerPhone, cardOwnerEmail, marketWay, transactionTime, marketDecisionStrategy, appendix)
       }
     }
+
+  override def getKey(t: MarketDecisionResult): String = t.transactionTime.toString
 }
