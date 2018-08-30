@@ -145,6 +145,8 @@ package object history {
 
   def genDeviceId: Gen[Option[String]] = Gen.option(Gen.identifier)
 
+  def genBankNo: Gen[Option[String]] = Gen.option(Gen.choose(1, 100).map(id => s"bankno_$id"))
+
   def genInput: Gen[Map[String, String]] = for {
     name <- genName
     certNo <- genCertNo
@@ -154,6 +156,7 @@ package object history {
     gender <- genGender
     age <- genAge
     deviceId <- genDeviceId
+    bankNo <- genBankNo
   } yield {
     var map = mutable.Map[String, String]()
     map += ("indivName__ROLE__APPLICANT" -> name)
@@ -169,7 +172,8 @@ package object history {
 //    if (phone.isDefined) map += ("indivPhone__ROLE__APPLICANT" -> phone.get)
     if (gender.isDefined) map += ("indivGender__ROLE__APPLICANT" -> gender.get)
     if (age.isDefined) map += ("indivAge__ROLE__APPLICANT" -> age.get.toString)
-    if (deviceId.isDefined) map += ("indivDeviceId__ROLE__APPLICANT" -> deviceId.get.toString)
+    if (deviceId.isDefined) map += ("clientData_deviceInfo_generalDeviceId" -> deviceId.get.toString)
+    if (bankNo.isDefined) map += ("indivBankNo__ROLE__APPLICANT" -> bankNo.get.toString)
 
     map.toMap
   }

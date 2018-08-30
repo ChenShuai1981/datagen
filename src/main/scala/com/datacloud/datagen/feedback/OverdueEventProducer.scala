@@ -7,13 +7,13 @@ import com.datacloud.polaris.protocol.avro.OverdueEvent
 import org.scalacheck.Gen
 
 object OverdueEventProducer extends App {
-//  val topicName = "sit_OVERDUE_EVENT"
-//  val bootstrapServers = "10.12.0.157:9092"
-//  val schemaRegistryUrl = "http://10.12.0.157:8081"
+  val topicName = "dev_OVERDUE_EVENT"
+  val bootstrapServers = "10.12.0.131:9092"
+  val schemaRegistryUrl = "http://10.12.0.131:8081"
 
-  val topicName = "preprod_OVERDUE_EVENT"
-  val bootstrapServers = "10.12.0.6:9092"
-  val schemaRegistryUrl = "http://10.12.0.6:8081"
+//  val topicName = "preprod_OVERDUE_EVENT"
+//  val bootstrapServers = "10.12.0.6:9092"
+//  val schemaRegistryUrl = "http://10.12.0.6:8081"
 
   val producer = new OverdueEventProducer(topicName, bootstrapServers, schemaRegistryUrl, 600L, 10)
   producer.run()
@@ -31,6 +31,9 @@ class OverdueEventProducer(topicName: String, bootstrapServers: String, schemaRe
     overdueDays <- Gen.choose(1, 3)
     eventTime <- Gen.const(System.currentTimeMillis())
     personalInfo <- genPersonalInfo
+    overdueNo <- Gen.choose(1, 12)
+    overdueStartDate <- Gen.const(1528646400000L)
+    dueDate <- Gen.const(1528560000000L)
   } yield {
     val overdueEvent = new OverdueEvent()
     overdueEvent.setCertNo(personalInfo.certNo)
@@ -53,9 +56,10 @@ class OverdueEventProducer(topicName: String, bootstrapServers: String, schemaRe
     overdueEvent.setRiskProcessId(417030711099260936L)
     overdueEvent.setTerminal("GENERAL")
     overdueEvent.setEventTime(1532942799000L)
-    overdueEvent.setOverdueStartDate(1528646400000L)
+    overdueEvent.setOverdueStartDate(overdueStartDate)
     overdueEvent.setOverdueDays(1)
-    overdueEvent.setDueDate(1528560000000L)
+    overdueEvent.setDueDate(dueDate)
+//    overdueEvent.setOverdueNo(overdueNo)
     overdueEvent
   }
 

@@ -1,16 +1,16 @@
 package com.datacloud.datagen
 
-import com.datacloud.dsp.avro.bbtree._
+import com.datacloud.dsp.avro._
 import org.scalacheck.Gen
 import scala.collection.JavaConversions._
 
 package object dsp {
 
-//  case class BBTreeBannerObj(w: Option[Int],
+//  case class BannerObj(w: Option[Int],
 //                             h: Option[Int],
 //                             pos: Option[Int])
 //
-//  case class BBTreeVideoObj(mimes: Seq[String],
+//  case class VideoObj(mimes: Seq[String],
 //                            w: Int,
 //                            h: Int,
 //                            pos: Option[Int],
@@ -19,15 +19,15 @@ package object dsp {
 //                            minbitrate: Option[Int],
 //                            maxbitrate: Option[Int])
 //
-//  case class BBTreeImpExtObj(title: Option[String],
+//  case class ImpExtObj(title: Option[String],
 //                             keywords: Option[String],
 //                             cat: Option[String])
 //
-//  case class BBTreeAppObj(id: String,
+//  case class AppObj(id: String,
 //                          ver: Option[String],
 //                          bundle: Option[String])
 //
-//  case class BBTreeDeviceObj(ip: String,
+//  case class DeviceObj(ip: String,
 //                             ipv6: Option[String],
 //                             devtype: Int,
 //                             lang: Option[String],
@@ -47,7 +47,7 @@ package object dsp {
 //                             idfasha1: Option[String],
 //                             ort: Option[Int])
 //
-//  case class BBTreeGeoObj(lat: Option[Double],
+//  case class GeoObj(lat: Option[Double],
 //                          lon: Option[Double],
 //                          country: Option[String],
 //                          prov: Option[String],
@@ -56,27 +56,27 @@ package object dsp {
 //                          `type`: Option[Int],
 //                          accu: Option[Int])
 //
-//  case class BBTreeImpObj(id: String,
+//  case class ImpObj(id: String,
 //                          tagid: String,
-//                          banner: Option[BBTreeBannerObj],
-//                          video: Option[BBTreeVideoObj],
-//                          ext: Option[BBTreeImpExtObj])
+//                          banner: Option[BannerObj],
+//                          video: Option[VideoObj],
+//                          ext: Option[ImpExtObj])
 //
-//  case class BBTreeUserObj(id: String,
+//  case class UserObj(id: String,
 //                           gender: Option[String],
 //                           yob: Option[Int],
 //                           keywords: Option[String],
 //                           ext: Option[Map[String, String]])
 //
-//  case class BBTreeBidRequestObj(id: String,
-//                                 imp: Seq[BBTreeImpObj],
-//                                 app: BBTreeAppObj,
-//                                 device: BBTreeDeviceObj,
-//                                 user: BBTreeUserObj,
+//  case class BidRequestObj(id: String,
+//                                 imp: Seq[ImpObj],
+//                                 app: AppObj,
+//                                 device: DeviceObj,
+//                                 user: UserObj,
 //                                 tmax: Option[Int],
 //                                 bcat: Option[Seq[String]])
 //
-//  case class BBTreeBidResponseExtObj(title: Option[String],
+//  case class BidResponseExtObj(title: Option[String],
 //                                     desc: Option[String],
 //                                     action: Int,
 //                                     images: Array[String],
@@ -87,32 +87,32 @@ package object dsp {
 //                                     imptrackers: Array[String],
 //                                     clktrackers: Array[String])
 //
-//  case class BBTreeBidResponseObj(id: String,
+//  case class BidResponseObj(id: String,
 //                                  bidid: String,
 //                                  adm: Option[String],
 //                                  cat: Option[String],
-//                                  ext: BBTreeBidResponseExtObj)
+//                                  ext: BidResponseExtObj)
 
   def genUserId: Gen[String] = Gen.choose(10000, 99999).map(n => s"userid_$n")
 
-  def genBBTreeUserObj: Gen[BBTreeUserObj] = for {
+  def genUserObj: Gen[UserObj] = for {
     id <- Gen.uuid.map(_.toString)
     gender <- Gen.oneOf(Seq("M", "F", "O"))
     yob <- Gen.choose(1970, 2000)
     keywords <- Gen.oneOf("food", "travel", "music", "sports")
     ext <- Gen.const(Map.empty[String, String])
   } yield {
-    new BBTreeUserObj(id, gender, yob, keywords, ext)
+    new UserObj(id, gender, yob, keywords, ext)
   }
 
-  def genBBTreeBannerObj: Gen[BBTreeBannerObj] = for {
+  def genBannerObj: Gen[BannerObj] = for {
     (w, h) <- Gen.oneOf(Seq((50, 100), (80, 150), (32, 48)))
     pos <- Gen.choose(0, 7)
   } yield {
-    new BBTreeBannerObj(w, h, pos)
+    new BannerObj(w, h, pos)
   }
 
-  def genBBTreeVideoObj: Gen[BBTreeVideoObj] = for {
+  def genVideoObj: Gen[VideoObj] = for {
     mimes <- Gen.someOf(Seq("avi", "mkv", "mp4"))
     (w, h) <- Gen.oneOf(Seq((50, 100), (80, 150), (32, 48)))
     pos <- Gen.choose(0, 7)
@@ -121,24 +121,26 @@ package object dsp {
     minbitrate <- Gen.choose(1000, 3000)
     maxbitrate <- Gen.choose(10000, 30000)
   } yield {
-    new BBTreeVideoObj(mimes, w, h, pos, mindur, maxdur, minbitrate, maxbitrate)
+    new VideoObj(mimes, w, h, pos, mindur, maxdur, minbitrate, maxbitrate)
   }
 
-  def genBBTreeImpExtObj: Gen[BBTreeImpExtObj] = for {
+  def genImpExtObj: Gen[ImpExtObj] = for {
     title <- Gen.oneOf(Seq("hello world"))
     keywords <- Gen.oneOf(Seq("women", "sports", "tv", "music"))
     cat <- Gen.someOf(Gen.choose(1, 10).map(n => s"IAB_$n"), Gen.choose(11, 20).map(n => s"IAB_$n"))
   } yield {
-    new BBTreeImpExtObj(title, keywords, cat)
+    new ImpExtObj(title, keywords, cat)
   }
 
-  def genBBTreeAppObj: Gen[BBTreeAppObj] = for {
-    id <- genSiteId
+  def genAppObj: Gen[AppObj] = for {
+    id <- genChannelId
     ver <- Gen.choose(1, 100).map(_.toString)
-    bundle <- Gen.const("com.bbtree.app")
+    bundle <- Gen.const("com..app")
   } yield {
-    new BBTreeAppObj(id, ver, bundle)
+    new AppObj(id, ver, bundle)
   }
+
+  def genUA: Gen[String] = Gen.oneOf(Seq("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36"))
 
   def genIP: Gen[String] = for {
       d1 <- Gen.choose(0, 255)
@@ -149,7 +151,7 @@ package object dsp {
       s"$d1.$d2.$d3.$d4"
     }
 
-  def genBBTreeDeviceObj: Gen[BBTreeDeviceObj] = for {
+  def genDeviceObj: Gen[DeviceObj] = for {
     ip <- genIP
     ipv6 <- Gen.const("2001:0DB8:0000:0023:0008:0800:200C:417A")
     devtype <- Gen.choose(1, 7)
@@ -170,15 +172,21 @@ package object dsp {
     idfasha1 <- Gen.uuid.map(_.toString)
     ort <- Gen.choose(0, 1)
   } yield {
-    new BBTreeDeviceObj(
+    new DeviceObj(
       ip, ipv6, devtype, lang, make, model, os, osv, conntype,
       didmd5, didsha1, dpidmd5, dpidsha1,
       macmd5, macsha1, idfa, idfamd5, idfasha1, ort)
   }
 
-  def genBBTreeGeoObj: Gen[BBTreeGeoObj] = for {
+  def genGPS: Gen[(Double, Double)] = for {
     lat <- Gen.choose(-90.0d, 90.0d)
     lon <- Gen.choose(-180.0d, 180.0d)
+  } yield {
+    (lat, lon)
+  }
+
+  def genGeoObj: Gen[GeoObj] = for {
+    (lat, lon) <- genGPS
     country <- Gen.const("China")
     prov <- Gen.oneOf("Shanghai", "Hebei", "Zhejiang", "GuangDong")
     city <- Gen.oneOf("Shanghai", "Beijing", "Hangzhou", "Guangzhou")
@@ -186,54 +194,61 @@ package object dsp {
     _type <- Gen.choose(0, 2)
     accu <- Gen.const(1)
   } yield {
-    new BBTreeGeoObj(lat, lon, country, prov, city, street, _type, accu)
+    new GeoObj(lat, lon, country, prov, city, street, _type, accu)
   }
 
-  def genBBTreeImpObj: Gen[BBTreeImpObj] = for {
+  def genImpObj: Gen[ImpObj] = for {
     id <- Gen.choose(1, 5).map(_.toString)
-    tagid <- genPlacementId
-    banner <- genBBTreeBannerObj
-    video <- genBBTreeVideoObj
-    ext <- genBBTreeImpExtObj
+    tagid <- genTagId
+    banner <- genBannerObj
+    video <- genVideoObj
+    ext <- genImpExtObj
   } yield {
-    new BBTreeImpObj(id, tagid, banner, video, ext)
+    new ImpObj(id, tagid, banner, video, ext)
   }
 
-  def genPublisherObj: Gen[BBTreePublisherObj] = for {
-    (id, name, cat, domain) <- Gen.oneOf(Seq(("BBTree", "BBTree", Seq("IAB-14"), "www.bbtree.com"), ("FlightManager", "FlightManager", Seq("IAB-21"), "www.flightmanager.com")))
+  def genPublisherObj: Gen[PublisherObj] = for {
+    (id, name, cat, domain) <- Gen.oneOf(Seq((224L, "", Seq("IAB-14"), "www..com"), (225L, "FlightManager", Seq("IAB-21"), "www.flightmanager.com")))
   } yield {
-    new BBTreePublisherObj(id, name, cat, domain)
+    new PublisherObj(id, name, cat, domain)
   }
 
-  def genBBTreeBidRequestObj: Gen[BBTreeBidRequestObj] = for {
+  def genBidRequestObj: Gen[BidRequestObj] = for {
     id <- Gen.uuid.map(_.toString)
     ts <- Gen.const(System.currentTimeMillis())
-    imp <- genBBTreeImpObj
+    imp <- genImpObj
     publisher <- genPublisherObj
-    app <- genBBTreeAppObj
-    device <- genBBTreeDeviceObj
-    user <- genBBTreeUserObj
+    app <- genAppObj
+    device <- genDeviceObj
+    user <- genUserObj
     tmax <- Gen.const(100)
     bcat <- Gen.someOf(Seq("IAB_5", "IAB_7", "IAB_12", "IAB_19"))
+    tenantid <- Gen.choose(1L, 5L)
+    ua <- genUA
+    ip <- genIP
+    (lat, lon) <- genGPS
   } yield {
-    new BBTreeBidRequestObj(id, ts, imp, publisher, app, device, user, tmax, bcat)
+    new BidRequestObj(id, ts, imp, publisher, app, device, user, tmax, bcat, tenantid, ua, ip, lat, lon)
   }
 
-  def genPublisherId: Gen[String] = Gen.choose(222, 223).map(n => s"publisherid_$n")
-  def genSiteId: Gen[String] = Gen.choose(444, 445).map(n => s"siteid_$n")
-  def genPlacementId: Gen[String] = Gen.choose(1, 5).map(n => s"placementid_$n")
-  def genCreativeId: Gen[String] = Gen.choose(666, 777).map(n => s"creativeid_$n")
+  def genPublisherId: Gen[Long] = Gen.choose(222, 226)
+  def genChannelId: Gen[Long] = Gen.choose(454, 459)
+  def genTagId: Gen[String] = Gen.choose(100, 200).map(n => s"tagid_$n")
 
-  def genBBTreeImpBeaconObj: Gen[BBTreeImpBeaconObj] = for {
+  def genImpBeaconObj: Gen[ImpBeaconObj] = for {
     ts <- Gen.const(System.currentTimeMillis())
     bidid <- Gen.uuid.map(_.toString)
-    placementid <- genPlacementId
+    tagid <- genTagId
     publisherid <- genPublisherId
-    siteId <- genSiteId
-    creativeId <- genCreativeId
-    userId <- genUserId
+    channelid <- genChannelId
+    userid <- genUserId
+    nonce <- Gen.uuid.map(_.toString)
+    ip <- genIP
+    tenantid <- Gen.choose(1L, 5L)
+    ua <- genUA
+    (lat, lon) <- genGPS
   } yield {
-    new BBTreeImpBeaconObj(ts, bidid, placementid, publisherid, siteId, creativeId, userId)
+    new ImpBeaconObj(ts, bidid, tagid, publisherid, channelid, userid, nonce, ip, tenantid, ua, lat, lon)
   }
 
   def genClkPos: Gen[String] = for {
@@ -243,16 +258,20 @@ package object dsp {
     s"$x,$y"
   }
 
-  def genBBTreeClickBeaconObj: Gen[BBTreeClickBeaconObj] = for {
+  def genClickBeaconObj: Gen[ClickBeaconObj] = for {
     ts <- Gen.const(System.currentTimeMillis())
     clkpos <- genClkPos
     bidid <- Gen.uuid.map(_.toString)
-    placementid <- genPlacementId
+    tagid <- genTagId
     publisherid <- genPublisherId
-    siteId <- genSiteId
-    creativeId <- genCreativeId
-    userId <- genUserId
+    channelid <- genChannelId
+    userid <- genUserId
+    nonce <- Gen.uuid.map(_.toString)
+    ip <- genIP
+    tenantid <- Gen.choose(1L, 5L)
+    ua <- genUA
+    (lat, lon) <- genGPS
   } yield {
-    new BBTreeClickBeaconObj(ts, clkpos, bidid, placementid, publisherid, siteId, creativeId, userId)
+    new ClickBeaconObj(ts, clkpos, bidid, tagid, publisherid, channelid, userid, nonce, ip, tenantid, ua, lat, lon)
   }
 }

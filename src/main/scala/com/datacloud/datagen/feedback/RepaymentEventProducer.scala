@@ -7,13 +7,13 @@ import com.datacloud.polaris.protocol.avro.{PaymentEvent, RepaymentEvent}
 import org.scalacheck.Gen
 
 object RepaymentEventProducer extends App {
-//    val topicName = "dev_REPAYMENT_EVENT"
-//    val bootstrapServers = "ambari-agent4.sit.geerong.com:9092"
-//    val schemaRegistryUrl = "http://ambari-agent4.sit.geerong.com:8081"
+    val topicName = "sit_REPAYMENT_EVENT"
+    val bootstrapServers = "10.12.0.131:9092"
+    val schemaRegistryUrl = "http://10.12.0.131:8081"
 
-  val topicName = "preprod_REPAYMENT_EVENT"
-  val bootstrapServers = "10.12.0.6:9092"
-  val schemaRegistryUrl = "http://10.12.0.6:8081"
+//  val topicName = "preprod_REPAYMENT_EVENT"
+//  val bootstrapServers = "10.12.0.6:9092"
+//  val schemaRegistryUrl = "http://10.12.0.6:8081"
 
   val producer = new RepaymentEventProducer(topicName, bootstrapServers, schemaRegistryUrl, 600L, 10)
   producer.run()
