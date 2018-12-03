@@ -8,12 +8,14 @@ import com.datacloud.polaris.protocol.avro.ApplyRejectedEvent
 import org.scalacheck.Gen
 
 object ApplyRejectedEventProducer extends App {
-  val topicName = "dev_APPLY_REJECTED_EVENT"
-//  val bootstrapServers = "10.12.0.131:9092"
-//  val schemaRegistryUrl = "http://10.12.0.131:8081"
 
+  val topicName = "loc_APPLY_REJECTED_EVENT"
   val bootstrapServers = "localhost:9092"
   val schemaRegistryUrl = "http://localhost:8081"
+
+//  val topicName = "sit_APPLY_REJECTED_EVENT"
+//  val bootstrapServers = "10.12.0.131:9092"
+//  val schemaRegistryUrl = "http://10.12.0.131:8081"
 
 //    val topicName = "preprod_APPLY_REJECTED_EVENT"
 //    val bootstrapServers = "10.12.0.6:9092"
@@ -66,5 +68,5 @@ class ApplyRejectedEventProducer(topicName: String, bootstrapServers: String, sc
     }
   }
 
-  override def getKey(t: ApplyRejectedEvent): String = s"${t.getRiskProcessId}_${t.getEventTime}"
+  override def getKey(t: ApplyRejectedEvent): String = s"${t.getRiskProcessId}"
 }

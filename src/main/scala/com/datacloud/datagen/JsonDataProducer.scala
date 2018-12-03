@@ -23,6 +23,7 @@ abstract class JsonDataProducer[T](topicName: String,
     props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, classOf[StringSerializer].getName)
     props.put(ProducerConfig.ACKS_CONFIG, "all")
     props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers)
+    props.put("enable.idempotence", "true")
 
     val producer: Producer[String, String] = new KafkaProducer[String, String](props)
     for (i <- 1 to loop) {

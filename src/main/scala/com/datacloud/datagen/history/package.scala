@@ -112,9 +112,23 @@ package object history {
 
   def genName: Gen[String] = Gen.oneOf("张三", "李四", "王五", "赵六")
 
-  def genCertNo: Gen[String] = Gen.const("450331199511070613") // Gen.choose(312039129372189999L, 578129129372189999L).map(_.toString)
+  def genCertNo: Gen[String] = for {
+    region <- Gen.choose(100000, 999999).map(_.toString) // 6
+    year <- Gen.choose(1930, 2000).map(_.toString) // 4
+    month <- Gen.choose(1, 12).map(m => if (m < 10) "0"+m else m.toString) // 2
+    day <- Gen.choose(1, 30).map(m => if (m < 10) "0"+m else m.toString) // 2
+    suffix <- Gen.choose(1000, 9999).map(_.toString) // 4
+  } yield {
+    region + year + month + day + suffix
+  }
 
-  def genPhone: Gen[Option[String]] = Gen.option(Gen.const("18887749973"))// Gen.option(Gen.choose(13000000000L, 18900000000L).map(_.toString))
+  def genTerminal: Gen[String] = Gen.oneOf("GENERAL", "WEB", "IOS", "ANDROID")
+
+  def genEventCode: Gen[String] = Gen.oneOf("loan", "activation", "loanApply")
+
+  def genProductCode: Gen[String] = Gen.oneOf("XINJIN", "CHEFANG")
+
+  def genPhone: Gen[String] = Gen.choose(13000000000L, 18900000000L).map(_.toString)
 
   //  def genGPS: Gen[Option[(Double, Double)]] = Gen.option(for {
   //    latitude <- Gen.choose(28.0, 35.0)
@@ -143,24 +157,26 @@ package object history {
   //    s"$d1.$d2.$d3.$d4"
   //  }
 
-  def genDeviceId: Gen[Option[String]] = Gen.option(Gen.identifier)
+  def genRegion: Gen[Region] =
+    Gen.oneOf(Seq(Region.INDONESIA))
+//    Gen.oneOf(Seq(Region.INDONESIA, Region.PRC, Region.MALAYSIA, Region.VIETNAM, Region.UNKNOWN))
+
+  def genDeviceId: Gen[Option[String]] = Gen.option(Gen.identifier.map(s => "adid_" + s))
 
   def genBankNo: Gen[Option[String]] = Gen.option(Gen.choose(1, 100).map(id => s"bankno_$id"))
 
-  def genInput: Gen[Map[String, String]] = for {
-    name <- genName
-    certNo <- genCertNo
-    phone <- genPhone
+  def genInput(certNo: String, name: String, phone: String): Gen[Map[String, String]] = for {
     ipOption <- genIP
     gpsOption <- genGPS
-    gender <- genGender
-    age <- genAge
-    deviceId <- genDeviceId
-    bankNo <- genBankNo
+    genderOption <- genGender
+    ageOption <- genAge
+    deviceIdOption <- genDeviceId
+    bankNoOption <- genBankNo
   } yield {
     var map = mutable.Map[String, String]()
     map += ("indivName__ROLE__APPLICANT" -> name)
     map += ("indivID__ROLE__APPLICANT" -> certNo)
+//    map += ("indivID__ROLE__APPLICANT" -> "5")
     if (ipOption.isDefined) {
       map += ("indivIpAddress__ROLE__APPLICANT" -> ipOption.get)
     }
@@ -168,12 +184,14 @@ package object history {
       map += ("indivDeviceGeoLatitude__ROLE__APPLICANT" -> gpsOption.get._1.toString)
       map += ("indivDeviceGeoLongitude__ROLE__APPLICANT" -> gpsOption.get._2.toString)
     }
-    map += ("indivPhone__ROLE__APPLICANT" -> "18887749973")
-//    if (phone.isDefined) map += ("indivPhone__ROLE__APPLICANT" -> phone.get)
-    if (gender.isDefined) map += ("indivGender__ROLE__APPLICANT" -> gender.get)
-    if (age.isDefined) map += ("indivAge__ROLE__APPLICANT" -> age.get.toString)
-    if (deviceId.isDefined) map += ("clientData_deviceInfo_generalDeviceId" -> deviceId.get.toString)
-    if (bankNo.isDefined) map += ("indivBankNo__ROLE__APPLICANT" -> bankNo.get.toString)
+//    map += ("indivPhone__ROLE__APPLICANT" -> "18887749973")
+    map += ("indivPhone__ROLE__APPLICANT" -> phone)
+    if (genderOption.isDefined) map += ("indivGender__ROLE__APPLICANT" -> genderOption.get)
+    if (ageOption.isDefined) map += ("indivAge__ROLE__APPLICANT" -> ageOption.get.toString)
+    if (deviceIdOption.isDefined) map += ("clientData_deviceInfo_generalDeviceId" -> deviceIdOption.get.toString)
+//    map += ("clientData_deviceInfo_generalDeviceId" -> "adid_1122334455")
+    if (bankNoOption.isDefined) map += ("indivBankNo__ROLE__APPLICANT" -> bankNoOption.get.toString)
+//    map += ("indivBankNo__ROLE__APPLICANT" -> "9876543210")
 
     map.toMap
   }

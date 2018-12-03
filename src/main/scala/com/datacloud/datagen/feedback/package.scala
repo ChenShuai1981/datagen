@@ -2,12 +2,12 @@ package com.datacloud.datagen
 
 import java.time.{Instant, LocalDateTime, ZoneId}
 
-import com.datacloud.polaris.protocol.avro.PaymentPlan
+import com.datacloud.polaris.protocol.avro.{PaymentPlan, Region}
 import org.scalacheck.Gen
 
 package object feedback {
 
-  def genRiskProcessId: Gen[Long] =  Gen.choose(1234567100L, 1234567123L)
+  def genRiskProcessId: Gen[Long] =  Gen.choose(1234560000L, 2345670000L)
 
   def genTerminal: Gen[String] = Gen.oneOf("GENERAL", "WEB", "IOS", "ANDROID")
 
@@ -18,6 +18,10 @@ package object feedback {
   case class PersonalInfo(certNo: String, name: String, phone: String)
   val lastNames = Seq("赵","钱","孙","李","王","陈","毛","黄","谢")
   val phonePrefix = Seq(13, 15, 17, 18)
+
+  def genRegion: Gen[Region] =
+    Gen.oneOf(Seq(Region.INDONESIA))
+  //    Gen.oneOf(Seq(Region.INDONESIA, Region.PRC, Region.MALAYSIA, Region.VIETNAM, Region.UNKNOWN))
 
   def genPersonalInfo: Gen[PersonalInfo] = for {
     i <- Gen.choose(1000, 9999)

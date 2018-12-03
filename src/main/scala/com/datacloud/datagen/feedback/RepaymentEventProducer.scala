@@ -27,6 +27,7 @@ class RepaymentEventProducer(topicName: String, bootstrapServers: String, schema
     terminal <- genTerminal
     productCode <- genProductCode
     tenantId <- genTenantId
+    region <- genRegion
     repaymentNo <- Gen.choose(1, 12)
     repaymentAmount <- Gen.choose(1000d, 10000d)
     eventTime <- Gen.const(System.currentTimeMillis()-3600*1000*24*12)
@@ -41,11 +42,12 @@ class RepaymentEventProducer(topicName: String, bootstrapServers: String, schema
     repaymentEvent.setCertNo(personalInfo.certNo)
     repaymentEvent.setName(personalInfo.name)
     repaymentEvent.setPhone(personalInfo.phone)
+    repaymentEvent.setPhoneCleaned(personalInfo.phone)
     repaymentEvent.setEventTime(eventTime)
     repaymentEvent.setProductCode(productCode)
-//    repaymentEvent.setRiskProcessId(riskProcessId)
-    repaymentEvent.setRiskProcessId(111111121L)
+    repaymentEvent.setRiskProcessId(riskProcessId)
     repaymentEvent.setTenantId(tenantId)
+    repaymentEvent.setRegion(region)
     repaymentEvent.setTerminal(terminal)
     repaymentEvent.setRepaymentNo(repaymentNo)
     repaymentEvent.setRepayAmount(repaymentAmount)
@@ -59,5 +61,5 @@ class RepaymentEventProducer(topicName: String, bootstrapServers: String, schema
     repaymentEvent
   }
 
-  override def getKey(t: RepaymentEvent): String = s"${t.getRiskProcessId}_${t.getDueDate}"
+  override def getKey(t: RepaymentEvent): String = s"${t.getRiskProcessId}_${t.getRepaymentNo}"
 }

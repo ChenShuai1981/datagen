@@ -7,9 +7,14 @@ import com.datacloud.polaris.protocol.avro.PaymentEvent
 import org.scalacheck.Gen
 
 object PaymentEventProducer extends App {
-  val topicName = "sit_PAYMENT_EVENT"
-  val bootstrapServers = "10.12.0.131:9092"
-  val schemaRegistryUrl = "http://10.12.0.131:8081"
+
+  val topicName = "loc_PAYMENT_EVENT"
+  val bootstrapServers = "localhost:9092"
+  val schemaRegistryUrl = "http://localhost:8081"
+
+//  val topicName = "sit_PAYMENT_EVENT"
+//  val bootstrapServers = "10.12.0.131:9092"
+//  val schemaRegistryUrl = "http://10.12.0.131:8081"
 
 //  val topicName = "preprod_PAYMENT_EVENT"
 //  val bootstrapServers = "10.12.0.6:9092"
@@ -27,6 +32,7 @@ class PaymentEventProducer(topicName: String, bootstrapServers: String, schemaRe
     terminal <- genTerminal
     productCode <- genProductCode
     tenantId <- genTenantId
+    region <- genRegion
     principalAmount <- Gen.choose(1000d, 10000d)
     eventTime <- Gen.const(System.currentTimeMillis()-3600*1000*24*12)
     loanTerm <- Gen.choose(12, 18)
@@ -40,6 +46,7 @@ class PaymentEventProducer(topicName: String, bootstrapServers: String, schemaRe
     paymentEvent.setCertNo(personalInfo.certNo)
     paymentEvent.setName(personalInfo.name)
     paymentEvent.setPhone(personalInfo.phone)
+    paymentEvent.setPhoneCleaned(personalInfo.phone)
     val ldt = LocalDateTime.ofInstant(Instant.ofEpochMilli(eventTime), zoneId).plusDays(1)
     val valueDate = ldt.atZone(zoneId).toInstant.toEpochMilli
     paymentEvent.setValueDate(valueDate)
@@ -60,13 +67,13 @@ class PaymentEventProducer(topicName: String, bootstrapServers: String, schemaRe
       paymentEvent.setSurchargeFixFee(surchargeFixFee.get)
     }
     paymentEvent.setProductCode(productCode)
-//    paymentEvent.setRiskProcessId(riskProcessId)
-    paymentEvent.setRiskProcessId(111111121L)
+    paymentEvent.setRiskProcessId(riskProcessId)
     paymentEvent.setTenantId(tenantId)
+    paymentEvent.setRegion(region)
     paymentEvent.setTerminal(terminal)
     paymentEvent.setPlanRepayment(planRepayment)
     paymentEvent
   }
 
-  override def getKey(t: PaymentEvent): String = s"${t.getRiskProcessId}_${t.getEventTime}"
+  override def getKey(t: PaymentEvent): String = s"${t.getRiskProcessId}"
 }

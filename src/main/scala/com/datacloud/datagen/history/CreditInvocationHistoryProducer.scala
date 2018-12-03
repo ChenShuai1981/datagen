@@ -7,7 +7,7 @@ import com.datacloud.polaris.protocol.avro._
 import org.scalacheck.Gen
 
 object CreditInvocationHistoryProducer extends App {
-  val topicName = "dev_CREDIT_INVOCATION_HISTORY"
+  val topicName = "sit_CREDIT_INVOCATION_HISTORY"
   val bootstrapServers = "10.12.0.131:9092"
   val schemaRegistryUrl = "http://10.12.0.131:8081"
 
@@ -44,7 +44,7 @@ class CreditInvocationHistoryProducer(topicName: String, bootstrapServers: Strin
       rateType <- genRateType
     } yield {
       val creditInvocationHistory = new CreditInvocationHistory
-//      creditInvocationHistory.setRiskProcessId(riskProcessId)
+      creditInvocationHistory.setRiskProcessId(riskProcessId)
       creditInvocationHistory.setExecutionId(executionId)
       creditInvocationHistory.setCreditStrategyId(creditStrategyId)
       creditInvocationHistory.setTenantId(tenantId)
@@ -68,25 +68,25 @@ class CreditInvocationHistoryProducer(topicName: String, bootstrapServers: Strin
 
       creditInvocationHistory.setOutput(new util.HashMap())
 
-      val creditDetail = new CreditDetail()
-      creditDetail.setCreditDecision(Decision.valueOf(decision.name()))
-      if (amount.isDefined) {
-        creditDetail.setAmount(amount.get)
-      }
-      if (compoundPeriod.isDefined) {
-        creditDetail.setCompoundPeriod(compoundPeriod.get)
-      }
-      if (rateValue.isDefined) {
-        creditDetail.setRateValue(rateValue.get)
-      }
-      if (rateType.isDefined) {
-        creditDetail.setRateType(RateType.valueOf(rateType.get.name()))
-      }
-      creditInvocationHistory.setCreditDetail(creditDetail)
+//      val creditDetail = new CreditDetail()
+//      creditDetail.setCreditDecision(Decision.valueOf(decision.name()))
+//      if (amount.isDefined) {
+//        creditDetail.setAmount(amount.get)
+//      }
+//      if (compoundPeriod.isDefined) {
+//        creditDetail.setCompoundPeriod(compoundPeriod.get)
+//      }
+//      if (rateValue.isDefined) {
+//        creditDetail.setRateValue(rateValue.get)
+//      }
+//      if (rateType.isDefined) {
+//        creditDetail.setRateType(RateType.valueOf(rateType.get.name()))
+//      }
+//      creditInvocationHistory.setCreditDetail(creditDetail)
 
       creditInvocationHistory
     }
   }
 
-  override def getKey(t: CreditInvocationHistory): String = s"${t.getRiskProcessId}_${t.getOccurTime}"
+  override def getKey(t: CreditInvocationHistory): String = s"${t.getRiskProcessId}_${t.getExecutionId}"
 }

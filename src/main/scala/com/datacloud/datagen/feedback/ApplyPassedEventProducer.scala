@@ -8,11 +8,12 @@ import com.datacloud.polaris.protocol.avro.ApplyPassedEvent
 import org.scalacheck.Gen
 
 object ApplyPassedEventProducer extends App {
-  val topicName = "dev_APPLY_PASSED_EVENT"
 
+  val topicName = "loc_APPLY_PASSED_EVENT"
   val bootstrapServers = "localhost:9092"
   val schemaRegistryUrl = "http://localhost:8081"
 
+//  val topicName = "sit_APPLY_PASSED_EVENT"
 //  val bootstrapServers = "10.12.0.131:9092"
 //  val schemaRegistryUrl = "http://10.12.0.131:8081"
 
@@ -43,7 +44,7 @@ class ApplyPassedEventProducer(topicName: String, bootstrapServers: String, sche
       tenantId <- Gen.choose(2557L, 2560L)
       productCode <- Gen.const("test")
       terminal <- Gen.const("GENERAL")
-      riskProcessId <- Gen.choose(911111153L, 911111153L)
+      riskProcessId <- Gen.choose(811111153L, 911111153L)
       name <- Gen.identifier
       certNo <- genCertNo
       phone <- Gen.choose(13512393721L, 13821382136L).map(_.toString)
@@ -69,5 +70,5 @@ class ApplyPassedEventProducer(topicName: String, bootstrapServers: String, sche
     }
   }
 
-  override def getKey(t: ApplyPassedEvent): String = s"${t.getRiskProcessId}_${t.getEventTime}"
+  override def getKey(t: ApplyPassedEvent): String = s"${t.getRiskProcessId}"
 }

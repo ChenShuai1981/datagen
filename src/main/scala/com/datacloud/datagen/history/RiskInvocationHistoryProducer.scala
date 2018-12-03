@@ -9,19 +9,20 @@ import org.scalacheck.Gen
 import scala.collection.JavaConversions._
 
 object RiskInvocationHistoryProducer extends App {
-  val topicName = "dev_RISK_INVOCATION_HISTORY"
 
-  val bootstrapServers = "10.12.0.131:9092"
-  val schemaRegistryUrl = "http://10.12.0.131:8081"
+  val topicName = "loc_RISK_INVOCATION_HISTORY"
+  val bootstrapServers = "localhost:9092"
+  val schemaRegistryUrl = "http://localhost:8081"
 
-//  val bootstrapServers = "localhost:9092"
-//  val schemaRegistryUrl = "http://localhost:8081"
+//  val topicName = "sit_RISK_INVOCATION_HISTORY"
+//  val bootstrapServers = "10.12.0.131:9092"
+//  val schemaRegistryUrl = "http://10.12.0.131:8081"
 
 //  val topicName = "preprod_RISK_INVOCATION_HISTORY"
 //  val bootstrapServers = "10.12.0.6:9092"
 //  val schemaRegistryUrl = "http://10.12.0.6:8081"
 
-  val producer = new RiskInvocationHistoryProducer(topicName, bootstrapServers, schemaRegistryUrl, 60L, 1)
+  val producer = new RiskInvocationHistoryProducer(topicName, bootstrapServers, schemaRegistryUrl, 200L, 100)
   producer.run()
 }
 
@@ -34,7 +35,7 @@ class RiskInvocationHistoryProducer(topicName: String, bootstrapServers: String,
     dateString <- Gen.choose(21, 22).map(day => if (day < 10) "0"+day.toString else day.toString)
     hourString <- Gen.choose(14, 20).map(hour => if (hour < 10) "0"+hour.toString else hour.toString)
   } yield {
-    val ds = "2018-06-" + dateString + " " + hourString + ":00:00"
+    val ds = "2018-09-" + dateString + " " + hourString + ":00:00"
 //    println(ds)
     sdf.parse(ds).getTime
   }
@@ -44,39 +45,45 @@ class RiskInvocationHistoryProducer(topicName: String, bootstrapServers: String,
       riskProcessId <- Gen.choose(1234560000L, 1234569999L)
       executionId <- Gen.uuid.map(uuid => Math.abs(uuid.getMostSignificantBits + uuid.getLeastSignificantBits))
       creditStrategyId <- Gen.oneOf(1234567890L to 1234567899L)
-      tenantId <- Gen.oneOf(Seq(2557L))
-      userId <- Gen.const(100L)
-//      productCode <- Gen.oneOf("test", "CAR")
-//      terminal <- Gen.oneOf("GENERAL", "WEB", "IOS", "ANDROID")
-//      eventCode <- Gen.oneOf("loan", "activation", "loanApply")
-      productCode <- Gen.const("test")
-      terminal <- Gen.const("GENERAL")
-      eventCode <- Gen.const("loanApply")
-      occurTime <- genOccurTime // Gen.const(System.currentTimeMillis()) //Gen.choose(1000, 60*1000).map(lag => System.currentTimeMillis() - lag)
+
+      tenantId <- Gen.oneOf(Seq(8L))
+      region <- genRegion
+
+      name <- Gen.oneOf(Seq("小二", "老大", "张三", "李四", "王五"))
+      certNo <- genCertNo
+      phone <- genPhone
+
+      eventId <- Gen.choose(1000L, 10000L)
+      eventName <- genEventCode
+      eventCode <- genEventCode
+
+      productId <- Gen.choose(1000L, 10000L)
+      productCode <- genProductCode
+
+      userId <- Gen.const(100L) // poseidon user
+      terminal <- genTerminal
+      occurTime <- Gen.const(System.currentTimeMillis()) //genOccurTime Gen.choose(1000, 60*1000).map(lag => System.currentTimeMillis() - lag)
       decision <- genDecision
       creditScore <- Gen.choose(300.0, 900.0)
       fraudScore <- Gen.choose(0.0, 100.0)
-      name <- Gen.option(Gen.identifier)
-      certNo <- genCertNo
-      phone <- genPhone
+      executedStrategyPhases <- Gen.someOf(Seq("admission", "antifraud", "credit"))
       admissionDetail <- genAdmissionDetail
       antifraudDetail <- genAntifraudDetail
-      productId <- Gen.choose(1000L, 10000L)
-      eventId <- Gen.choose(1000L, 10000L)
-      eventName <- Gen.oneOf("loan", "credit", "apply")
       strategySetId <- Gen.choose(1000L, 10000L)
       strategySetName <- Gen.identifier
       creditDetail <- genCreditDetail
-      input <- genInput
+      input <- genInput(certNo, name, phone)
       output = input
     } yield {
       val riskInvocationHistory = new RiskInvocationHistory()
-      riskInvocationHistory.setAdmissionDetail(admissionDetail)
-      riskInvocationHistory.setAntifraudDetail(antifraudDetail)
+      riskInvocationHistory.setAdmissionDetail(null)
+      riskInvocationHistory.setAntifraudDetail(null)
       riskInvocationHistory.setProductCode(productCode)
       riskInvocationHistory.setProductId(productId)
       riskInvocationHistory.setCertNo(certNo)
       riskInvocationHistory.setCreditDetail(creditDetail)
+      riskInvocationHistory.setAdmissionDetail(admissionDetail)
+      riskInvocationHistory.setAntifraudDetail(antifraudDetail)
       riskInvocationHistory.setCreditStrategyRCId(creditStrategyId)
       riskInvocationHistory.setCreditScore(creditScore)
       riskInvocationHistory.setInput(input)
@@ -85,20 +92,20 @@ class RiskInvocationHistoryProducer(topicName: String, bootstrapServers: String,
       riskInvocationHistory.setEventCode(eventCode)
       riskInvocationHistory.setEventId(eventId)
       riskInvocationHistory.setEventName(eventName)
+      riskInvocationHistory.setExecutedStrategyPhases(executedStrategyPhases)
       riskInvocationHistory.setExecutionId(executionId)
       riskInvocationHistory.setFraudScore(fraudScore)
-      if (name.isDefined) {
-        riskInvocationHistory.setName(name.get)
-      }
+      riskInvocationHistory.setName(name)
       riskInvocationHistory.setOccurTime(occurTime)
-      if (phone.isDefined) {
-        riskInvocationHistory.setPhone(phone.get)
-      }
+      riskInvocationHistory.setPhone(phone)
+      riskInvocationHistory.setPhoneCleaned(phone)
       riskInvocationHistory.setProductCode(productCode)
       riskInvocationHistory.setRiskProcessId(riskProcessId)
+//      riskInvocationHistory.setRiskProcessId(123456786L)
       riskInvocationHistory.setStrategySetId(strategySetId)
       riskInvocationHistory.setStrategySetName(strategySetName)
       riskInvocationHistory.setTenantId(tenantId)
+      riskInvocationHistory.setRegion(region)
       riskInvocationHistory.setTerminal(terminal)
       riskInvocationHistory.setUserId(userId)
 
@@ -106,5 +113,5 @@ class RiskInvocationHistoryProducer(topicName: String, bootstrapServers: String,
     }
   }
 
-  override def getKey(t: RiskInvocationHistory): String = s"${t.getRiskProcessId}_${t.getOccurTime}"
+  override def getKey(t: RiskInvocationHistory): String = s"${t.getRiskProcessId}_${t.getEventId}"
 }

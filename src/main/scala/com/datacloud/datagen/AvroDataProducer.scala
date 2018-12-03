@@ -24,6 +24,7 @@ abstract class AvroDataProducer[T](topicName: String,
     props.put(ProducerConfig.ACKS_CONFIG, "all")
     props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers)
     props.put("schema.registry.url", schemaRegistryUrl)
+    props.put("enable.idempotence", "true")
 
     val producer: Producer[String, T] = new KafkaProducer[String, T](props)
     for (i <- 1 to loop) {

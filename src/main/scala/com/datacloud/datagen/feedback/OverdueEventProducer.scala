@@ -7,9 +7,14 @@ import com.datacloud.polaris.protocol.avro.OverdueEvent
 import org.scalacheck.Gen
 
 object OverdueEventProducer extends App {
-  val topicName = "dev_OVERDUE_EVENT"
-  val bootstrapServers = "10.12.0.131:9092"
-  val schemaRegistryUrl = "http://10.12.0.131:8081"
+
+  val topicName = "loc_OVERDUE_EVENT"
+  val bootstrapServers = "localhost:9092"
+  val schemaRegistryUrl = "http://localhost:8081"
+
+//  val topicName = "sit_OVERDUE_EVENT"
+//  val bootstrapServers = "10.12.0.131:9092"
+//  val schemaRegistryUrl = "http://10.12.0.131:8081"
 
 //  val topicName = "preprod_OVERDUE_EVENT"
 //  val bootstrapServers = "10.12.0.6:9092"
@@ -27,18 +32,20 @@ class OverdueEventProducer(topicName: String, bootstrapServers: String, schemaRe
     terminal <- genTerminal
     productCode <- genProductCode
     tenantId <- genTenantId
+    region <- genRegion
     overdueAmount <- Gen.choose(1000d, 10000d)
-    overdueDays <- Gen.choose(1, 3)
+    overdueDays <- Gen.choose(1, 5)
     eventTime <- Gen.const(System.currentTimeMillis())
     personalInfo <- genPersonalInfo
     overdueNo <- Gen.choose(1, 12)
-    overdueStartDate <- Gen.const(1528646400000L)
-    dueDate <- Gen.const(1528560000000L)
+//    overdueStartDate <- Gen.const(1528646400000L)
+//    dueDate <- Gen.const(1528560000000L)
   } yield {
     val overdueEvent = new OverdueEvent()
     overdueEvent.setCertNo(personalInfo.certNo)
     overdueEvent.setName(personalInfo.name)
     overdueEvent.setPhone(personalInfo.phone)
+    overdueEvent.setPhoneCleaned(personalInfo.phone)
     val ldt = LocalDateTime.ofInstant(Instant.ofEpochMilli(eventTime), zoneId)
     val dueDate = ldt.minusDays(overdueDays).toLocalDate.atStartOfDay().atZone(zoneId).toInstant.toEpochMilli
     overdueEvent.setDueDate(dueDate)
@@ -48,20 +55,14 @@ class OverdueEventProducer(topicName: String, bootstrapServers: String, schemaRe
     overdueEvent.setOverdueDays(overdueDays)
     overdueEvent.setProductCode(productCode)
     overdueEvent.setRiskProcessId(riskProcessId)
+//    overdueEvent.setRiskProcessId(123456787L)
     overdueEvent.setTenantId(tenantId)
+    overdueEvent.setRegion(region)
     overdueEvent.setTerminal(terminal)
+    overdueEvent.setOverdueNo(overdueNo)
 
-    overdueEvent.setTenantId(436L)
-    overdueEvent.setProductCode("PLUTO_TEST")
-    overdueEvent.setRiskProcessId(417030711099260936L)
-    overdueEvent.setTerminal("GENERAL")
-    overdueEvent.setEventTime(1532942799000L)
-    overdueEvent.setOverdueStartDate(overdueStartDate)
-    overdueEvent.setOverdueDays(1)
-    overdueEvent.setDueDate(dueDate)
-//    overdueEvent.setOverdueNo(overdueNo)
     overdueEvent
   }
 
-  override def getKey(t: OverdueEvent): String = s"${t.getRiskProcessId}_${t.getDueDate}"
+  override def getKey(t: OverdueEvent): String = s"${t.getRiskProcessId}_${t.getOverdueNo}"
 }
