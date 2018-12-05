@@ -176,7 +176,7 @@ package object history {
     var map = mutable.Map[String, String]()
     map += ("indivName__ROLE__APPLICANT" -> name)
     map += ("indivID__ROLE__APPLICANT" -> certNo)
-//    map += ("indivID__ROLE__APPLICANT" -> "5")
+//    map += ("indivID__ROLE__APPLICANT" -> "777777779")
     if (ipOption.isDefined) {
       map += ("indivIpAddress__ROLE__APPLICANT" -> ipOption.get)
     }
@@ -191,7 +191,7 @@ package object history {
     if (deviceIdOption.isDefined) map += ("clientData_deviceInfo_generalDeviceId" -> deviceIdOption.get.toString)
 //    map += ("clientData_deviceInfo_generalDeviceId" -> "adid_1122334455")
     if (bankNoOption.isDefined) map += ("indivBankNo__ROLE__APPLICANT" -> bankNoOption.get.toString)
-//    map += ("indivBankNo__ROLE__APPLICANT" -> "9876543210")
+//    map += ("indivBankNo__ROLE__APPLICANT" -> "bankno_987")
 
     map.toMap
   }

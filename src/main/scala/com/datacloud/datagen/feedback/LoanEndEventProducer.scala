@@ -1,16 +1,15 @@
 package com.datacloud.datagen.feedback
 
 
-import java.util
-
 import com.datacloud.datagen.AvroDataProducer
 import com.datacloud.polaris.protocol.avro.{LoanEndEvent, LoanEndType, PaymentPlan}
 import org.scalacheck.Gen
 
 object LoanEndEventProducer extends App {
-    val topicName = "loc_LOANEND_EVENT"
-    val bootstrapServers = "localhost:9092"
-    val schemaRegistryUrl = "http://localhost:8081"
+
+//    val topicName = "loc_LOANEND_EVENT"
+//    val bootstrapServers = "localhost:9092"
+//    val schemaRegistryUrl = "http://localhost:8081"
 
 //  val topicName = "sit_LOANEND_EVENT"
 //  val bootstrapServers = "10.12.0.131:9092"
@@ -20,7 +19,11 @@ object LoanEndEventProducer extends App {
 //  val bootstrapServers = "10.12.0.6:9092"
 //  val schemaRegistryUrl = "http://10.12.0.6:8081"
 
-  val producer = new LoanEndEventProducer(topicName, bootstrapServers, schemaRegistryUrl, 60L, 1)
+  val topicName = "preprod_LOANEND_EVENT"
+  val bootstrapServers = "10.12.0.175:9092"
+  val schemaRegistryUrl = "http://10.12.0.175:8081"
+
+  val producer = new LoanEndEventProducer(topicName, bootstrapServers, schemaRegistryUrl, 200L, 100)
   producer.run()
 }
 
@@ -41,14 +44,17 @@ class LoanEndEventProducer(topicName: String, bootstrapServers: String, schemaRe
   } yield {
     val loanEndEvent = new LoanEndEvent()
     loanEndEvent.setCertNo(personalInfo.certNo)
+//    loanEndEvent.setCertNo("362502198101110613")
     loanEndEvent.setName(personalInfo.name)
     loanEndEvent.setPhone(personalInfo.phone)
+//    loanEndEvent.setPhone("13801899719")
     loanEndEvent.setPhoneCleaned(personalInfo.phone)
+//    loanEndEvent.setPhoneCleaned("13801899719")
     loanEndEvent.setEventTime(eventTime)
     loanEndEvent.setLoanEndType(loanEndType)
     loanEndEvent.setProductCode(productCode)
     loanEndEvent.setRiskProcessId(riskProcessId)
-//    loanEndEvent.setRiskProcessId(123456787L)
+//    loanEndEvent.setRiskProcessId(446617L)
     loanEndEvent.setTenantId(tenantId)
     loanEndEvent.setRegion(region)
     loanEndEvent.setTerminal(terminal)

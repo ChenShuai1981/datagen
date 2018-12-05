@@ -9,9 +9,9 @@ import org.scalacheck.Gen
 
 object ApplyPassedEventProducer extends App {
 
-  val topicName = "loc_APPLY_PASSED_EVENT"
-  val bootstrapServers = "localhost:9092"
-  val schemaRegistryUrl = "http://localhost:8081"
+//  val topicName = "loc_APPLY_PASSED_EVENT"
+//  val bootstrapServers = "localhost:9092"
+//  val schemaRegistryUrl = "http://localhost:8081"
 
 //  val topicName = "sit_APPLY_PASSED_EVENT"
 //  val bootstrapServers = "10.12.0.131:9092"
@@ -21,7 +21,11 @@ object ApplyPassedEventProducer extends App {
 //    val bootstrapServers = "10.12.0.6:9092"
 //    val schemaRegistryUrl = "http://10.12.0.6:8081"
 
-  val producer = new ApplyPassedEventProducer(topicName, bootstrapServers, schemaRegistryUrl, 60L, 1)
+  val topicName = "preprod_APPLY_PASSED_EVENT"
+  val bootstrapServers = "10.12.0.175:9092"
+  val schemaRegistryUrl = "http://10.12.0.175:8081"
+
+  val producer = new ApplyPassedEventProducer(topicName, bootstrapServers, schemaRegistryUrl, 200L, 100)
   producer.run()
 }
 
@@ -61,6 +65,7 @@ class ApplyPassedEventProducer(topicName: String, bootstrapServers: String, sche
       applyPassedEvent.setName(name)
       applyPassedEvent.setCertNo(certNo)
       applyPassedEvent.setPhone(phone)
+      applyPassedEvent.setPhoneCleaned(phone)
       applyPassedEvent.setApplyTime(applyTime)
       applyPassedEvent.setApplyAmount(applyAmount)
       applyPassedEvent.setEventTime(eventTime)

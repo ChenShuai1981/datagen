@@ -9,9 +9,9 @@ import org.scalacheck.Gen
 
 object ApplyRejectedEventProducer extends App {
 
-  val topicName = "loc_APPLY_REJECTED_EVENT"
-  val bootstrapServers = "localhost:9092"
-  val schemaRegistryUrl = "http://localhost:8081"
+//  val topicName = "loc_APPLY_REJECTED_EVENT"
+//  val bootstrapServers = "localhost:9092"
+//  val schemaRegistryUrl = "http://localhost:8081"
 
 //  val topicName = "sit_APPLY_REJECTED_EVENT"
 //  val bootstrapServers = "10.12.0.131:9092"
@@ -20,6 +20,10 @@ object ApplyRejectedEventProducer extends App {
 //    val topicName = "preprod_APPLY_REJECTED_EVENT"
 //    val bootstrapServers = "10.12.0.6:9092"
 //    val schemaRegistryUrl = "http://10.12.0.6:8081"
+
+  val topicName = "preprod_APPLY_REJECTED_EVENT"
+  val bootstrapServers = "10.12.0.175:9092"
+  val schemaRegistryUrl = "http://10.12.0.175:8081"
 
   val producer = new ApplyRejectedEventProducer(topicName, bootstrapServers, schemaRegistryUrl, 60L, 1)
   producer.run()
@@ -60,6 +64,7 @@ class ApplyRejectedEventProducer(topicName: String, bootstrapServers: String, sc
       applyRejectedEvent.setName(name)
       applyRejectedEvent.setCertNo(certNo)
       applyRejectedEvent.setPhone(phone)
+      applyRejectedEvent.setPhoneCleaned(phone)
       applyRejectedEvent.setApplyTime(applyTime)
       applyRejectedEvent.setApplyAmount(applyAmount)
       applyRejectedEvent.setEventTime(eventTime)

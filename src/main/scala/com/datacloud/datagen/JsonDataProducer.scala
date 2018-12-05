@@ -29,9 +29,25 @@ abstract class JsonDataProducer[T](topicName: String,
     for (i <- 1 to loop) {
       forAll(genData) {
         (data: T) => {
+//          val jsonString =
+//            """
+//              |{
+//              |	"input_clientData_deviceInfo_generalDeviceId": "",
+//              |	"input_indivIpAddress__ROLE__APPLICANT": "",
+//              |	"input_indivIpAddress__ROLE__APPLICANT_location_country": "",
+//              |	"input_indivIpAddress__ROLE__APPLICANT_location_province": "",
+//              |	"input_indivIpAddress__ROLE__APPLICANT_location_city": "",
+//              |	"input_indivDeviceGeoLatitude__ROLE__APPLICANT": 0.0,
+//              |	"input_indivDeviceGeoLongitude__ROLE__APPLICANT": 0.0,
+//              |	"input_indivDeviceGeo__ROLE__APPLICANT_result_addressComponent_country": "",
+//              |	"input_indivDeviceGeo__ROLE__APPLICANT_result_addressComponent_province": "",
+//              |	"input_indivDeviceGeo__ROLE__APPLICANT_result_addressComponent_city": ""
+//              |}
+//            """.stripMargin
+//          producer.send(new ProducerRecord[String, String](topicName, null, null, jsonString))
           val jsonString = JsonUtil.toJson(data)
-          println(jsonString)
           producer.send(new ProducerRecord[String, String](topicName, null, getKey(data), jsonString))
+          println(jsonString)
           Thread.sleep(interval)
         }
       }

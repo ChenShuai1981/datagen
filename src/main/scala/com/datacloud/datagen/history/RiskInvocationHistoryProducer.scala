@@ -10,9 +10,9 @@ import scala.collection.JavaConversions._
 
 object RiskInvocationHistoryProducer extends App {
 
-  val topicName = "loc_RISK_INVOCATION_HISTORY"
-  val bootstrapServers = "localhost:9092"
-  val schemaRegistryUrl = "http://localhost:8081"
+//  val topicName = "loc_RISK_INVOCATION_HISTORY"
+//  val bootstrapServers = "localhost:9092"
+//  val schemaRegistryUrl = "http://localhost:8081"
 
 //  val topicName = "sit_RISK_INVOCATION_HISTORY"
 //  val bootstrapServers = "10.12.0.131:9092"
@@ -21,6 +21,10 @@ object RiskInvocationHistoryProducer extends App {
 //  val topicName = "preprod_RISK_INVOCATION_HISTORY"
 //  val bootstrapServers = "10.12.0.6:9092"
 //  val schemaRegistryUrl = "http://10.12.0.6:8081"
+
+  val topicName = "preprod_RISK_INVOCATION_HISTORY"
+  val bootstrapServers = "10.12.0.175:9092"
+  val schemaRegistryUrl = "http://10.12.0.175:8081"
 
   val producer = new RiskInvocationHistoryProducer(topicName, bootstrapServers, schemaRegistryUrl, 200L, 100)
   producer.run()
@@ -98,7 +102,9 @@ class RiskInvocationHistoryProducer(topicName: String, bootstrapServers: String,
       riskInvocationHistory.setName(name)
       riskInvocationHistory.setOccurTime(occurTime)
       riskInvocationHistory.setPhone(phone)
+//      riskInvocationHistory.setPhone("13801899719")
       riskInvocationHistory.setPhoneCleaned(phone)
+//      riskInvocationHistory.setPhoneCleaned("13801899719")
       riskInvocationHistory.setProductCode(productCode)
       riskInvocationHistory.setRiskProcessId(riskProcessId)
 //      riskInvocationHistory.setRiskProcessId(123456786L)

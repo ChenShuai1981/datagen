@@ -8,9 +8,9 @@ import org.scalacheck.Gen
 
 object PaymentEventProducer extends App {
 
-  val topicName = "loc_PAYMENT_EVENT"
-  val bootstrapServers = "localhost:9092"
-  val schemaRegistryUrl = "http://localhost:8081"
+//  val topicName = "loc_PAYMENT_EVENT"
+//  val bootstrapServers = "localhost:9092"
+//  val schemaRegistryUrl = "http://localhost:8081"
 
 //  val topicName = "sit_PAYMENT_EVENT"
 //  val bootstrapServers = "10.12.0.131:9092"
@@ -20,7 +20,11 @@ object PaymentEventProducer extends App {
 //  val bootstrapServers = "10.12.0.6:9092"
 //  val schemaRegistryUrl = "http://10.12.0.6:8081"
 
-  val producer = new PaymentEventProducer(topicName, bootstrapServers, schemaRegistryUrl, 600L, 10)
+  val topicName = "preprod_PAYMENT_EVENT"
+  val bootstrapServers = "10.12.0.175:9092"
+  val schemaRegistryUrl = "http://10.12.0.175:8081"
+
+  val producer = new PaymentEventProducer(topicName, bootstrapServers, schemaRegistryUrl, 200L, 100)
   producer.run()
 }
 
@@ -44,9 +48,12 @@ class PaymentEventProducer(topicName: String, bootstrapServers: String, schemaRe
   } yield {
     val paymentEvent = new PaymentEvent()
     paymentEvent.setCertNo(personalInfo.certNo)
+//    paymentEvent.setCertNo("362502198101110613")
     paymentEvent.setName(personalInfo.name)
     paymentEvent.setPhone(personalInfo.phone)
+//    paymentEvent.setPhoneCleaned("13801899719")
     paymentEvent.setPhoneCleaned(personalInfo.phone)
+//    paymentEvent.setPhoneCleaned("13801899719")
     val ldt = LocalDateTime.ofInstant(Instant.ofEpochMilli(eventTime), zoneId).plusDays(1)
     val valueDate = ldt.atZone(zoneId).toInstant.toEpochMilli
     paymentEvent.setValueDate(valueDate)
@@ -68,6 +75,7 @@ class PaymentEventProducer(topicName: String, bootstrapServers: String, schemaRe
     }
     paymentEvent.setProductCode(productCode)
     paymentEvent.setRiskProcessId(riskProcessId)
+//    paymentEvent.setRiskProcessId(446617L)
     paymentEvent.setTenantId(tenantId)
     paymentEvent.setRegion(region)
     paymentEvent.setTerminal(terminal)
