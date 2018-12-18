@@ -12,12 +12,14 @@ package object history {
     ruleDescription <- Gen.const("ruleDescription")
     (ruleId, ruleName) <- Gen.choose(101505L, 101515L).map(i => (i, "rule-"+i))
     ruleTemplateId <- Gen.choose(4567L, 5678L)
+    isHit <- Gen.oneOf(true, false)
   } yield {
     val hitRule = new HitRule()
     hitRule.setRuleDescription(ruleDescription)
-    hitRule.setRuleId(199L)
-    hitRule.setRuleName("rule-199")
+    hitRule.setRuleId(ruleId)
+    hitRule.setRuleName(ruleName)
     hitRule.setRuleTemplateId(ruleTemplateId)
+    hitRule.setIsHit(isHit)
     hitRule
   }
 
@@ -158,8 +160,8 @@ package object history {
   //  }
 
   def genRegion: Gen[Region] =
-    Gen.oneOf(Seq(Region.INDONESIA))
-//    Gen.oneOf(Seq(Region.INDONESIA, Region.PRC, Region.MALAYSIA, Region.VIETNAM, Region.UNKNOWN))
+//    Gen.oneOf(Seq(Region.INDONESIA))
+    Gen.oneOf(Seq(Region.INDONESIA, Region.PRC, Region.MALAYSIA, Region.VIETNAM, Region.UNKNOWN))
 
   def genDeviceId: Gen[Option[String]] = Gen.option(Gen.identifier.map(s => "adid_" + s))
 
@@ -176,7 +178,7 @@ package object history {
     var map = mutable.Map[String, String]()
     map += ("indivName__ROLE__APPLICANT" -> name)
     map += ("indivID__ROLE__APPLICANT" -> certNo)
-//    map += ("indivID__ROLE__APPLICANT" -> "777777779")
+//    map += ("indivID__ROLE__APPLICANT" -> "1122334480")
     if (ipOption.isDefined) {
       map += ("indivIpAddress__ROLE__APPLICANT" -> ipOption.get)
     }
@@ -189,9 +191,9 @@ package object history {
     if (genderOption.isDefined) map += ("indivGender__ROLE__APPLICANT" -> genderOption.get)
     if (ageOption.isDefined) map += ("indivAge__ROLE__APPLICANT" -> ageOption.get.toString)
     if (deviceIdOption.isDefined) map += ("clientData_deviceInfo_generalDeviceId" -> deviceIdOption.get.toString)
-//    map += ("clientData_deviceInfo_generalDeviceId" -> "adid_1122334455")
+    map += ("clientData_deviceInfo_generalDeviceId" -> "adid_112233445577")
     if (bankNoOption.isDefined) map += ("indivBankNo__ROLE__APPLICANT" -> bankNoOption.get.toString)
-//    map += ("indivBankNo__ROLE__APPLICANT" -> "bankno_987")
+//    map += ("indivBankNo__ROLE__APPLICANT" -> "4213")
 
     map.toMap
   }

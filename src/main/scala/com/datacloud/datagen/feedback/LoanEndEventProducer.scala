@@ -2,7 +2,7 @@ package com.datacloud.datagen.feedback
 
 
 import com.datacloud.datagen.AvroDataProducer
-import com.datacloud.polaris.protocol.avro.{LoanEndEvent, LoanEndType, PaymentPlan}
+import com.datacloud.polaris.protocol.avro.{LoanEndEvent, LoanEndType, PaymentPlan, Region}
 import org.scalacheck.Gen
 
 object LoanEndEventProducer extends App {
@@ -11,19 +11,19 @@ object LoanEndEventProducer extends App {
 //    val bootstrapServers = "localhost:9092"
 //    val schemaRegistryUrl = "http://localhost:8081"
 
-//  val topicName = "sit_LOANEND_EVENT"
-//  val bootstrapServers = "10.12.0.131:9092"
-//  val schemaRegistryUrl = "http://10.12.0.131:8081"
+  val topicName = "dev_LOANEND_EVENT"
+  val bootstrapServers = "10.12.0.131:9092"
+  val schemaRegistryUrl = "http://10.12.0.131:8081"
 
 //  val topicName = "preprod_LOANEND_EVENT"
 //  val bootstrapServers = "10.12.0.6:9092"
 //  val schemaRegistryUrl = "http://10.12.0.6:8081"
 
-  val topicName = "preprod_LOANEND_EVENT"
-  val bootstrapServers = "10.12.0.175:9092"
-  val schemaRegistryUrl = "http://10.12.0.175:8081"
+//  val topicName = "preprod_LOANEND_EVENT"
+//  val bootstrapServers = "10.12.0.175:9092"
+//  val schemaRegistryUrl = "http://10.12.0.175:8081"
 
-  val producer = new LoanEndEventProducer(topicName, bootstrapServers, schemaRegistryUrl, 200L, 100)
+  val producer = new LoanEndEventProducer(topicName, bootstrapServers, schemaRegistryUrl, 100L, 100)
   producer.run()
 }
 
@@ -44,19 +44,20 @@ class LoanEndEventProducer(topicName: String, bootstrapServers: String, schemaRe
   } yield {
     val loanEndEvent = new LoanEndEvent()
     loanEndEvent.setCertNo(personalInfo.certNo)
-//    loanEndEvent.setCertNo("362502198101110613")
+    loanEndEvent.setCertNo("362502198101110613")
     loanEndEvent.setName(personalInfo.name)
     loanEndEvent.setPhone(personalInfo.phone)
-//    loanEndEvent.setPhone("13801899719")
+    loanEndEvent.setPhone("13801899719")
     loanEndEvent.setPhoneCleaned(personalInfo.phone)
-//    loanEndEvent.setPhoneCleaned("13801899719")
+    loanEndEvent.setPhoneCleaned("13801899719")
     loanEndEvent.setEventTime(eventTime)
     loanEndEvent.setLoanEndType(loanEndType)
     loanEndEvent.setProductCode(productCode)
     loanEndEvent.setRiskProcessId(riskProcessId)
-//    loanEndEvent.setRiskProcessId(446617L)
+    loanEndEvent.setRiskProcessId(29382342861L)
     loanEndEvent.setTenantId(tenantId)
     loanEndEvent.setRegion(region)
+    loanEndEvent.setRegion(Region.PRC)
     loanEndEvent.setTerminal(terminal)
     loanEndEvent.setCancelledPlanRepayment(planRepayment)
 //    loanEndEvent.setCancelledPlanRepayment(new util.ArrayList[PaymentPlan]())

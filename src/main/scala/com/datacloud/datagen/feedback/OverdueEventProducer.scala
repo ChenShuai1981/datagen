@@ -3,7 +3,7 @@ package com.datacloud.datagen.feedback
 import java.time.{Instant, LocalDateTime}
 
 import com.datacloud.datagen.AvroDataProducer
-import com.datacloud.polaris.protocol.avro.OverdueEvent
+import com.datacloud.polaris.protocol.avro.{OverdueEvent, Region}
 import org.scalacheck.Gen
 
 object OverdueEventProducer extends App {
@@ -12,19 +12,19 @@ object OverdueEventProducer extends App {
 //  val bootstrapServers = "localhost:9092"
 //  val schemaRegistryUrl = "http://localhost:8081"
 
-//  val topicName = "sit_OVERDUE_EVENT"
-//  val bootstrapServers = "10.12.0.131:9092"
-//  val schemaRegistryUrl = "http://10.12.0.131:8081"
+  val topicName = "dev_OVERDUE_EVENT"
+  val bootstrapServers = "10.12.0.131:9092"
+  val schemaRegistryUrl = "http://10.12.0.131:8081"
 
 //  val topicName = "preprod_OVERDUE_EVENT"
 //  val bootstrapServers = "10.12.0.6:9092"
 //  val schemaRegistryUrl = "http://10.12.0.6:8081"
 
-  val topicName = "preprod_OVERDUE_EVENT"
-  val bootstrapServers = "10.12.0.175:9092"
-  val schemaRegistryUrl = "http://10.12.0.175:8081"
+//  val topicName = "preprod_OVERDUE_EVENT"
+//  val bootstrapServers = "10.12.0.175:9092"
+//  val schemaRegistryUrl = "http://10.12.0.175:8081"
 
-  val producer = new OverdueEventProducer(topicName, bootstrapServers, schemaRegistryUrl, 200L, 100)
+  val producer = new OverdueEventProducer(topicName, bootstrapServers, schemaRegistryUrl, 100L, 100)
   producer.run()
 }
 
@@ -47,12 +47,12 @@ class OverdueEventProducer(topicName: String, bootstrapServers: String, schemaRe
   } yield {
     val overdueEvent = new OverdueEvent()
     overdueEvent.setCertNo(personalInfo.certNo)
-//    overdueEvent.setCertNo("362501543821528616")
+    overdueEvent.setCertNo("362501543821528616")
     overdueEvent.setName(personalInfo.name)
     overdueEvent.setPhone(personalInfo.phone)
-//    overdueEvent.setPhone("13801899719")
+    overdueEvent.setPhone("13801899719")
     overdueEvent.setPhoneCleaned(personalInfo.phone)
-//    overdueEvent.setPhoneCleaned("13801899719")
+    overdueEvent.setPhoneCleaned("13801899719")
     val ldt = LocalDateTime.ofInstant(Instant.ofEpochMilli(eventTime), zoneId)
     val dueDate = ldt.minusDays(overdueDays).toLocalDate.atStartOfDay().atZone(zoneId).toInstant.toEpochMilli
     overdueEvent.setDueDate(dueDate)
@@ -60,11 +60,13 @@ class OverdueEventProducer(topicName: String, bootstrapServers: String, schemaRe
     overdueEvent.setEventTime(eventTime)
     overdueEvent.setOverdueAmount(overdueAmount)
     overdueEvent.setOverdueDays(overdueDays)
+    overdueEvent.setOverdueDays(9)
     overdueEvent.setProductCode(productCode)
     overdueEvent.setRiskProcessId(riskProcessId)
-//    overdueEvent.setRiskProcessId(2302911415L)
+//    overdueEvent.setRiskProcessId(29382342856L)
     overdueEvent.setTenantId(tenantId)
     overdueEvent.setRegion(region)
+    overdueEvent.setRegion(Region.PRC)
     overdueEvent.setTerminal(terminal)
     overdueEvent.setOverdueNo(overdueNo)
 

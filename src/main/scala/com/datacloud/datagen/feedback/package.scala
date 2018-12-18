@@ -20,8 +20,8 @@ package object feedback {
   val phonePrefix = Seq(13, 15, 17, 18)
 
   def genRegion: Gen[Region] =
-    Gen.oneOf(Seq(Region.INDONESIA))
-  //    Gen.oneOf(Seq(Region.INDONESIA, Region.PRC, Region.MALAYSIA, Region.VIETNAM, Region.UNKNOWN))
+//    Gen.oneOf(Seq(Region.INDONESIA))
+      Gen.oneOf(Seq(Region.INDONESIA, Region.PRC, Region.MALAYSIA, Region.VIETNAM, Region.UNKNOWN))
 
   def genPersonalInfo: Gen[PersonalInfo] = for {
     i <- Gen.choose(1000, 9999)

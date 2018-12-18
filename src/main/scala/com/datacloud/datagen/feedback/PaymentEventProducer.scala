@@ -3,7 +3,7 @@ package com.datacloud.datagen.feedback
 import java.time.{Instant, LocalDateTime}
 
 import com.datacloud.datagen.AvroDataProducer
-import com.datacloud.polaris.protocol.avro.PaymentEvent
+import com.datacloud.polaris.protocol.avro.{PaymentEvent, Region}
 import org.scalacheck.Gen
 
 object PaymentEventProducer extends App {
@@ -12,19 +12,19 @@ object PaymentEventProducer extends App {
 //  val bootstrapServers = "localhost:9092"
 //  val schemaRegistryUrl = "http://localhost:8081"
 
-//  val topicName = "sit_PAYMENT_EVENT"
-//  val bootstrapServers = "10.12.0.131:9092"
-//  val schemaRegistryUrl = "http://10.12.0.131:8081"
+  val topicName = "sit_PAYMENT_EVENT"
+  val bootstrapServers = "10.12.0.131:9092"
+  val schemaRegistryUrl = "http://10.12.0.131:8081"
 
 //  val topicName = "preprod_PAYMENT_EVENT"
 //  val bootstrapServers = "10.12.0.6:9092"
 //  val schemaRegistryUrl = "http://10.12.0.6:8081"
 
-  val topicName = "preprod_PAYMENT_EVENT"
-  val bootstrapServers = "10.12.0.175:9092"
-  val schemaRegistryUrl = "http://10.12.0.175:8081"
+//  val topicName = "preprod_PAYMENT_EVENT"
+//  val bootstrapServers = "10.12.0.175:9092"
+//  val schemaRegistryUrl = "http://10.12.0.175:8081"
 
-  val producer = new PaymentEventProducer(topicName, bootstrapServers, schemaRegistryUrl, 200L, 100)
+  val producer = new PaymentEventProducer(topicName, bootstrapServers, schemaRegistryUrl, 100L, 100)
   producer.run()
 }
 
@@ -48,12 +48,12 @@ class PaymentEventProducer(topicName: String, bootstrapServers: String, schemaRe
   } yield {
     val paymentEvent = new PaymentEvent()
     paymentEvent.setCertNo(personalInfo.certNo)
-//    paymentEvent.setCertNo("362502198101110613")
+    paymentEvent.setCertNo("36250219810XXX0613")
     paymentEvent.setName(personalInfo.name)
     paymentEvent.setPhone(personalInfo.phone)
-//    paymentEvent.setPhoneCleaned("13801899719")
+    paymentEvent.setPhone("13801899719")
     paymentEvent.setPhoneCleaned(personalInfo.phone)
-//    paymentEvent.setPhoneCleaned("13801899719")
+    paymentEvent.setPhoneCleaned("13801899719")
     val ldt = LocalDateTime.ofInstant(Instant.ofEpochMilli(eventTime), zoneId).plusDays(1)
     val valueDate = ldt.atZone(zoneId).toInstant.toEpochMilli
     paymentEvent.setValueDate(valueDate)
@@ -75,9 +75,10 @@ class PaymentEventProducer(topicName: String, bootstrapServers: String, schemaRe
     }
     paymentEvent.setProductCode(productCode)
     paymentEvent.setRiskProcessId(riskProcessId)
-//    paymentEvent.setRiskProcessId(446617L)
+    paymentEvent.setRiskProcessId(29382342861L)
     paymentEvent.setTenantId(tenantId)
     paymentEvent.setRegion(region)
+    paymentEvent.setRegion(Region.PRC)
     paymentEvent.setTerminal(terminal)
     paymentEvent.setPlanRepayment(planRepayment)
     paymentEvent

@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat
 
 import com.datacloud.datagen.AvroDataProducer
 import com.datacloud.datagen.history.genCertNo
-import com.datacloud.polaris.protocol.avro.ApplyPassedEvent
+import com.datacloud.polaris.protocol.avro.{ApplyPassedEvent, Region}
 import org.scalacheck.Gen
 
 object ApplyPassedEventProducer extends App {
@@ -13,19 +13,19 @@ object ApplyPassedEventProducer extends App {
 //  val bootstrapServers = "localhost:9092"
 //  val schemaRegistryUrl = "http://localhost:8081"
 
-//  val topicName = "sit_APPLY_PASSED_EVENT"
-//  val bootstrapServers = "10.12.0.131:9092"
-//  val schemaRegistryUrl = "http://10.12.0.131:8081"
+  val topicName = "dev_APPLY_PASSED_EVENT"
+  val bootstrapServers = "10.12.0.131:9092"
+  val schemaRegistryUrl = "http://10.12.0.131:8081"
 
 //    val topicName = "preprod_APPLY_PASSED_EVENT"
 //    val bootstrapServers = "10.12.0.6:9092"
 //    val schemaRegistryUrl = "http://10.12.0.6:8081"
 
-  val topicName = "preprod_APPLY_PASSED_EVENT"
-  val bootstrapServers = "10.12.0.175:9092"
-  val schemaRegistryUrl = "http://10.12.0.175:8081"
+//  val topicName = "preprod_APPLY_PASSED_EVENT"
+//  val bootstrapServers = "10.12.0.175:9092"
+//  val schemaRegistryUrl = "http://10.12.0.175:8081"
 
-  val producer = new ApplyPassedEventProducer(topicName, bootstrapServers, schemaRegistryUrl, 200L, 100)
+  val producer = new ApplyPassedEventProducer(topicName, bootstrapServers, schemaRegistryUrl, 100L, 100)
   producer.run()
 }
 
@@ -51,6 +51,7 @@ class ApplyPassedEventProducer(topicName: String, bootstrapServers: String, sche
       riskProcessId <- Gen.choose(811111153L, 911111153L)
       name <- Gen.identifier
       certNo <- genCertNo
+      region <- genRegion
       phone <- Gen.choose(13512393721L, 13821382136L).map(_.toString)
       applyTime <- genOccurTime
       applyAmount <- Gen.choose(1000L, 10000L)
@@ -62,10 +63,14 @@ class ApplyPassedEventProducer(topicName: String, bootstrapServers: String, sche
       applyPassedEvent.setProductCode(productCode)
       applyPassedEvent.setTerminal(terminal)
       applyPassedEvent.setRiskProcessId(riskProcessId)
+      applyPassedEvent.setRiskProcessId(57718523L)
       applyPassedEvent.setName(name)
       applyPassedEvent.setCertNo(certNo)
+      applyPassedEvent.setCertNo("362502198101110613")
       applyPassedEvent.setPhone(phone)
       applyPassedEvent.setPhoneCleaned(phone)
+      applyPassedEvent.setRegion(region)
+      applyPassedEvent.setRegion(Region.PRC)
       applyPassedEvent.setApplyTime(applyTime)
       applyPassedEvent.setApplyAmount(applyAmount)
       applyPassedEvent.setEventTime(eventTime)

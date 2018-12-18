@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat
 
 import com.datacloud.datagen.AvroDataProducer
 import com.datacloud.datagen.history.genCertNo
-import com.datacloud.polaris.protocol.avro.ApplyRejectedEvent
+import com.datacloud.polaris.protocol.avro.{ApplyRejectedEvent, Region}
 import org.scalacheck.Gen
 
 object ApplyRejectedEventProducer extends App {
@@ -13,19 +13,19 @@ object ApplyRejectedEventProducer extends App {
 //  val bootstrapServers = "localhost:9092"
 //  val schemaRegistryUrl = "http://localhost:8081"
 
-//  val topicName = "sit_APPLY_REJECTED_EVENT"
-//  val bootstrapServers = "10.12.0.131:9092"
-//  val schemaRegistryUrl = "http://10.12.0.131:8081"
+  val topicName = "dev_APPLY_REJECTED_EVENT"
+  val bootstrapServers = "10.12.0.131:9092"
+  val schemaRegistryUrl = "http://10.12.0.131:8081"
 
 //    val topicName = "preprod_APPLY_REJECTED_EVENT"
 //    val bootstrapServers = "10.12.0.6:9092"
 //    val schemaRegistryUrl = "http://10.12.0.6:8081"
 
-  val topicName = "preprod_APPLY_REJECTED_EVENT"
-  val bootstrapServers = "10.12.0.175:9092"
-  val schemaRegistryUrl = "http://10.12.0.175:8081"
+//  val topicName = "preprod_APPLY_REJECTED_EVENT"
+//  val bootstrapServers = "10.12.0.175:9092"
+//  val schemaRegistryUrl = "http://10.12.0.175:8081"
 
-  val producer = new ApplyRejectedEventProducer(topicName, bootstrapServers, schemaRegistryUrl, 60L, 1)
+  val producer = new ApplyRejectedEventProducer(topicName, bootstrapServers, schemaRegistryUrl, 100L, 100)
   producer.run()
 }
 
@@ -51,6 +51,7 @@ class ApplyRejectedEventProducer(topicName: String, bootstrapServers: String, sc
       riskProcessId <- Gen.choose(1234560000L, 1234569999L)
       name <- Gen.identifier
       certNo <- genCertNo
+      region <- genRegion
       phone <- Gen.choose(13512393721L, 13821382136L).map(_.toString)
       applyTime <- genOccurTime
       applyAmount <- Gen.choose(1000L, 10000L)
@@ -61,10 +62,14 @@ class ApplyRejectedEventProducer(topicName: String, bootstrapServers: String, sc
       applyRejectedEvent.setProductCode(productCode)
       applyRejectedEvent.setTerminal(terminal)
       applyRejectedEvent.setRiskProcessId(riskProcessId)
+      applyRejectedEvent.setRiskProcessId(2361283771L)
       applyRejectedEvent.setName(name)
       applyRejectedEvent.setCertNo(certNo)
+      applyRejectedEvent.setCertNo("362502198101110613")
       applyRejectedEvent.setPhone(phone)
       applyRejectedEvent.setPhoneCleaned(phone)
+      applyRejectedEvent.setRegion(region)
+      applyRejectedEvent.setRegion(Region.INDONESIA)
       applyRejectedEvent.setApplyTime(applyTime)
       applyRejectedEvent.setApplyAmount(applyAmount)
       applyRejectedEvent.setEventTime(eventTime)

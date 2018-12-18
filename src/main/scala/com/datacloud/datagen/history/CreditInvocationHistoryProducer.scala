@@ -11,17 +11,17 @@ object CreditInvocationHistoryProducer extends App {
 //  val bootstrapServers = "localhost:9092"
 //  val schemaRegistryUrl = "http://localhost:8081"
 
-//  val topicName = "sit_CREDIT_INVOCATION_HISTORY"
-//  val bootstrapServers = "10.12.0.131:9092"
-//  val schemaRegistryUrl = "http://10.12.0.131:8081"
+  val topicName = "dev_CREDIT_INVOCATION_HISTORY"
+  val bootstrapServers = "10.12.0.131:9092"
+  val schemaRegistryUrl = "http://10.12.0.131:8081"
 
 //  val topicName = "preprod_CREDIT_INVOCATION_HISTORY"
 //  val bootstrapServers = "10.12.0.6:9092"
 //  val schemaRegistryUrl = "http://10.12.0.6:8081"
 
-  val topicName = "preprod_CREDIT_INVOCATION_HISTORY"
-  val bootstrapServers = "10.12.0.175:9092"
-  val schemaRegistryUrl = "http://10.12.0.175:8081"
+//  val topicName = "preprod_CREDIT_INVOCATION_HISTORY"
+//  val bootstrapServers = "10.12.0.175:9092"
+//  val schemaRegistryUrl = "http://10.12.0.175:8081"
 
   val producer = new CreditInvocationHistoryProducer(topicName, bootstrapServers, schemaRegistryUrl, 100L, 10)
   producer.run()
@@ -76,21 +76,21 @@ class CreditInvocationHistoryProducer(topicName: String, bootstrapServers: Strin
 
       creditInvocationHistory.setOutput(new util.HashMap())
 
-//      val creditDetail = new CreditDetail()
-//      creditDetail.setCreditDecision(Decision.valueOf(decision.name()))
-//      if (amount.isDefined) {
-//        creditDetail.setAmount(amount.get)
-//      }
-//      if (compoundPeriod.isDefined) {
-//        creditDetail.setCompoundPeriod(compoundPeriod.get)
-//      }
-//      if (rateValue.isDefined) {
-//        creditDetail.setRateValue(rateValue.get)
-//      }
-//      if (rateType.isDefined) {
-//        creditDetail.setRateType(RateType.valueOf(rateType.get.name()))
-//      }
-//      creditInvocationHistory.setCreditDetail(creditDetail)
+      val creditDetail = new CreditDetail()
+      creditDetail.setCreditDecision(Decision.valueOf(decision.name()))
+      if (amount.isDefined) {
+        creditDetail.setAmount(amount.get)
+      }
+      if (compoundPeriod.isDefined) {
+        creditDetail.setCompoundPeriod(compoundPeriod.get)
+      }
+      if (rateValue.isDefined) {
+        creditDetail.setRateValue(rateValue.get)
+      }
+      if (rateType.isDefined) {
+        creditDetail.setRateType(RateType.valueOf(rateType.get.name()))
+      }
+      creditInvocationHistory.setCreditDetail(creditDetail)
 
       creditInvocationHistory
     }
