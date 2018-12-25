@@ -191,7 +191,7 @@ package object history {
     if (genderOption.isDefined) map += ("indivGender__ROLE__APPLICANT" -> genderOption.get)
     if (ageOption.isDefined) map += ("indivAge__ROLE__APPLICANT" -> ageOption.get.toString)
     if (deviceIdOption.isDefined) map += ("clientData_deviceInfo_generalDeviceId" -> deviceIdOption.get.toString)
-    map += ("clientData_deviceInfo_generalDeviceId" -> "adid_112233445577")
+//    map += ("clientData_deviceInfo_generalDeviceId" -> "adid_112233445588")
     if (bankNoOption.isDefined) map += ("indivBankNo__ROLE__APPLICANT" -> bankNoOption.get.toString)
 //    map += ("indivBankNo__ROLE__APPLICANT" -> "4213")
 

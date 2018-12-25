@@ -10,13 +10,13 @@ import scala.collection.JavaConversions._
 
 object RiskInvocationHistoryProducer extends App {
 
-//  val topicName = "loc_RISK_INVOCATION_HISTORY"
-//  val bootstrapServers = "localhost:9092"
-//  val schemaRegistryUrl = "http://localhost:8081"
+  val topicName = "loc_RISK_INVOCATION_HISTORY"
+  val bootstrapServers = "localhost:9092"
+  val schemaRegistryUrl = "http://localhost:8081"
 
-  val topicName = "sit_RISK_INVOCATION_HISTORY"
-  val bootstrapServers = "10.12.0.131:9092"
-  val schemaRegistryUrl = "http://10.12.0.131:8081"
+//  val topicName = "dev_RISK_INVOCATION_HISTORY"
+//  val bootstrapServers = "10.12.0.131:9092"
+//  val schemaRegistryUrl = "http://10.12.0.131:8081"
 
 //  val topicName = "preprod_RISK_INVOCATION_HISTORY"
 //  val bootstrapServers = "10.12.0.6:9092"
@@ -26,7 +26,7 @@ object RiskInvocationHistoryProducer extends App {
 //  val bootstrapServers = "10.12.0.175:9092"
 //  val schemaRegistryUrl = "http://10.12.0.175:8081"
 
-  val producer = new RiskInvocationHistoryProducer(topicName, bootstrapServers, schemaRegistryUrl, 1L, 10000)
+  val producer = new RiskInvocationHistoryProducer(topicName, bootstrapServers, schemaRegistryUrl, 1000L, 10000)
   producer.run()
 }
 
@@ -86,7 +86,7 @@ class RiskInvocationHistoryProducer(topicName: String, bootstrapServers: String,
       riskInvocationHistory.setProductCode(productCode)
       riskInvocationHistory.setProductId(productId)
       riskInvocationHistory.setCertNo(certNo)
-      riskInvocationHistory.setCertNo("362502198101110613")
+//      riskInvocationHistory.setCertNo("362502198101110613")
       riskInvocationHistory.setCreditDetail(creditDetail)
       riskInvocationHistory.setAdmissionDetail(admissionDetail)
       riskInvocationHistory.setAntifraudDetail(antifraudDetail)
@@ -109,12 +109,12 @@ class RiskInvocationHistoryProducer(topicName: String, bootstrapServers: String,
 //      riskInvocationHistory.setPhoneCleaned("13801899719")
       riskInvocationHistory.setProductCode(productCode)
       riskInvocationHistory.setRiskProcessId(riskProcessId)
-      riskInvocationHistory.setRiskProcessId(29382342861L)
+//      riskInvocationHistory.setRiskProcessId(29382342862L)
       riskInvocationHistory.setStrategySetId(strategySetId)
       riskInvocationHistory.setStrategySetName(strategySetName)
       riskInvocationHistory.setTenantId(tenantId)
       riskInvocationHistory.setRegion(region)
-      riskInvocationHistory.setRegion(Region.INDONESIA)
+//      riskInvocationHistory.setRegion(Region.INDONESIA)
       riskInvocationHistory.setTerminal(terminal)
       riskInvocationHistory.setUserId(userId)
       riskInvocationHistory.setOrderNo(orderNo)

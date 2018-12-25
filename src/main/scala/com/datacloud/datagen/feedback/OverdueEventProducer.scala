@@ -24,7 +24,7 @@ object OverdueEventProducer extends App {
 //  val bootstrapServers = "10.12.0.175:9092"
 //  val schemaRegistryUrl = "http://10.12.0.175:8081"
 
-  val producer = new OverdueEventProducer(topicName, bootstrapServers, schemaRegistryUrl, 100L, 100)
+  val producer = new OverdueEventProducer(topicName, bootstrapServers, schemaRegistryUrl, 1000L, 100)
   producer.run()
 }
 
@@ -47,7 +47,7 @@ class OverdueEventProducer(topicName: String, bootstrapServers: String, schemaRe
   } yield {
     val overdueEvent = new OverdueEvent()
     overdueEvent.setCertNo(personalInfo.certNo)
-    overdueEvent.setCertNo("362501543821528616")
+    overdueEvent.setCertNo("362502198101110612")
     overdueEvent.setName(personalInfo.name)
     overdueEvent.setPhone(personalInfo.phone)
     overdueEvent.setPhone("13801899719")
@@ -60,10 +60,10 @@ class OverdueEventProducer(topicName: String, bootstrapServers: String, schemaRe
     overdueEvent.setEventTime(eventTime)
     overdueEvent.setOverdueAmount(overdueAmount)
     overdueEvent.setOverdueDays(overdueDays)
-    overdueEvent.setOverdueDays(9)
+//    overdueEvent.setOverdueDays(9)
     overdueEvent.setProductCode(productCode)
     overdueEvent.setRiskProcessId(riskProcessId)
-//    overdueEvent.setRiskProcessId(29382342856L)
+//    overdueEvent.setRiskProcessId(29382342862L)
     overdueEvent.setTenantId(tenantId)
     overdueEvent.setRegion(region)
     overdueEvent.setRegion(Region.PRC)

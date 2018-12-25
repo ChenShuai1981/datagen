@@ -12,7 +12,7 @@ object PaymentEventProducer extends App {
 //  val bootstrapServers = "localhost:9092"
 //  val schemaRegistryUrl = "http://localhost:8081"
 
-  val topicName = "sit_PAYMENT_EVENT"
+  val topicName = "dev_PAYMENT_EVENT"
   val bootstrapServers = "10.12.0.131:9092"
   val schemaRegistryUrl = "http://10.12.0.131:8081"
 
@@ -48,12 +48,12 @@ class PaymentEventProducer(topicName: String, bootstrapServers: String, schemaRe
   } yield {
     val paymentEvent = new PaymentEvent()
     paymentEvent.setCertNo(personalInfo.certNo)
-    paymentEvent.setCertNo("36250219810XXX0613")
+    paymentEvent.setCertNo("362502198101110612")
     paymentEvent.setName(personalInfo.name)
     paymentEvent.setPhone(personalInfo.phone)
-    paymentEvent.setPhone("13801899719")
+    paymentEvent.setPhone("13801899712")
     paymentEvent.setPhoneCleaned(personalInfo.phone)
-    paymentEvent.setPhoneCleaned("13801899719")
+    paymentEvent.setPhoneCleaned("13801899712")
     val ldt = LocalDateTime.ofInstant(Instant.ofEpochMilli(eventTime), zoneId).plusDays(1)
     val valueDate = ldt.atZone(zoneId).toInstant.toEpochMilli
     paymentEvent.setValueDate(valueDate)
@@ -75,7 +75,7 @@ class PaymentEventProducer(topicName: String, bootstrapServers: String, schemaRe
     }
     paymentEvent.setProductCode(productCode)
     paymentEvent.setRiskProcessId(riskProcessId)
-    paymentEvent.setRiskProcessId(29382342861L)
+    paymentEvent.setRiskProcessId(29382342870L)
     paymentEvent.setTenantId(tenantId)
     paymentEvent.setRegion(region)
     paymentEvent.setRegion(Region.PRC)

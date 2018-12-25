@@ -63,7 +63,7 @@ class ApplyPassedEventProducer(topicName: String, bootstrapServers: String, sche
       applyPassedEvent.setProductCode(productCode)
       applyPassedEvent.setTerminal(terminal)
       applyPassedEvent.setRiskProcessId(riskProcessId)
-      applyPassedEvent.setRiskProcessId(57718523L)
+//      applyPassedEvent.setRiskProcessId(57718523L)
       applyPassedEvent.setName(name)
       applyPassedEvent.setCertNo(certNo)
       applyPassedEvent.setCertNo("362502198101110613")
