@@ -2,29 +2,13 @@ package com.datacloud.datagen.feedback
 
 import java.time.{Instant, LocalDateTime}
 
-import com.datacloud.datagen.AvroDataProducer
-import com.datacloud.polaris.protocol.avro.{PaymentEvent, RepaymentEvent}
+import com.datacloud.datagen.{AvroDataProducer, KafkaEnv}
+import com.datacloud.polaris.protocol.avro.RepaymentEvent
 import org.scalacheck.Gen
 
-object RepaymentEventProducer extends App {
-
-//  val topicName = "loc_REPAYMENT_EVENT"
-//  val bootstrapServers = "localhost:9092"
-//  val schemaRegistryUrl = "http://localhost:8081"
-
-  val topicName = "sit_REPAYMENT_EVENT"
-  val bootstrapServers = "10.12.0.131:9092"
-  val schemaRegistryUrl = "http://10.12.0.131:8081"
-
-//  val topicName = "preprod_REPAYMENT_EVENT"
-//  val bootstrapServers = "10.12.0.6:9092"
-//  val schemaRegistryUrl = "http://10.12.0.6:8081"
-
-//  val topicName = "preprod_REPAYMENT_EVENT"
-//  val bootstrapServers = "10.12.0.175:9092"
-//  val schemaRegistryUrl = "http://10.12.0.175:8081"
-
-  val producer = new RepaymentEventProducer(topicName, bootstrapServers, schemaRegistryUrl, 60L, 10)
+object RepaymentEventProducer extends App with KafkaEnv {
+  val topicName = envPrefix + "REPAYMENT_EVENT"
+  val producer = new RepaymentEventProducer(topicName, bootstrapServers, schemaRegistryUrl, 1000L, 10)
   producer.run()
 }
 

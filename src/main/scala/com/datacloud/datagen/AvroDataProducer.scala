@@ -8,6 +8,32 @@ import org.apache.kafka.common.serialization.StringSerializer
 import org.scalacheck.Gen
 import org.scalatest.prop.GeneratorDrivenPropertyChecks
 
+trait KafkaEnv {
+  //  val envPrefix = "local_"
+  //  val bootstrapServers = "localhost:9092"
+  //  val schemaRegistryUrl = "http://localhost:8081"
+
+//  val envPrefix = "feature1_"
+//  val bootstrapServers = "10.12.0.161:9092"
+//  val schemaRegistryUrl = "http://10.12.0.161:8081"
+
+//    val envPrefix = "dev_"
+//    val bootstrapServers = "10.12.0.210:9092"
+//    val schemaRegistryUrl = "http://10.12.0.210:8081"
+
+//    val envPrefix = "sit_"
+//    val bootstrapServers = "10.12.0.131:9092"
+//    val schemaRegistryUrl = "http://10.12.0.131:8081"
+
+  //  val envPrefix = "preprod_"
+  //  val bootstrapServers = "10.12.0.6:9092"
+  //  val schemaRegistryUrl = "http://10.12.0.6:8081"
+
+    val envPrefix = "preprod_"
+    val bootstrapServers = "10.12.0.175:9092"
+    val schemaRegistryUrl = "http://10.12.0.175:8081"
+}
+
 abstract class AvroDataProducer[T](topicName: String,
                                    bootstrapServers: String = "localhost:9092",
                                    schemaRegistryUrl: String = "http://localhost:8081",

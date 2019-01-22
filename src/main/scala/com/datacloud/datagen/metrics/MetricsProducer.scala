@@ -1,17 +1,13 @@
 package com.datacloud.datagen.metrics
 
-import com.datacloud.datagen.JsonDataProducer
+import com.datacloud.datagen.{JsonDataProducer, KafkaEnv}
 import org.scalacheck.Gen
 
-case class Metrics(INDIVBANKNO: String, LINKNIKCOUNT: Int)
+case class Metrics(key: String, value: String)
 
-object MetricsProducer extends App {
-  val topicName = "preprod_RISK_INVOCATION_HISTORY_FLATTEN"
-  val bootstrapServers = "10.12.0.175:9092"
-  val interval = 60L
-  val loop = 1
-
-  val producer = new MetricsProducer(topicName, bootstrapServers, interval, loop)
+object MetricsProducer extends App with KafkaEnv {
+  val topicName = envPrefix + "METRICS_STM"
+  val producer = new MetricsProducer(topicName, bootstrapServers, 600, 1)
   producer.run()
 }
 
@@ -20,11 +16,11 @@ class MetricsProducer(topicName: String, bootstrapServers: String, interval: Lon
 
   override def genData = for {
     key <- Gen.const("bankno_987")
-    value <- Gen.const(20)
+    value <- Gen.const("20")
   } yield {
     val metrics = Metrics(key, value)
     metrics
   }
 
-  override def getKey(t: Metrics): String = t.INDIVBANKNO.toString
+  override def getKey(t: Metrics): String = t.key
 }

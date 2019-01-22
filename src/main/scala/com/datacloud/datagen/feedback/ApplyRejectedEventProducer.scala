@@ -2,30 +2,14 @@ package com.datacloud.datagen.feedback
 
 import java.text.SimpleDateFormat
 
-import com.datacloud.datagen.AvroDataProducer
+import com.datacloud.datagen.{AvroDataProducer, KafkaEnv}
 import com.datacloud.datagen.history.genCertNo
 import com.datacloud.polaris.protocol.avro.{ApplyRejectedEvent, Region}
 import org.scalacheck.Gen
 
-object ApplyRejectedEventProducer extends App {
-
-//  val topicName = "loc_APPLY_REJECTED_EVENT"
-//  val bootstrapServers = "localhost:9092"
-//  val schemaRegistryUrl = "http://localhost:8081"
-
-  val topicName = "dev_APPLY_REJECTED_EVENT"
-  val bootstrapServers = "10.12.0.131:9092"
-  val schemaRegistryUrl = "http://10.12.0.131:8081"
-
-//    val topicName = "preprod_APPLY_REJECTED_EVENT"
-//    val bootstrapServers = "10.12.0.6:9092"
-//    val schemaRegistryUrl = "http://10.12.0.6:8081"
-
-//  val topicName = "preprod_APPLY_REJECTED_EVENT"
-//  val bootstrapServers = "10.12.0.175:9092"
-//  val schemaRegistryUrl = "http://10.12.0.175:8081"
-
-  val producer = new ApplyRejectedEventProducer(topicName, bootstrapServers, schemaRegistryUrl, 100L, 100)
+object ApplyRejectedEventProducer extends App with KafkaEnv {
+  val topicName = envPrefix + "APPLY_REJECTED_EVENT"
+  val producer = new ApplyRejectedEventProducer(topicName, bootstrapServers, schemaRegistryUrl, 1000L, 100)
   producer.run()
 }
 
@@ -65,11 +49,11 @@ class ApplyRejectedEventProducer(topicName: String, bootstrapServers: String, sc
 //      applyRejectedEvent.setRiskProcessId(2361283771L)
       applyRejectedEvent.setName(name)
       applyRejectedEvent.setCertNo(certNo)
-//      applyRejectedEvent.setCertNo("362502198101110613")
+      applyRejectedEvent.setCertNo("362502198101110603")
       applyRejectedEvent.setPhone(phone)
       applyRejectedEvent.setPhoneCleaned(phone)
       applyRejectedEvent.setRegion(region)
-//      applyRejectedEvent.setRegion(Region.INDONESIA)
+      applyRejectedEvent.setRegion(Region.PRC)
       applyRejectedEvent.setApplyTime(applyTime)
       applyRejectedEvent.setApplyAmount(applyAmount)
       applyRejectedEvent.setEventTime(eventTime)

@@ -2,31 +2,15 @@ package com.datacloud.datagen.history
 
 import java.text.SimpleDateFormat
 
-import com.datacloud.datagen.AvroDataProducer
+import com.datacloud.datagen.{AvroDataProducer, KafkaEnv}
 import com.datacloud.polaris.protocol.avro._
 import org.scalacheck.Gen
 
 import scala.collection.JavaConversions._
 
-object RiskInvocationHistoryProducer extends App {
-
-  val topicName = "loc_RISK_INVOCATION_HISTORY"
-  val bootstrapServers = "localhost:9092"
-  val schemaRegistryUrl = "http://localhost:8081"
-
-//  val topicName = "dev_RISK_INVOCATION_HISTORY"
-//  val bootstrapServers = "10.12.0.131:9092"
-//  val schemaRegistryUrl = "http://10.12.0.131:8081"
-
-//  val topicName = "preprod_RISK_INVOCATION_HISTORY"
-//  val bootstrapServers = "10.12.0.6:9092"
-//  val schemaRegistryUrl = "http://10.12.0.6:8081"
-
-//  val topicName = "preprod_RISK_INVOCATION_HISTORY"
-//  val bootstrapServers = "10.12.0.175:9092"
-//  val schemaRegistryUrl = "http://10.12.0.175:8081"
-
-  val producer = new RiskInvocationHistoryProducer(topicName, bootstrapServers, schemaRegistryUrl, 1000L, 10000)
+object RiskInvocationHistoryProducer extends App with KafkaEnv {
+  val topicName = envPrefix + "RISK_INVOCATION_HISTORY"
+  val producer = new RiskInvocationHistoryProducer(topicName, bootstrapServers, schemaRegistryUrl, 600L, 1)
   producer.run()
 }
 
@@ -46,7 +30,7 @@ class RiskInvocationHistoryProducer(topicName: String, bootstrapServers: String,
 
   def genData: Gen[RiskInvocationHistory] = {
     for {
-      riskProcessId <- Gen.choose(1234560000L, 1234569999L)
+      riskProcessId <- Gen.choose(2534560000L, 2834569999L)
       executionId <- Gen.uuid.map(uuid => Math.abs(uuid.getMostSignificantBits + uuid.getLeastSignificantBits))
       creditStrategyId <- Gen.oneOf(1234567890L to 1234567899L)
 
@@ -86,7 +70,7 @@ class RiskInvocationHistoryProducer(topicName: String, bootstrapServers: String,
       riskInvocationHistory.setProductCode(productCode)
       riskInvocationHistory.setProductId(productId)
       riskInvocationHistory.setCertNo(certNo)
-//      riskInvocationHistory.setCertNo("362502198101110613")
+      riskInvocationHistory.setCertNo("441826197812242766")
       riskInvocationHistory.setCreditDetail(creditDetail)
       riskInvocationHistory.setAdmissionDetail(admissionDetail)
       riskInvocationHistory.setAntifraudDetail(antifraudDetail)
@@ -102,19 +86,21 @@ class RiskInvocationHistoryProducer(topicName: String, bootstrapServers: String,
       riskInvocationHistory.setExecutionId(executionId)
       riskInvocationHistory.setFraudScore(fraudScore)
       riskInvocationHistory.setName(name)
+      riskInvocationHistory.setName("右右右")
       riskInvocationHistory.setOccurTime(occurTime)
       riskInvocationHistory.setPhone(phone)
-//      riskInvocationHistory.setPhone("13801899719")
+      riskInvocationHistory.setPhone("13801899715")
       riskInvocationHistory.setPhoneCleaned(phone)
-//      riskInvocationHistory.setPhoneCleaned("13801899719")
+      riskInvocationHistory.setPhoneCleaned("13801899715")
       riskInvocationHistory.setProductCode(productCode)
       riskInvocationHistory.setRiskProcessId(riskProcessId)
-//      riskInvocationHistory.setRiskProcessId(29382342862L)
+      riskInvocationHistory.setRiskProcessId(2932999777L)
       riskInvocationHistory.setStrategySetId(strategySetId)
       riskInvocationHistory.setStrategySetName(strategySetName)
       riskInvocationHistory.setTenantId(tenantId)
+      riskInvocationHistory.setTenantId(16L)
       riskInvocationHistory.setRegion(region)
-//      riskInvocationHistory.setRegion(Region.INDONESIA)
+      riskInvocationHistory.setRegion(Region.INDONESIA)
       riskInvocationHistory.setTerminal(terminal)
       riskInvocationHistory.setUserId(userId)
       riskInvocationHistory.setOrderNo(orderNo)

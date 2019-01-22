@@ -2,30 +2,15 @@ package com.datacloud.datagen.feedback
 
 import java.text.SimpleDateFormat
 
-import com.datacloud.datagen.AvroDataProducer
+import com.datacloud.datagen.history.RiskInvocationHistoryProducer.envPrefix
+import com.datacloud.datagen.{AvroDataProducer, KafkaEnv}
 import com.datacloud.datagen.history.genCertNo
 import com.datacloud.polaris.protocol.avro.{ApplyPassedEvent, Region}
 import org.scalacheck.Gen
 
-object ApplyPassedEventProducer extends App {
-
-//  val topicName = "loc_APPLY_PASSED_EVENT"
-//  val bootstrapServers = "localhost:9092"
-//  val schemaRegistryUrl = "http://localhost:8081"
-
-  val topicName = "dev_APPLY_PASSED_EVENT"
-  val bootstrapServers = "10.12.0.131:9092"
-  val schemaRegistryUrl = "http://10.12.0.131:8081"
-
-//    val topicName = "preprod_APPLY_PASSED_EVENT"
-//    val bootstrapServers = "10.12.0.6:9092"
-//    val schemaRegistryUrl = "http://10.12.0.6:8081"
-
-//  val topicName = "preprod_APPLY_PASSED_EVENT"
-//  val bootstrapServers = "10.12.0.175:9092"
-//  val schemaRegistryUrl = "http://10.12.0.175:8081"
-
-  val producer = new ApplyPassedEventProducer(topicName, bootstrapServers, schemaRegistryUrl, 100L, 100)
+object ApplyPassedEventProducer extends App with KafkaEnv {
+  val topicName = envPrefix + "APPLY_PASSED_EVENT"
+  val producer = new ApplyPassedEventProducer(topicName, bootstrapServers, schemaRegistryUrl, 1000L, 100)
   producer.run()
 }
 

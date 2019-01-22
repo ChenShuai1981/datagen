@@ -2,28 +2,13 @@ package com.datacloud.datagen.history
 
 import java.util
 
-import com.datacloud.datagen.AvroDataProducer
+import com.datacloud.datagen.{AvroDataProducer, KafkaEnv}
 import com.datacloud.polaris.protocol.avro._
 import org.scalacheck.Gen
 
-object CreditInvocationHistoryProducer extends App {
-//  val topicName = "loc_CREDIT_INVOCATION_HISTORY"
-//  val bootstrapServers = "localhost:9092"
-//  val schemaRegistryUrl = "http://localhost:8081"
-
-  val topicName = "dev_CREDIT_INVOCATION_HISTORY"
-  val bootstrapServers = "10.12.0.131:9092"
-  val schemaRegistryUrl = "http://10.12.0.131:8081"
-
-//  val topicName = "preprod_CREDIT_INVOCATION_HISTORY"
-//  val bootstrapServers = "10.12.0.6:9092"
-//  val schemaRegistryUrl = "http://10.12.0.6:8081"
-
-//  val topicName = "preprod_CREDIT_INVOCATION_HISTORY"
-//  val bootstrapServers = "10.12.0.175:9092"
-//  val schemaRegistryUrl = "http://10.12.0.175:8081"
-
-  val producer = new CreditInvocationHistoryProducer(topicName, bootstrapServers, schemaRegistryUrl, 100L, 10)
+object CreditInvocationHistoryProducer extends App with KafkaEnv {
+  val topicName = envPrefix + "CREDIT_INVOCATION_HISTORY"
+  val producer = new CreditInvocationHistoryProducer(topicName, bootstrapServers, schemaRegistryUrl, 1000L, 10)
   producer.run()
 }
 
