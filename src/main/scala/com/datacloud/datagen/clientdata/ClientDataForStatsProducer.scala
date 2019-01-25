@@ -13,7 +13,8 @@ case class ClientDataForStats(id: Long, clientId: String, tenantId: Long, region
                               indivPhone: String, indivName: String, clientData_bankCard: String,
                               clientData_deviceInfo_generalDeviceId: String,
                               indivEmergentContacts_0_phone: List[String],
-                              clientData_contacts_0_phones_0_value: List[List[String]])
+                              clientData_contacts_0_phones_0_value: List[List[String]],
+                              clientData_deviceInfo_ipAddress: String)
 
 class ClientDataForStatsProducer(topicName: String, bootstrapServers: String, interval: Long, loop: Int)
   extends JsonDataProducer[ClientDataForStats](topicName, bootstrapServers, interval, loop) {
@@ -30,11 +31,13 @@ class ClientDataForStatsProducer(topicName: String, bootstrapServers: String, in
     clientData_deviceInfo_generalDeviceId <- genDeviceId
     indivEmergentContacts_0_phone <- Gen.containerOfN[List, String](2, genPhone)
     clientData_contacts_0_phones_0_value <- Gen.containerOf[List, List[String]](Gen.containerOf[List, String](genPhone))
+    clientData_deviceInfo_ipAddress <- genIP
   } yield {
     val clientDataForStats = ClientDataForStats(id, clientId, tenantId, region, indivID, indivPhone, indivName, clientData_bankCard.orNull,
       clientData_deviceInfo_generalDeviceId.orNull,
       indivEmergentContacts_0_phone,
-      clientData_contacts_0_phones_0_value)
+      clientData_contacts_0_phones_0_value,
+      clientData_deviceInfo_ipAddress)
 
     clientDataForStats
       .copy(indivPhone = "13921938217")
@@ -43,6 +46,7 @@ class ClientDataForStatsProducer(topicName: String, bootstrapServers: String, in
       .copy(clientId = "96dac856-7e6c-4ca5-b14d-5b6b98be303c")
       .copy(clientData_deviceInfo_generalDeviceId = "adid_298429382174")
       .copy(indivEmergentContacts_0_phone = List("13921938218", "13266868337"))
+      .copy(clientData_deviceInfo_ipAddress = "10.12.0.31")
   }
 
   override def getKey(t: ClientDataForStats): String = t.id.toString

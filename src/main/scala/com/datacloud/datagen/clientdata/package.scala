@@ -18,5 +18,12 @@ package object clientdata {
   def genName: Gen[String] = Gen.oneOf("张三", "李四", "王五", "赵六")
   def genBankNo: Gen[Option[String]] = Gen.option(Gen.choose(1, 100).map(id => s"bankno_$id"))
   def genDeviceId: Gen[Option[String]] = Gen.option(Gen.identifier.map(s => "adid_" + s))
-
+  def genIP: Gen[String] = for {
+    d1 <- Gen.choose(0, 255)
+    d2 <- Gen.choose(0, 255)
+    d3 <- Gen.choose(0, 255)
+    d4 <- Gen.choose(0, 255)
+  } yield {
+    s"$d1.$d2.$d3.$d4"
+  }
 }
