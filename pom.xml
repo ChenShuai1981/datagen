@@ -13,16 +13,16 @@
     <scala.version>2.11.8</scala.version>
     <kafka.version>1.0.0</kafka.version>
     <jackson.version>2.9.4</jackson.version>
-    <polaris.version>3.0.0-SNAPSHOT</polaris.version>
+    <!--<polaris.version>3.0.0-SNAPSHOT</polaris.version>-->
     <confluent.version>4.0.0</confluent.version>
   </properties>
 
   <dependencies>
-    <dependency>
-      <groupId>com.datacloud.polaris</groupId>
-      <artifactId>polaris-protocol</artifactId>
-      <version>${polaris.version}</version>
-    </dependency>
+    <!--<dependency>-->
+      <!--<groupId>com.datacloud.polaris</groupId>-->
+      <!--<artifactId>polaris-protocol</artifactId>-->
+      <!--<version>${polaris.version}</version>-->
+    <!--</dependency>-->
     <dependency>
       <groupId>org.scala-lang</groupId>
       <artifactId>scala-library</artifactId>
