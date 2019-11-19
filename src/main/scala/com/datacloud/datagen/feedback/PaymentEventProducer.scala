@@ -33,12 +33,12 @@ class PaymentEventProducer(topicName: String, bootstrapServers: String, schemaRe
   } yield {
     val paymentEvent = new PaymentEvent()
     paymentEvent.setCertNo(personalInfo.certNo)
-    paymentEvent.setCertNo("362502198101110611")
+//    paymentEvent.setCertNo("362502198101110611")
     paymentEvent.setName(personalInfo.name)
     paymentEvent.setPhone(personalInfo.phone)
-    paymentEvent.setPhone("13801899711")
+//    paymentEvent.setPhone("13801899711")
     paymentEvent.setPhoneCleaned(personalInfo.phone)
-    paymentEvent.setPhoneCleaned("13801899711")
+//    paymentEvent.setPhoneCleaned("13801899711")
     val ldt = LocalDateTime.ofInstant(Instant.ofEpochMilli(eventTime), zoneId).plusDays(1)
     val valueDate = ldt.atZone(zoneId).toInstant.toEpochMilli
     paymentEvent.setValueDate(valueDate)
@@ -60,10 +60,10 @@ class PaymentEventProducer(topicName: String, bootstrapServers: String, schemaRe
     }
     paymentEvent.setProductCode(productCode)
     paymentEvent.setRiskProcessId(riskProcessId)
-    paymentEvent.setRiskProcessId(2932999780L)
+//    paymentEvent.setRiskProcessId(2932999780L)
     paymentEvent.setTenantId(tenantId)
     paymentEvent.setRegion(region)
-    paymentEvent.setRegion(Region.INDONESIA)
+//    paymentEvent.setRegion(Region.INDONESIA)
     paymentEvent.setTerminal(terminal)
     paymentEvent.setPlanRepayment(planRepayment)
     paymentEvent

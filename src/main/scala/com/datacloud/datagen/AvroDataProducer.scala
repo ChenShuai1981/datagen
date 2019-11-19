@@ -9,13 +9,13 @@ import org.scalacheck.Gen
 import org.scalatest.prop.GeneratorDrivenPropertyChecks
 
 trait KafkaEnv {
-  //  val envPrefix = "local_"
-  //  val bootstrapServers = "localhost:9092"
-  //  val schemaRegistryUrl = "http://localhost:8081"
+    val envPrefix = "local_"
+    val bootstrapServers = "localhost:9092"
+    val schemaRegistryUrl = "http://localhost:8081"
 
-  val envPrefix = "feature1_"
-  val bootstrapServers = "10.12.0.161:9092"
-  val schemaRegistryUrl = "http://10.12.0.161:8081"
+//  val envPrefix = "feature1_"
+//  val bootstrapServers = "10.12.0.161:9092"
+//  val schemaRegistryUrl = "http://10.12.0.161:8081"
 
 //    val envPrefix = "dev_"
 //    val bootstrapServers = "10.12.0.210:9092"
@@ -25,9 +25,9 @@ trait KafkaEnv {
 //    val bootstrapServers = "10.12.0.131:9092"
 //    val schemaRegistryUrl = "http://10.12.0.131:8081"
 
-  //  val envPrefix = "preprod_"
-  //  val bootstrapServers = "10.12.0.6:9092"
-  //  val schemaRegistryUrl = "http://10.12.0.6:8081"
+//    val envPrefix = "preprod_"
+//    val bootstrapServers = "10.12.0.214:9092"
+//    val schemaRegistryUrl = "http://10.12.0.212:8081"
 
 //    val envPrefix = "preprod_"
 //    val bootstrapServers = "10.12.0.175:9092"

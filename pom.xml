@@ -13,21 +13,21 @@
     <scala.version>2.11.8</scala.version>
     <kafka.version>1.0.0</kafka.version>
     <jackson.version>2.9.4</jackson.version>
-    <polaris.version>3.6.0-SNAPSHOT</polaris.version>
+    <avro-protocol.version>3.7.2-SNAPSHOT</avro-protocol.version>
     <confluent.version>4.0.0</confluent.version>
     <avro.version>1.8.2</avro.version>
   </properties>
 
   <dependencies>
+    <!--<dependency>-->
+      <!--<groupId>com.adcloud.dsp</groupId>-->
+      <!--<artifactId>dsp-idl</artifactId>-->
+      <!--<version>1.0.0-SNAPSHOT</version>-->
+    <!--</dependency>-->
     <dependency>
-      <groupId>com.adcloud.dsp</groupId>
-      <artifactId>dsp-idl</artifactId>
-      <version>1.0.0-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>com.datacloud.polaris</groupId>
-      <artifactId>polaris-protocol</artifactId>
-      <version>${polaris.version}</version>
+      <groupId>com.datacloud</groupId>
+      <artifactId>avro-protocol</artifactId>
+      <version>${avro-protocol.version}</version>
     </dependency>
     <dependency>
       <groupId>org.scala-lang</groupId>
@@ -48,6 +48,11 @@
       <groupId>com.fasterxml.jackson.module</groupId>
       <artifactId>jackson-module-scala_2.11</artifactId>
       <version>${jackson.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.datatype</groupId>
+      <artifactId>jackson-datatype-jsr310</artifactId>
+      <version>2.9.5</version>
     </dependency>
     <dependency>
       <groupId>org.apache.kafka</groupId>

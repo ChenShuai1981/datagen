@@ -49,7 +49,7 @@ class ApplyRejectedEventProducer(topicName: String, bootstrapServers: String, sc
 //      applyRejectedEvent.setRiskProcessId(2361283771L)
       applyRejectedEvent.setName(name)
       applyRejectedEvent.setCertNo(certNo)
-      applyRejectedEvent.setCertNo("362502198101110603")
+      applyRejectedEvent.setCertNo("362502198101110655")
       applyRejectedEvent.setPhone(phone)
       applyRejectedEvent.setPhoneCleaned(phone)
       applyRejectedEvent.setRegion(region)

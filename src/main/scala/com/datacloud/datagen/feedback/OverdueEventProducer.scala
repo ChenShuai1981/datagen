@@ -23,7 +23,7 @@ class OverdueEventProducer(topicName: String, bootstrapServers: String, schemaRe
     tenantId <- genTenantId
     region <- genRegion
     overdueAmount <- Gen.choose(1000d, 10000d)
-    overdueDays <- Gen.choose(1, 5)
+    overdueDays <- Gen.choose(6, 8)
     eventTime <- Gen.const(System.currentTimeMillis())
     personalInfo <- genPersonalInfo
     overdueNo <- Gen.choose(1, 12)
@@ -32,13 +32,13 @@ class OverdueEventProducer(topicName: String, bootstrapServers: String, schemaRe
   } yield {
     val overdueEvent = new OverdueEvent()
     overdueEvent.setCertNo(personalInfo.certNo)
-    overdueEvent.setCertNo("362502198101110611")
+    overdueEvent.setCertNo("362502198101110601")
     overdueEvent.setName(personalInfo.name)
     overdueEvent.setName("张三")
     overdueEvent.setPhone(personalInfo.phone)
-    overdueEvent.setPhone("13801899711")
+    overdueEvent.setPhone("142345733333")
     overdueEvent.setPhoneCleaned(personalInfo.phone)
-    overdueEvent.setPhoneCleaned("13801899711")
+    overdueEvent.setPhoneCleaned("142345733333")
     val ldt = LocalDateTime.ofInstant(Instant.ofEpochMilli(eventTime), zoneId)
     val dueDate = ldt.minusDays(overdueDays).toLocalDate.atStartOfDay().atZone(zoneId).toInstant.toEpochMilli
 //    var dueDate = 1546666626110L
@@ -53,11 +53,11 @@ class OverdueEventProducer(topicName: String, bootstrapServers: String, schemaRe
     overdueEvent.setProductCode(productCode)
     overdueEvent.setProductCode("CCC")
     overdueEvent.setRiskProcessId(riskProcessId)
-    overdueEvent.setRiskProcessId(2932999777L)
+    overdueEvent.setRiskProcessId(218361826L)
     overdueEvent.setTenantId(tenantId)
-    overdueEvent.setTenantId(16L)
+    overdueEvent.setTenantId(908L)
     overdueEvent.setRegion(region)
-    overdueEvent.setRegion(Region.INDONESIA)
+    overdueEvent.setRegion(Region.VIETNAM)
     overdueEvent.setTerminal(terminal)
     overdueEvent.setTerminal("GENERAL")
     overdueEvent.setOverdueNo(overdueNo)

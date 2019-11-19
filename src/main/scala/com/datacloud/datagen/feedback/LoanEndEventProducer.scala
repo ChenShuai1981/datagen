@@ -1,9 +1,8 @@
 package com.datacloud.datagen.feedback
 
 
-import com.datacloud.datagen.history.RiskInvocationHistoryProducer.envPrefix
 import com.datacloud.datagen.{AvroDataProducer, KafkaEnv}
-import com.datacloud.polaris.protocol.avro.{LoanEndEvent, LoanEndType, PaymentPlan, Region}
+import com.datacloud.polaris.protocol.avro.{LoanEndEvent, LoanEndType, Region}
 import org.scalacheck.Gen
 
 object LoanEndEventProducer extends App with KafkaEnv {
@@ -29,21 +28,21 @@ class LoanEndEventProducer(topicName: String, bootstrapServers: String, schemaRe
   } yield {
     val loanEndEvent = new LoanEndEvent()
     loanEndEvent.setCertNo(personalInfo.certNo)
-    loanEndEvent.setCertNo("362502198101110611")
+//    loanEndEvent.setCertNo("362502198101110611")
     loanEndEvent.setName(personalInfo.name)
     loanEndEvent.setPhone(personalInfo.phone)
-    loanEndEvent.setPhone("13801899711")
+//    loanEndEvent.setPhone("13801899711")
     loanEndEvent.setPhoneCleaned(personalInfo.phone)
-    loanEndEvent.setPhoneCleaned("13801899711")
+//    loanEndEvent.setPhoneCleaned("13801899711")
     loanEndEvent.setEventTime(eventTime)
     loanEndEvent.setLoanEndType(loanEndType)
     loanEndEvent.setProductCode(productCode)
     loanEndEvent.setRiskProcessId(riskProcessId)
-    loanEndEvent.setRiskProcessId(2932999780L)
+//    loanEndEvent.setRiskProcessId(2932999780L)
     loanEndEvent.setTenantId(tenantId)
-    loanEndEvent.setTenantId(16L)
+//    loanEndEvent.setTenantId(16L)
     loanEndEvent.setRegion(region)
-    loanEndEvent.setRegion(Region.INDONESIA)
+//    loanEndEvent.setRegion(Region.INDONESIA)
     loanEndEvent.setTerminal(terminal)
     loanEndEvent.setCancelledPlanRepayment(planRepayment)
 //    loanEndEvent.setCancelledPlanRepayment(new util.ArrayList[PaymentPlan]())

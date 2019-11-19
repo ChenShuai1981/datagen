@@ -1,13 +1,11 @@
 package com.datacloud.datagen.userinfo
 
-import com.datacloud.datagen.JsonDataProducer
+import com.datacloud.datagen.{JsonDataProducer, KafkaEnv}
 import org.scalacheck.Gen
 
-object UserInfoProducer extends App {
-  val topicName = "user-info"
-  val bootstrapServers = "localhost:9092"
-
-  val producer = new UserInfoProducer(topicName, bootstrapServers, 1000L, 10)
+object UserInfoProducer extends App with KafkaEnv {
+  val topicName = envPrefix + "user_info"
+  val producer = new UserInfoProducer(topicName, bootstrapServers, 100, 9)
   producer.run()
 }
 

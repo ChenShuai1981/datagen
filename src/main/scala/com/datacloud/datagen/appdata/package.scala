@@ -4,8 +4,7 @@ import java.time.{Instant, LocalDateTime, ZoneId}
 
 import org.scalacheck.Gen
 
-package object clientdata {
-
+package object appdata {
   def genCertNo: Gen[String] = for {
     region <- Gen.choose(100000, 999999).map(_.toString) // 6
     year <- Gen.choose(1930, 2000).map(_.toString) // 4
@@ -30,8 +29,8 @@ package object clientdata {
     s"$d1.$d2.$d3.$d4"
   }
   def genGPS: Gen[(Double, Double)] = for {
-      latitude <- Gen.choose(28.0, 35.0)
-      longitude <- Gen.choose(110.0, 120.0)
+    latitude <- Gen.choose(28.0, 35.0)
+    longitude <- Gen.choose(110.0, 120.0)
   } yield (latitude, longitude)
 
   def genSmsMessage: Gen[(String, String, LocalDateTime, String, String)] = for {

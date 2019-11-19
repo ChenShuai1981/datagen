@@ -126,9 +126,14 @@ package object history {
 
   def genTerminal: Gen[String] = Gen.oneOf("GENERAL", "WEB", "IOS", "ANDROID")
 
-  def genEventCode: Gen[String] = Gen.oneOf("loan", "activation", "loanApply")
+//  def genEventCode: Gen[String] = Gen.oneOf("registry", "login","withdraw", "apply", "credit")
+def genEventCode: Gen[String] = Gen.const("withdraw")
 
-  def genProductCode: Gen[String] = Gen.oneOf("XINJIN", "CHEFANG")
+//  def genProductCode: Gen[String] = Gen.oneOf("XINJIN", "ABC", "BBC")
+def genProductCode: Gen[String] = Gen.const("ABC")
+
+//  def genTenantId: Gen[Long] = Gen.choose(1L, 20L)
+  def genTenantId: Gen[Long] = Gen.const(15L)
 
   def genPhone: Gen[String] = Gen.choose(13000000000L, 18900000000L).map(_.toString)
 

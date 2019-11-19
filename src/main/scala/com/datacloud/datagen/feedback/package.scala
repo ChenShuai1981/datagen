@@ -13,7 +13,7 @@ package object feedback {
 
   def genProductCode: Gen[String] = Gen.const("TEST")
 
-  def genTenantId: Gen[Long] = Gen.oneOf(Array(29L))
+  def genTenantId: Gen[Long] = Gen.choose(1, 20)
 
   case class PersonalInfo(certNo: String, name: String, phone: String)
   val lastNames = Seq("赵","钱","孙","李","王","陈","毛","黄","谢")
