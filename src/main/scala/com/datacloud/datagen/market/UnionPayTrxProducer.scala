@@ -24,4 +24,5 @@ class UnionPayTrxProducer(topicName: String, bootstrapServers: String, interval:
     trxTime <- Gen.const(System.currentTimeMillis())
   } yield UnionPayTrx(trxAccount, trxAmount, trxDescription, trxType, trxTime)
 
+  override def getKey(t: UnionPayTrx): String = t.trxTime.toString
 }

@@ -6,13 +6,21 @@
 //import scala.collection.JavaConversions._
 //
 //object CreditNodeHistoryProducer extends App {
+<<<<<<< HEAD
+//  val topicName = "sit_CREDIT_NODE_HISTORY"
+=======
 //  val topicName = "dev_CREDIT_NODE_HISTORY"
+>>>>>>> ad393f7091de855dec8c28b578de64be41f01242
 //  val bootstrapServers = "ambari-agent4.sit.geerong.com:9092"
 //  val schemaRegistryUrl = "http://ambari-agent4.sit.geerong.com:8081"
 //  //  val bootstrapServers = "localhost:9092"
 //  //  val schemaRegistryUrl = "http://localhost:8081"
 //
+<<<<<<< HEAD
+//  val producer = new CreditNodeHistoryProducer(topicName, bootstrapServers, schemaRegistryUrl, 2000L, 10000)
+=======
 //  val producer = new CreditNodeHistoryProducer(topicName, bootstrapServers, schemaRegistryUrl, 60L, 1)
+>>>>>>> ad393f7091de855dec8c28b578de64be41f01242
 //  producer.run()
 //}
 //

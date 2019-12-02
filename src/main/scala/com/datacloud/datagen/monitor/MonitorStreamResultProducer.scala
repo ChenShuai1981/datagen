@@ -1,16 +1,11 @@
 package com.datacloud.datagen.monitor
 
-import com.datacloud.datagen.JsonDataProducer
+import com.datacloud.datagen.{JsonDataProducer, KafkaEnv}
 import org.scalacheck.Gen
 
-object MonitorStreamResultProducer extends App {
-  val topicName = "sit_MONITOR_RULESET_29_4321_STREAM"
-  val bootstrapServers = "ambari-agent4.sit.geerong.com:9092"
-  //  val bootstrapServers = "localhost:9092"
-  val interval = 60L
-  val loop = 1
-
-  val producer = new MonitorStreamResultProducer(topicName, bootstrapServers, interval, loop)
+object MonitorStreamResultProducer extends App with KafkaEnv {
+  val topicName = envPrefix + "MONITOR_RULESET_29_4321_STREAM"
+  val producer = new MonitorStreamResultProducer(topicName, bootstrapServers, 600, 1)
   producer.run()
 }
 
@@ -27,4 +22,5 @@ class MonitorStreamResultProducer(topicName: String, bootstrapServers: String, i
     MonitorStreamResult(tenantId, productCode, eventCode, terminal, occurTime)
   }
 
+  override def getKey(t: MonitorStreamResult): String = t.occurTime.toString
 }

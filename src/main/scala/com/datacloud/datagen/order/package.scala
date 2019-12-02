@@ -1,6 +1,9 @@
 package com.datacloud.datagen
 
 package object order {
+<<<<<<< HEAD
+
+=======
   case class SubOrderDetail(userId: Long,
                             orderId: Long,
                             subOrderId: Long,
@@ -15,4 +18,5 @@ package object order {
                             orderStatus: Int,
                             isNewOrder: Int,
                             timestamp: Long)
+>>>>>>> ad393f7091de855dec8c28b578de64be41f01242
 }

@@ -1,16 +1,11 @@
 package com.datacloud.datagen.monitor
 
-import com.datacloud.datagen.JsonDataProducer
+import com.datacloud.datagen.{JsonDataProducer, KafkaEnv}
 import org.scalacheck.Gen
 
-object MonitorTableResultProducer extends App {
-  val topicName = "sit_MONITOR_11123_TS_TABLE"
-  val bootstrapServers = "ambari-agent4.sit.geerong.com:9092"
-  //  val bootstrapServers = "localhost:9092"
-  val interval = 60L
-  val loop = 1
-
-  val producer = new MonitorTableResultProducer(topicName, bootstrapServers, interval, loop)
+object MonitorTableResultProducer extends App with KafkaEnv {
+  val topicName = envPrefix + "MONITOR_11123_TS_TABLE"
+  val producer = new MonitorTableResultProducer(topicName, bootstrapServers, 600, 1)
   producer.run()
 }
 
@@ -25,4 +20,5 @@ class MonitorTableResultProducer(topicName: String, bootstrapServers: String, in
     MonitorTableResult(tenantId, hitTime, hitCounts)
   }
 
+  override def getKey(t: MonitorTableResult): String = t.hitTime.toString
 }

@@ -15,20 +15,23 @@ abstract class JsonDataProducer[T](topicName: String,
 
   def genData: Gen[T]
 
+  def getKey(t: T): String
+
   def run() = {
     val props = new Properties
     props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, classOf[StringSerializer].getName)
     props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, classOf[StringSerializer].getName)
     props.put(ProducerConfig.ACKS_CONFIG, "all")
     props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers)
+    props.put("enable.idempotence", "true")
 
     val producer: Producer[String, String] = new KafkaProducer[String, String](props)
     for (i <- 1 to loop) {
       forAll(genData) {
         (data: T) => {
           val jsonString = JsonUtil.toJson(data)
+          producer.send(new ProducerRecord[String, String](topicName, null, null, jsonString))
           println(jsonString)
-          producer.send(new ProducerRecord[String, String](topicName, null, String.valueOf(System.currentTimeMillis()), jsonString))
           Thread.sleep(interval)
         }
       }

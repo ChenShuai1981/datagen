@@ -1,0 +1,10 @@
+{
+  "namespace" : "com.example",
+  "type" : "record",
+  "name" : "MyRecord",
+  "fields" : [
+    {"name":"id","type":"string"},
+    {"name":"birthday", "type":"long","logicalType":"date"},
+    {"name":"ts","type":"long","logicalType":"timestamp-millis"}
+  ]
+}

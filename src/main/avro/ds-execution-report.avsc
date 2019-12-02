@@ -1,0 +1,18 @@
+[
+    {
+     "namespace": "com.datacloud.cybertron.protocol.avro",
+     "type": "record",
+     "name": "DataSourceExecutionCommonRecord",
+     "fields": [
+        {"name": "dataSourceId", "type": ["null", "long"], "default": null},
+        {"name": "tenantId", "type": ["null", "long"], "default": null},
+        {"name": "requestId", "type": ["null", "string"], "default": null},
+        {"name": "region", "type": ["null", "string"], "default": null},
+        {"name": "templateName", "type": ["null", "string"], "default": null},
+        {"name": "requestTime", "type": ["null", "long"], "default": null},
+        {"name": "responseResultTime", "type": ["null", "long"], "default": null},
+        {"name": "source", "type": ["null", "string"], "default": null},
+        {"name": "status", "type": ["null", "string"], "default": null}
+     ]
+    }
+]
