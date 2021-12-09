@@ -12,7 +12,7 @@
     <scala.binary.version>2.11</scala.binary.version>
     <scala.version>2.11.8</scala.version>
     <kafka.version>1.0.0</kafka.version>
-    <jackson.version>2.9.4</jackson.version>
+    <jackson.version>2.9.10.8</jackson.version>
     <avro-protocol.version>3.7.2-SNAPSHOT</avro-protocol.version>
     <confluent.version>4.0.0</confluent.version>
     <avro.version>1.8.2</avro.version>
